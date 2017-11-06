@@ -1,5 +1,4 @@
 # SS13WebMap
-=====
 
 This is a small web-map for OracleStation based off of the GoonHub code (They are fine with it, I checked)
 
