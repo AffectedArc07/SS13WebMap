@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel=
+    "stylesheet">
+    <link href=
+    "style.css"
+    rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Request Map/Update</title>
+    <style>
+    .btn-full-width {
+    width: 100%;
+    }
+	body {
+	background-color: #3399FF;
+	}
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="card card-panel center">
+            <h1>SS13 Webmap Update/Addition Requester</h1>
+        </div>
+        <div class="card card-panel">
+			<div class="input-field">
+			<input id="codebase" type="text"> <label for="codebase">Codebase</label>
+			</div>
+            <div class="input-field">
+                <input id="map" type="text"> <label for="map">Map</label>
+            </div>
+        </div>
+		<a class="btn btn-large btn-full-width waves-effect waves-light" href="#!">Request Update</a>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
+    "text/javascript">
+    </script> 
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
+    </script> 
+    <script>
+    $(function() {
+        $('a').click(function(e) {
+        var codebase = $("#codebase").val();
+        var map = $("#map").val();
+        $.post("https://canary.discordapp.com/api/webhooks/407955956689928193/JI3UelS_S-I6g3TitPNHztuTwe4aDHavOY3RrYu-wkduWWpn5QjV6XsD_SbwdofXTCdb",
+    {"content": "Map: "+map+" | @here", "username": "Codebase: "+codebase},
+        function(){
+            Materialize.toast('Update Requested!', 4000)
+        });
+        });
+    });
+    </script>
+</body>
+</html>
