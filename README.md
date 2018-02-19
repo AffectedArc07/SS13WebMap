@@ -3,10 +3,18 @@
 This is a web-map for SS13 based off of the GoonHub code (They are fine with it, I checked)
 
 Current Maps:
-- Paradise:
-  - Cyberiad
+- AuroraStation:
+  - NSS Exodus
+- GoonStation:
+  - All maps
 - OracleStation:
   - OmegaStation
   - MetaStation
-
-If you want to submit a map, make an issue with the codebase and map and I will see what I can do.
+  - DeltaStation
+- Paradise:
+  - Cyberiad
+  - MetaStation
+- TGStation:
+  - DeltaStation
+ 
+If you want to submit a map, use the submission feature on the site.
