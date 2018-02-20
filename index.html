@@ -1,101 +1,160 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>SS13 Web Map</title>
-<style type="text/css">
-body,td,th {
-	font-family: "Courier New", Courier, monospace;
-	font-size: 14px;
-	text-align: center;
-}
-h1 {
-	font-size: 50px;
-	color: #FFF;
-	text-align: center;
-}
-.BlackText {
-	color: #000;
-}
-.left {
-	text-align: left;
-}
-</style>
-<script type="text/javascript">
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SS13 Web Map</title>
+	<style>
+		body {color: #FFF;
+		text-align: center;
+		font-family: Verdana;
+		}
+		div {
+			border: 1px solid gray;
+			padding: 8px;
+		}
+		// main text
+		h1 {font-size: 70px;
+			color: #FFF;
+			text-align: center;
+			font-weight: bold;
+		}
+		//medium text
+		h2 {font-size: 20px;
+			text-align: center;
+			
+		}
 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-</script>
+		.BlackText {color: #000;}
+		
+		.left {text-align: left;}
+		
+		//button parent
+		.button {
+			border: none;
+			color: #FFCC00;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+		}
+		/* station buttons */
+		.button1 {
+			background-color: #40628a; 
+			color: white; 
+			border: 1px solid black;
+			width: 255px;
+			height: 40px;
+			font-size: 25px;
+			//font-family: "FontAwesome";
+			font-weight: bold;
+			text-align: center;
+			margin: 2px auto;
+			display: block;
+		}
+		.button1:hover {
+			background-color: white;
+			color: #40628a;
+		}
+		
+		/* request station */
+		.button2 {
+			background-color: #40628a; 
+			color: white; 
+			border: 1px solid black;
+			width: 300px;
+			height: 40px;
+			font-size: 25px;
+			//font-family: "FontAwesome";
+			font-weight: bold;
+			margin: 4px auto;
+			display: block;
+		}
+		.button2:hover {
+			background-color: white;
+			color: #40628a;
+		}
+		
+		/* width */
+		::-webkit-scrollbar {
+			width: 15px;
+		}
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #f1f1f1; 
+		} 
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888; 
+		}
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555; 
+		}
+	</style>
 </head>
-<body bgcolor="#232323" text="#FFFFFF" link="#FFCC00" vlink="#33FF99" alink="#33FF99" onload="MM_preloadImages('Buttons/Oracle-Hovered.png','Buttons/Paradise-Hovered.png')">
+
+<body bgcolor="#232323" text="#FFFFFF" link="#FFCC00" vlink="#33FF99" alink="#33FF99">
 <table width="872" border="0" align="center">
-  <tr>
-    <td><h1>SS13 Webmap</h1></td>
-  </tr>
-  <tr>
-    <td>Made by AffectedArc07. I know this page is basic. Contribute to the github <a href="https://github.com/AffectedArc07/SS13WebMap">here</a>.</td>
-  </tr>
-  <tr>
-    <td>- Please Select A Codebase/Station -</td>
-  </tr>
-  <tr>
-    <td><a href="OracleStation/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Oracle','','Buttons/Oracle-Hovered.png',1)"><img src="Buttons/Oracle-Normal.png" id="Oracle" /></a></td>
-  </tr>
-  <tr>
-    <td><a href="Paradise/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Paradise','','Buttons/Paradise-Hovered.png',1)"><img src="Buttons/Paradise-Normal.png" id="Paradise" /></a></td>
-  </tr>
-  <tr>
-    <td><a href="TGStation/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('TG','','Buttons/TG-Hovered.png',1)"><img src="Buttons/TG-Normal.png" id="TG" /></a></td>
-  </tr>
-  <tr>
-    <td><a href="AuroraStation/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Aurora','','Buttons/Aurora-Hovered.png',1)"><img src="Buttons/Aurora-Normal.png" id="Aurora" /></a></td>
-  </tr>
-  <tr>
-    <td><a href="Goon/index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Goon','','Buttons/Goon-Hovered.png',1)"><img src="Buttons/Goon-Normal.png" id="Goon" /></a></td>
-  </tr>
-   <tr>
-    <td><a href="requests.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Update','','Buttons/Update-Hovered.png',1)"><img src="Buttons/Update-Normal.png" id="Update" /></a></td>
-  </tr>
-  <tr>
-    <td>- More To Come -</td>
-  </tr>
-  <tr>
-    <td><table width="373" border="0" align="center">
-      <tr>
-        <td><p>Changelog:<br />
-        </p>
-          <p class="left">10/02/2018:<br />
-- New button icons (Thanks LetterN)<br />
-- Redesign of the whole site
-<br />
-          </p>
-          <p class="left">31/01/2018:<br />
-            - &quot;Added&quot; GoonStation<br />
-            <br />
-            30/01/2018:<br />
-            - Added changelog<br />
-            - Added TGStation\DeltaStation<br />
-          - Added AuroraStation\NSS Exodus</p></td>
-      </tr>
-    </table></td>
-  </tr>
+
+	<div><h1>SS13 Webmap</h1>
+	Created by AffectedArc07, Page design by LetterN.
+
+	<div>
+	<h2>- Please Select A Codebase/Station -</h2>
+	<!-- OracleStation -->
+	<button title="Oracle Station" class="button button1" onclick="window.location.href='OracleStation/index.html'">
+	Oracle Station
+	</button>
+
+	<!-- ParadiseStation -->
+	<button title="Paradise Station" class="button button1" onclick="window.location.href='Paradise/index.html'">
+	Paradise Station
+	</button>
+
+	<!-- /tg/ station -->
+	<button title="Traditional Games Station" class="button button1" onclick="window.location.href='TGstation/index.html'">
+	/tg/ Station
+	</button>
+	
+	<!-- Aurora Station -->
+	<button title="Aurora Station" class="button button1" onclick="window.location.href='AuroraStation/index.html'">
+	Aurora Station
+	</button>
+	
+	<!-- Goon Station -->
+	<button title="Goon Station" class="button button1" onclick="window.location.href='Goon/index.html'">
+	Goon Station
+	</button>
+	
+	<h2>- More To Come -</h2>
+	</div>
+	
+	<!-- Request -->
+	<button title="Annoy the devbus button" class="button button2" onclick="window.location.href='requests.html'">
+	Request maps here!
+	</button>
+	
+	<!-- Discord -->
+	<button title="Discord" class="button button2" onclick="window.location.href='https://discord.gg/pjBpxHa'">
+	Discord Link
+	</button>
+	
+	<!-- Github -->
+	<button title="Contribute!" class="button button2" onclick="window.location.href='https://github.com/AffectedArc07/SS13WebMap/'">
+	SS13 Web Map Git
+	</button>
+	
+	<!-- Changelog -->
+	<button title="Changelog" class="button button2" onclick="window.location.href='Changelog.html'">
+	Changelog
+	</button>
+
+	</div>
 </table>
 </body>
 </html>
