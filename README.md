@@ -11,6 +11,8 @@ Current Maps:
   - OmegaStation
   - MetaStation
   - DeltaStation
+  - PubbyStation
+  - CTF
 - Paradise:
   - Cyberiad
   - MetaStation
