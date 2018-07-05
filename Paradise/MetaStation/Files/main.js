@@ -5453,7 +5453,7 @@ var initializeMap = function(a, b, c, d) {
             d.empty();
             for (var e = Math.ceil(C[c].width / B), f = Math.ceil(C[c].height / B), g = B * A, h = C[c].height % B * A || g, i = C[c].width % B * A || g, j = 3 == c ? "cogmap2" : b, k = 0; e > k; ++k)
                 for (var l = 0; f > l; ++l) d.append($($.parseHTML("<img/>")).attr({
-                    src: "Files" + "/" + l + "" + k + ".png"
+                    src: "Files/Map/" + l + "" + k + ".png"
                 }).css({
                     left: k * g,
                     top: l * g,

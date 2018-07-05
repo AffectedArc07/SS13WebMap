@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>SS13 Web Map</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-115958323-1');
+	</script>
+	<style>
+		body {color: #FFF;
+		text-align: center;
+		font-family: Verdana;
+		}
+		div {
+			border: 1px solid gray;
+			padding: 8px;
+		}
+		// main text
+		h1 {font-size: 70px;
+			color: #FFF;
+			text-align: center;
+			font-weight: bold;
+		}
+		//medium text
+		h2 {font-size: 20px;
+			text-align: center;
+			
+		}
+
+		.BlackText {color: #000;}
+		
+		.left {text-align: left;}
+		
+		//button parent
+		.button {
+			border: none;
+			color: #FFCC00;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+		}
+		/* station buttons */
+		.button1 {
+			background-color: #40628a; 
+			color: white; 
+			border: 1px solid black;
+			width: 255px;
+			height: 40px;
+			font-size: 25px;
+			//font-family: "FontAwesome";
+			font-weight: bold;
+			text-align: center;
+			margin: 2px auto;
+			display: block;
+		}
+		.button1:hover {
+			background-color: white;
+			color: #40628a;
+		}
+		
+		/* request station */
+		.button2 {
+			background-color: #40628a; 
+			color: white; 
+			border: 1px solid black;
+			width: 300px;
+			height: 40px;
+			font-size: 25px;
+			//font-family: "FontAwesome";
+			font-weight: bold;
+			margin: 4px auto;
+			display: block;
+		}
+		.button2:hover {
+			background-color: white;
+			color: #40628a;
+		}
+		
+		/* width */
+		::-webkit-scrollbar {
+			width: 15px;
+		}
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #f1f1f1; 
+		} 
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888; 
+		}
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555; 
+		}
+	</style>
+</head>
+
+<body bgcolor="#232323" text="#FFFFFF" link="#FFCC00" vlink="#33FF99" alink="#33FF99">
+<table width="872" border="0" align="center">
+
+	<div><h1>SS13 Webmap</h1>
+	Created by AffectedArc07, Page design by LetterN.
+
+	<div>
+	<h2>- Please Select A Codebase/Station -</h2>
+	<!-- OracleStation -->
+	<button title="Oracle Station" class="button button1" onclick="window.location.href='OracleStation/index.html'">
+	Oracle Station
+	</button>
+
+	<!-- ParadiseStation -->
+	<button title="Paradise Station" class="button button1" onclick="window.location.href='Paradise/index.html'">
+	Paradise Station
+	</button>
+
+	<!-- /tg/ station -->
+	<button title="Traditional Games Station" class="button button1" onclick="window.location.href='TGStation/index.html'">
+	/tg/ Station
+	</button>
+	
+	<!-- Aurora Station -->
+	<button title="Aurora Station" class="button button1" onclick="window.location.href='AuroraStation/index.html'">
+	Aurora Station
+	</button>
+	
+	<!-- Goon Station -->
+	<button title="Goon Station" class="button button1" onclick="window.location.href='Goon/index.html'">
+	Goon Station
+	</button>
+	
+	<h2>- More To Come -</h2>
+	</div>
+	
+	<!-- Request -->
+	<button title="Annoy the devbus button" class="button button2" onclick="window.location.href='requests.html'">
+	Request maps here!
+	</button>
+	
+	<!-- Discord -->
+	<button title="Discord" class="button button2" onclick="window.location.href='https://discord.gg/pjBpxHa'">
+	Discord Link
+	</button>
+	
+	<!-- Github -->
+	<button title="Contribute!" class="button button2" onclick="window.location.href='https://github.com/AffectedArc07/SS13WebMap/'">
+	SS13 Web Map Git
+	</button>
+	
+	<!-- Changelog -->
+	<button title="Changelog" class="button button2" onclick="window.location.href='Changelog.html'">
+	Changelog
+	</button>
+
+	</div>
+</table>
+</body>
+</html>
