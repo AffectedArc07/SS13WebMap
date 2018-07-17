@@ -22,5 +22,15 @@ Current Maps:
   - DeltaStation
   - PubbyStation
   - BoxStation
- 
+- HippieStation:
+  - HippieStation
+- YogStation:
+  - YogStation
+- Citadel Station:
+  - OmegaStation
+  - MetaStation
+  - DeltaStation
+  - PubbyStation
+  - BoxStation
+  
 If you want to submit a map, join the discord and ask
