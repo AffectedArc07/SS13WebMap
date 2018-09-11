@@ -7,6 +7,7 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
@@ -15,63 +16,80 @@
 </script>
 <title>SS13 Webmap</title>
 </head>
-<body style="overflow: visible;">
-	<ul id="dropdown-aurora" class="dropdown-content">
-		<li><a class="ss13-blue-text" href="Aurora/Aurora/index.html">NSS Aurora</a></li>
-		<li><a class="ss13-blue-text" href="Aurora/Exodus/index.html">NSS Exodus</a></li>
-	</ul>
-	<ul id="dropdown-citadel" class="dropdown-content">
-		<li><a class="ss13-blue-text" href="Citadel/BoxStation/index.html">BoxStation</a></li>
-		<li><a class="ss13-blue-text" href="Citadel/DeltaStation/index.html">DeltaStation</a></li>
-		<li><a class="ss13-blue-text" href="Citadel/MetaStation/index.html">MetaStation</a></li>
-		<li><a class="ss13-blue-text" href="Citadel/OmegaStation/index.html">OmegaStation</a></li>
-		<li><a class="ss13-blue-text" href="Citadel/PubbyStation/index.html">PubbyStation</a></li>
-	</ul>
-		<ul id="dropdown-lebensraum" class="dropdown-content">
-		<li><a class="ss13-blue-text" href="Lebensraum/City/index.html">City</a></li>
-		<li><a class="ss13-blue-text" href="Lebensraum/Forest/index.html">Forest</a></li>
-		<li><a class="ss13-blue-text" href="Lebensraum/Island/index.html">Island</a></li>
-		<li><a class="ss13-blue-text" href="Lebensraum/Occupation/index.html">Occupation</a></li>
-		<li><a class="ss13-blue-text" href="Lebensraum/Partisan/index.html">Partisan</a></li>
-		<li><a class="ss13-blue-text" href="Lebensraum/Reichstag/index.html">Reichstag</a></li>
-		<li><a class="ss13-blue-text" href="Lebensraum/Tower/index.html">Tower</a></li>
-	</ul>
-	<ul id="dropdown-paradise" class="dropdown-content">
-		<li><a class="ss13-blue-text" href="Paradise/Cyberiad/index.html">NSS Cyberiad</a></li>
-		<li><a class="ss13-blue-text" href="Paradise/MetaStation/index.html">MetaStation</a></li>
-	</ul>
-	<ul id="dropdown-tg" class="dropdown-content">
-		<li><a class="ss13-blue-text" href="TG/BoxStation/index.html">BoxStation</a></li>
-		<li><a class="ss13-blue-text" href="TG/DeltaStation/index.html">DeltaStation</a></li>
-		<li><a class="ss13-blue-text" href="TG/MetaStation/index.html">MetaStation</a></li>
-		<li><a class="ss13-blue-text" href="TG/OmegaStation/index.html">OmegaStation</a></li>
-		<li><a class="ss13-blue-text" href="TG/PubbyStation/index.html">PubbyStation</a></li>
-	</ul>
-	<nav>
-		<div class="nav-wrapper ss13-blue">
-			<ul class="left hide-on-med-and-down">
-				<li><a class="dropdown-button" data-activates="dropdown-aurora">AuroraStation<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a class="dropdown-button" data-activates="dropdown-citadel">Citadel Station 13<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a href="http://goonhub.com/maps/">GoonStation</a></li>
-				<li><a href="Hippie/HippieStation/index.html">HippieStation</a></li>
-				<li><a class="dropdown-button" data-activates="dropdown-lebensraum">Lebensraum<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a class="dropdown-button" data-activates="dropdown-paradise">Paradise Station<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a class="dropdown-button" data-activates="dropdown-tg">TG Station<i class="material-icons right">arrow_drop_down</i></a></li>
-				<li><a href="Yog/YogStation/index.html">YogStation</a></li>
-			</ul>
-			<ul class="right hide-on-med-and-down">
-				<li><a href="https://github.com/AffectedArc07/SS13WebMap/">Webmap GitHub</a></li>
-				<li><a href="https://discordapp.com/invite/pjBpxHa">Webmap Discord (Request maps here)</a></li>
-			</ul>
-		</div>
-	</nav>
-	<div class="container">
-		<br><br><br><br><br><br><br><br>
-		<div class="card-panel center">
-			<h1>SS13 Webmap</h1>
-			<p><b>Created by AffectedArc07. Use Google Chrome for optimal experience.</b></p>
-			<p>Special thanks to Letter_N (For HTML assistance), And to atlanta_ned (For making a tool with docker to make renders quickly)</p>
-		</div>
+<body>
+	<div class="container center">
+		<h1 class="white-text">SS13 Webmap</h1>
+		<p class="white-text"><b>Created by AffectedArc07. Use Google Chrome for optimal experience.</b></p>
+		<p class="white-text">Special thanks to <b>Letter_N</b> (For HTML theming), And to <b>atlanta_ned</b> (For Docker tech support)</p>
+				<a class="btn ss13-blue" href="https://github.com/AffectedArc07/SS13WebMap"><i class="fab fa-github"></i>   GitHub</a>
+				<a class="btn ss13-blue" href="https://discordapp.com/invite/pjBpxHa"><i class="fab fa-discord"></i> Discord (Request maps here)</a>
+		<br><br>
+		<ul class="collapsible">
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>AuroraStation</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="Aurora/Aurora/index.html">NSS Aurora</a>
+					<a class="btn ss13-blue" href="Aurora/Exodus/index.html">NSS Exodus</a>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>Citadel Station 13</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="Citadel/BoxStation/index.html">BoxStation</a>
+					<a class="btn ss13-blue" href="Citadel/DeltaStation/index.html">DeltaStation</a>
+					<a class="btn ss13-blue" href="Citadel/MetaStation/index.html">MetaStation</a>
+					<a class="btn ss13-blue" href="Citadel/OmegaStation/index.html">OmegaStation</a>
+					<a class="btn ss13-blue" href="Citadel/PubbyStation/index.html">PubbyStation</a>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>GoonStation</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="http://goonhub.com/maps/">Goon Hub</a>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>HippieStation</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="Hippie/HippieStation/index.html">HippieStation</a>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>Lebensraum</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="Lebensraum/City/index.html">City</a>
+					<a class="btn ss13-blue" href="Lebensraum/Forest/index.html">Forest</a>
+					<a class="btn ss13-blue" href="Lebensraum/Island/index.html">Island</a>
+					<a class="btn ss13-blue" href="Lebensraum/Occupation/index.html">Occupation</a>
+					<a class="btn ss13-blue" href="Lebensraum/Partisan/index.html">Partisan</a>
+					<a class="btn ss13-blue" href="Lebensraum/Reichstag/index.html">Reichstag</a>
+					<a class="btn ss13-blue" href="Lebensraum/Tower/index.html">Tower</a>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>Paradise Station</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="Paradise/Cyberiad/index.html">NSS Cyberiad</a>
+					<a class="btn ss13-blue" href="Paradise/MetaStation/index.html">MetaStation</a>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>/TG/ Station</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="TG/BoxStation/index.html">BoxStation</a>
+					<a class="btn ss13-blue" href="TG/DeltaStation/index.html">DeltaStation</a>
+					<a class="btn ss13-blue" href="TG/MetaStation/index.html">MetaStation</a>
+					<a class="btn ss13-blue" href="TG/OmegaStation/index.html">OmegaStation</a>
+					<a class="btn ss13-blue" href="TG/PubbyStation/index.html">PubbyStation</a>
+				</div>
+			</li>
+			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>YogStation</div>
+				<div class="collapsible-body white-text left-align">
+					<a class="btn ss13-blue" href="Yog/YogStation/index.html">YogStation</a>
+				</div>
+			</li>
+		</ul>
 	</div>
 <div class="layer1TG"></div>
 <div class="layer2TG"></div>
