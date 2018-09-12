@@ -30,6 +30,21 @@
 		<br><br>
 		<ul class="collapsible">
 			<li>
+				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>Recent Changes</div>
+				<div class="collapsible-body white-text left-align">
+					<ul>
+						<div id="gitlog">
+							<li v-for="record in commits">
+								<a :href="record.author.html_url" target="_blank">{{ record.commit.author.name }}</a> - 
+								<span class="message">{{ record.commit.message | truncate }}</span> | 
+								<span class="date">{{ record.commit.author.date | formatDate }}</span> | 
+								(<a :href="record.html_url" target="_blank" class="commit">{{ record.sha.slice(0, 7) }}</a>)
+							</li>
+						</div>
+					</ul>
+				</div>
+			</li>
+			<li>
 				<div class="collapsible-header transparent white-text"><i class="material-icons">arrow_drop_down</i>AuroraStation</div>
 				<div class="collapsible-body white-text left-align">
 					<a class="btn ss13-blue" href="Aurora/Aurora/index.html">NSS Aurora</a>
@@ -116,6 +131,8 @@ var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator
    }
  });
 </script>
+<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
+<script src="Files/Retrieve.js"></script>
 </body>
 </html>
 
