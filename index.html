@@ -8,8 +8,8 @@
 <meta name="viewport" content="width = device-width, initial-scale = 1">
 <link rel="stylesheet" href="Files/materialize.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 <script>
@@ -23,7 +23,7 @@
 <body>
 	<div class="container center">
 		<h1 class="white-text">SS13 Webmap</h1>
-		<p class="white-text"><b>Created by AffectedArc07. Use Google Chrome for optimal experience.</b></p>
+		<p class="white-text"><b>Created by AffectedArc07</b></p>
 		<p class="white-text">Special thanks to <b>Letter_N</b> (For HTML theming), And to <b>atlanta_ned</b> (For Docker tech support)</p>
 				<a class="btn ss13-blue" href="https://github.com/AffectedArc07/SS13WebMap"><i class="fab fa-github"></i>   GitHub</a>
 				<a class="btn ss13-blue" href="https://discordapp.com/invite/pjBpxHa"><i class="fab fa-discord"></i> Discord (Request maps here)</a>
@@ -98,6 +98,24 @@
 <div class="layer1TG"></div>
 <div class="layer2TG"></div>
 <div class="layer3TG"></div>
+	
+<div id="modal1" class="modal">
+<div class="modal-content">
+<p>The site has detected you are using a browser other than Google Chrome. As such, the site may not function properly, or even at all. Please use Google Chrome for the optimal experience. Thanks!</p>
+<div class="modal-footer">
+<a class="modal-close btn ss13-blue">Ok</a>
+</div>
+</div>
+</div>
+<script>
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor); 
+ $(document).ready(function() {
+  $('.modal').modal();
+   if (!isChrome) {
+  $('.modal').modal('open'); 
+   }
+ });
+</script>
 </body>
 </html>
 
