@@ -182,6 +182,12 @@ div.highlight {
 .ss13-blue-text {
   color: #40628a !important;
 }
+.pepperthot-teal {
+	background-color: #4bff85 !important;
+}
+.pepperthot-teal-text {
+	color: #4bff85 !important;
+}
 .materialize-red {
   background-color: #e51c23 !important;
 }
