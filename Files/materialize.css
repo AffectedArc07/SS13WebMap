@@ -171,13 +171,14 @@ div.highlight {
     margin-top: -16px
 }
 
-/*!
- * Materialize v1.0.0-rc.2 (http://materializecss.com)
- * Copyright 2014-2017 Materialize
- * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
- */
+ /* Custom CSS */
 .dabbermint {
   content:url(Logos/pepperdab.gif);
+  width: 32px;
+  height: 32px;
+}
+.logo-tg {
+  content:url(Logos/tg.png);
   width: 32px;
   height: 32px;
 }
@@ -199,6 +200,11 @@ div.highlight {
 .dmca-blue-text {
   color: #00bfff !important;
 }
+/*!
+ * Materialize v1.0.0-rc.2 (http://materializecss.com)
+ * Copyright 2014-2017 Materialize
+ * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+ */
 .materialize-red {
   background-color: #e51c23 !important;
 }
