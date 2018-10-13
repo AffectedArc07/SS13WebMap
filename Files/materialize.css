@@ -187,6 +187,11 @@ div.highlight {
   width: 32px;
   height: 32px;
 }
+.logo-dmca {
+  content:url(Logos/dmca.png);
+  width: 32px;
+  height: 32px;
+}
 .ss13-blue {
   background-color: #40628a !important;
 }
