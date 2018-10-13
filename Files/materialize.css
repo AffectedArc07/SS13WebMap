@@ -182,6 +182,11 @@ div.highlight {
   width: 32px;
   height: 32px;
 }
+.logo-hippie {
+  content:url(Logos/hippie.webp);
+  width: 32px;
+  height: 32px;
+}
 .ss13-blue {
   background-color: #40628a !important;
 }
