@@ -18,6 +18,18 @@
 	gtag('js', new Date());
 	gtag('config', 'UA-115958323-1');
 </script>
+<script type="text/javascript">
+	window.onload = function() {
+		var d = Math.random();
+		if (d < 0.85)// roll chance
+			console.log("nothing happened.");
+		else if (d < 0.15)
+			document.getElementById('tgstuff').class="dabbermint";
+			console.log("something is nya~t right.\n dont blame lettern.");
+		else
+			console.log("this is just a fallback else if all if's fails.");
+	};	
+</script>
 <title>SS13 Webmap</title>
 </head>
 <div class="layer1TG"></div>
@@ -108,7 +120,7 @@
 				</div>
 			</li>
 			<li>
-				<div class="collapsible-header transparent pepperthot-teal-text"><i class="material-icons">arrow_drop_down</i>/TG/ Station</div>
+				<div class="collapsible-header transparent pepperthot-teal-text"><i id="tgstuff" class="material-icons">arrow_drop_down</i>/TG/ Station</div>
 				<div class="collapsible-body white-text left-align">
 					<a class="btn ss13-blue" href="TG/BoxStation/index.html">BoxStation</a>
 					<a class="btn ss13-blue" href="TG/DeltaStation/index.html">DeltaStation</a>
