@@ -176,6 +176,11 @@ div.highlight {
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+.dabbermint {
+  content:url(Logos/pepperdab.gif);
+  width: 32px;
+  height: 32px;
+}
 .ss13-blue {
   background-color: #40628a !important;
 }
