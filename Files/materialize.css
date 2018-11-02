@@ -108,7 +108,8 @@ a {
 }
 #tiles,
 #tiles img {
-    position: absolute
+    position: absolute;
+    image-rendering: pixelated;
 }
 div.highlight {
     position: absolute;
