@@ -1,54 +1,25 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="description" content="SS13 Web based map viewer built by AffectedArc07">
-<meta name="keywords" content="SS13, webmap">
-<meta name="author" content="AffectedArc07">
-<link rel="shortcut icon" href="../../Files/favicon.ico" type="image/x-icon">
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style=""><!--<![endif]--><head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="robots" content="noindex, nofollow">
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
+<head>
+	<link rel="stylesheet" href="../../Files/materialize.css">
+	<script src="../../Files/leaflet.js"></script>
+	<meta name="description" content="SS13 Web based map viewer built by AffectedArc07">
+	<meta name="keywords" content="SS13, webmap">
+	<meta name="author" content="AffectedArc07">
+	<link rel="shortcut icon" href="../../Files/favicon.ico" type="image/x-icon">
+	<title>SS13 WebMap</title>
+</head>
+
+<body>
+	<div class="layer1TG"></div>
+	<div class="layer2TG"></div>
+	<div class="layer3TG"></div>
+	<div id="webmap"></div>
 	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-115958323-1');
+		var bounds = [[0, 0], [8160, 8160]];
+		var webmap = L.map('webmap', { crs: L.CRS.Simple });
+		webmap.fitBounds(bounds);
+		webmap.attributionControl.setPrefix('SS13 Webmap by AffectedArc07');
+		webmap.options.minZoom = -2;
+		webmap.options.maxZoom = 4;
+		var image = L.imageOverlay('Z.01.LV624-1.png', bounds).addTo(webmap);
 	</script>
-
-        <title>SS13 Web Map</title>
-		<link rel="stylesheet" href="../../Files/materialize.css">
-
-        <script src="./Files/modernizr.js"></script>
-    </head>
-    <body>
-<div class="layer1TG"></div>
-<div class="layer2TG"></div>
-<div class="layer3TG"></div>
-	<div id="mapcontainer">
-		<div id="map" style="width: 9600px; height: 9600px; transition-duration: 0.5s; transform: matrix(0.2, 0, 0, 0.2, -236.8, -568.2); display: block;">
-			<div id="tiles"><img src="Files/Map/00.png" style="left: 0px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/10.png" style="left: 0px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/20.png" style="left: 0px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/30.png" style="left: 0px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/40.png" style="left: 0px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/50.png" style="left: 0px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/60.png" style="left: 0px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/70.png" style="left: 0px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/01.png" style="left: 1200px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/11.png" style="left: 1200px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/21.png" style="left: 1200px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/31.png" style="left: 1200px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/41.png" style="left: 1200px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/51.png" style="left: 1200px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/61.png" style="left: 1200px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/71.png" style="left: 1200px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/02.png" style="left: 2400px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/12.png" style="left: 2400px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/22.png" style="left: 2400px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/32.png" style="left: 2400px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/42.png" style="left: 2400px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/52.png" style="left: 2400px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/62.png" style="left: 2400px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/72.png" style="left: 2400px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/03.png" style="left: 3600px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/13.png" style="left: 3600px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/23.png" style="left: 3600px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/33.png" style="left: 3600px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/43.png" style="left: 3600px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/53.png" style="left: 3600px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/63.png" style="left: 3600px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/73.png" style="left: 3600px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/04.png" style="left: 4800px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/14.png" style="left: 4800px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/24.png" style="left: 4800px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/34.png" style="left: 4800px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/44.png" style="left: 4800px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/54.png" style="left: 4800px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/64.png" style="left: 4800px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/74.png" style="left: 4800px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/05.png" style="left: 6000px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/15.png" style="left: 6000px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/25.png" style="left: 6000px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/35.png" style="left: 6000px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/45.png" style="left: 6000px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/55.png" style="left: 6000px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/65.png" style="left: 6000px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/75.png" style="left: 6000px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/06.png" style="left: 7200px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/16.png" style="left: 7200px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/26.png" style="left: 7200px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/36.png" style="left: 7200px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/46.png" style="left: 7200px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/56.png" style="left: 7200px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/66.png" style="left: 7200px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/76.png" style="left: 7200px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/07.png" style="left: 8400px; top: 0px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/17.png" style="left: 8400px; top: 1200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/27.png" style="left: 8400px; top: 2400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/37.png" style="left: 8400px; top: 3600px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/47.png" style="left: 8400px; top: 4800px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/57.png" style="left: 8400px; top: 6000px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/67.png" style="left: 8400px; top: 7200px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"><img src="Files/Map/77.png" style="left: 8400px; top: 8400px; width: 1200px; height: 1200px; background: transparent none repeat scroll 0% 0%;"></div>
-			<div id="hilight"></div>
-		</div>
-	</div>
-	<div class="mapControl">
-		<center><b><a href="../../index.html" id="return" title="Return"><</a></b></center>
-		<center><b><a href="#zoomIn" id="zoomIn" title="Zoom In">+</a></b></center>
-		<center><b><a href="#zoomOut" id="zoomOut" title="Zoom Out">-</a></b></center>
-	</div>
-
-
-        <script src="./Files/vendor.js"></script>
-
-        <script src="./Files/main.js"></script>
-
-        	<script type="text/javascript">
-				var zlist = ["z1"];
- 				initializeMap('/Files', 'SS13-Webmap', zlist);
-	</script>
-
-<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src=""><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body></html>
+</body>
