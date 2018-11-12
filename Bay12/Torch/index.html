@@ -25,21 +25,23 @@
         var webmap = L.map('webmap', { crs: L.CRS.Simple });
         webmap.fitBounds(bounds);
         webmap.attributionControl.setPrefix('SS13 Webmap by AffectedArc07');
-        var deck_0 = L.imageOverlay('torch-0-1.png', bounds)
-        var deck_5 = L.imageOverlay('torch-1-1.png', bounds)
-        var deck_1 = L.imageOverlay('torch-2-1.png', bounds)
-        var deck_2 = L.imageOverlay('torch-3-1.png', bounds)
-        var deck_3 = L.imageOverlay('torch-4-1.png', bounds)
-        var deck_4 = L.imageOverlay('torch-5-1.png', bounds)
+        var z_0 = L.imageOverlay('torch-0-1.png', bounds)
+        var z_1 = L.imageOverlay('torch-1-1.png', bounds)
+        var z_2 = L.imageOverlay('torch-2-1.png', bounds)
+        var z_3 = L.imageOverlay('torch-3-1.png', bounds)
+        var z_4 = L.imageOverlay('torch-4-1.png', bounds)
+        var z_5 = L.imageOverlay('torch-5-1.png', bounds)
         var zlevels = {
-            'Deck 5': deck_0,
-            'Deck 4': deck_1,
-            'Deck 3': deck_2,
-            'Deck 2': deck_3,
-            'Deck 1': deck_4,
-            'Bridge Deck': deck_5,
+            'Deck 5': z_0,
+            'Deck 4': z_1,
+            'Deck 3': z_2,
+            'Deck 2': z_3,
+            'Deck 1': z_4,
+            'Bridge Deck': z_5,
         };
-        webmap.addLayer(deck_0);
+        webmap.addLayer(z_0);
+        webmap.options.minZoom = -2;
+		webmap.options.maxZoom = 4;
         L.control.layers(zlevels).addTo(webmap);
     </script>
 </body>
