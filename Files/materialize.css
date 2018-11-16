@@ -721,6 +721,11 @@ PARALLAX STUFF
   width: 32px;
   height: 32px;
 }
+.logo-bay {
+  content:url(Logos/bay12.svg);
+  width: 32px;
+  height: 32px;
+}
 .ss13-blue {
   background-color: #40628a !important;
 }
