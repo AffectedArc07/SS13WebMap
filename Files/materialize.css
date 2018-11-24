@@ -716,8 +716,8 @@ PARALLAX STUFF
   width: 32px;
   height: 32px;
 }
-.logo-dmca {
-  content:url(Logos/dmca.png);
+.logo-tgmc {
+  content:url(Logos/tgmc.png);
   width: 32px;
   height: 32px;
 }
@@ -738,10 +738,10 @@ PARALLAX STUFF
 .pepperthot-teal-text {
 	color: #4bff85 !important;
 }
-.dmca-blue {
+.tgmc-blue {
   background-color: #00bfff !important;
 }
-.dmca-blue-text {
+.tgmc-blue-text {
   color: #00bfff !important;
 }
 /*!
