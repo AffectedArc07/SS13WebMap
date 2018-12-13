@@ -13,8 +13,16 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-115958323-1');
 	</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script>
+		$(window).load(function () {
+			// Animate loader off screen
+			$(".loader").fadeOut("slow");;
+		});
+	</script>
 </head>
-
+<div class="loader"></div>
 <body>
 	<div class="layer1"></div>
 	<div class="layer2"></div>
