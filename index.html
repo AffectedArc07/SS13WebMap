@@ -12,6 +12,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script>
+	$(window).load(function () {
+		// Animate loader off screen
+		$(".loader").fadeOut("slow");;
+	});
+</script>
 <script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
@@ -34,6 +42,7 @@
 </script>
 <title>SS13 Webmap</title>
 </head>
+<div class="loader"></div>
 <div class="layer1TG"></div>
 <div class="layer2TG"></div>
 <div class="layer3TG"></div>
