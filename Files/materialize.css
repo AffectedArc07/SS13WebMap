@@ -744,6 +744,15 @@ PARALLAX STUFF
 .tgmc-blue-text {
   color: #00bfff !important;
 }
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(images/loader.gif) center no-repeat #272727;
+}
 /*!
  * Materialize v1.0.0-rc.2 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
