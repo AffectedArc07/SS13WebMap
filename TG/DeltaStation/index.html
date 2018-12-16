@@ -36,5 +36,13 @@
 		webmap.options.minZoom = -2;
 		webmap.options.maxZoom = 4;
 		var image = L.imageOverlay('DeltaStation2-1.png', bounds).addTo(webmap);
+		var pipenet = L.imageOverlay('DeltaStation2-2.png', bounds).addTo(webmap);
+		var base = {
+				"Base Map": image,
+			};
+		var overlays = {
+			'Pipenet': pipenet,
+		};
+		L.control.layers(base, overlays).addTo(webmap);
 	</script>
 </body>
