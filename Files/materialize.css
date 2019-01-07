@@ -462,9 +462,14 @@ PARALLAX STUFF
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
-	background: #fff;
-	background: rgba(255, 255, 255, 0.7);
-	margin: 0;
+  background: transparent;
+  color: #FFF;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+  margin: 0;
 	}
 .leaflet-control-attribution,
 .leaflet-control-scale-line {
@@ -479,7 +484,7 @@ PARALLAX STUFF
 	}
 .leaflet-container .leaflet-control-attribution,
 .leaflet-container .leaflet-control-scale {
-	font-size: 11px;
+	font-size: 15px;
 	}
 .leaflet-left .leaflet-control-scale {
 	margin-left: 5px;
