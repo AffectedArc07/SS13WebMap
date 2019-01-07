@@ -32,20 +32,18 @@
         var bounds = [[0, 0], [6400, 6400]];
         var webmap = L.map('webmap', { crs: L.CRS.Simple });
         webmap.fitBounds(bounds);
-        webmap.attributionControl.setPrefix('SS13 Webmap by AffectedArc07');
-        var z_0 = L.imageOverlay('img1.png', bounds)
-        var z_1 = L.imageOverlay('img2.png', bounds)
-        var z_2 = L.imageOverlay('img3.png', bounds)
-        var z_3 = L.imageOverlay('img4.png', bounds)
-        var z_4 = L.imageOverlay('img5.png', bounds)
-        var z_5 = L.imageOverlay('img6.png', bounds)
+        webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
+        var z_0 = L.imageOverlay('_CEV_Eris-1.png', bounds)
+        var z_1 = L.imageOverlay('_CEV_Eris-2.png', bounds)
+        var z_2 = L.imageOverlay('_CEV_Eris-3.png', bounds)
+        var z_3 = L.imageOverlay('_CEV_Eris-4.png', bounds)
+        var z_4 = L.imageOverlay('_CEV_Eris-5.png', bounds)
         var zlevels = {
-            'Deck 5': z_0,
-            'Deck 4': z_1,
+            'Deck 1': z_0,
+            'Deck 2': z_1,
             'Deck 3': z_2,
-            'Deck 2': z_3,
-            'Deck 1': z_4,
-            'Bridge Deck': z_5,
+            'Deck 4': z_3,
+            'Deck 5': z_4,
         };
         webmap.addLayer(z_0);
         webmap.options.minZoom = -2;

@@ -24,17 +24,17 @@
 </head>
 <div class="loader"></div>
 <body>
-	<div class="layer1TG"></div>
-	<div class="layer2TG"></div>
-	<div class="layer3TG"></div>
+	<div class="layer1"></div>
+	<div class="layer2"></div>
+	<div class="layer3"></div>
 	<div id="webmap"></div>
 	<script>
 		var bounds = [[0, 0], [8160, 8160]];
 		var webmap = L.map('webmap', { crs: L.CRS.Simple });
 		webmap.fitBounds(bounds);
-		webmap.attributionControl.setPrefix('SS13 Webmap by AffectedArc07');
+		webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
 		webmap.options.minZoom = -2;
 		webmap.options.maxZoom = 4;
-		var image = L.imageOverlay('image.png', bounds).addTo(webmap);
+		var image = L.imageOverlay('NSS-Sunset-1.png', bounds).addTo(webmap);
 	</script>
 </body>
