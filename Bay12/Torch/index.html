@@ -29,7 +29,7 @@
     <div class="layer3TG"></div>
     <div id="webmap"></div>
     <script>
-        var bounds = [[0, 0], [6400, 6400]];
+        var bounds = [[0, 0], [-200, 200]];
         var webmap = L.map('webmap', { crs: L.CRS.Simple });
         webmap.fitBounds(bounds);
         webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
@@ -48,8 +48,10 @@
             'Bridge Deck': z_5,
         };
         webmap.addLayer(z_0);
-        webmap.options.minZoom = -2;
-		webmap.options.maxZoom = 4;
+        webmap.options.minZoom = 4;
+		webmap.options.maxZoom = 6;
         L.control.layers(zlevels).addTo(webmap);
-    </script>
+    	webmap.setView([-100, 100], 4);
+	</script>
+	<script src="../../Files/coords.js"></script>
 </body>
