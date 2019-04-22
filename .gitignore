@@ -1,1 +1,25 @@
+### https://raw.github.com/github/gitignore/cc542de017c606138a87ee4880e5f06b3a306def/Global/Windows.gitignore
+
+# Windows image file caches
 Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+#Sublime
+*.sublime-project
+*.sublime-workspace
+
+#Visual studio stuff
+*.vscode/*
+!/.vscode/extensions.json
+
+#GitHub Atom
+.atom-build.json
