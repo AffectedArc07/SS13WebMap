@@ -33,13 +33,15 @@
         var webmap = L.map('webmap', { crs: L.CRS.Simple });
         webmap.fitBounds(bounds);
         webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
-        var z_0 = L.imageOverlay('https://raw.githubusercontent.com/AffectedArc07/SS13WebMap-Images/master/DS13/Intrepid/Intrepid-1.png', bounds)
-        var z_1 = L.imageOverlay('https://raw.githubusercontent.com/AffectedArc07/SS13WebMap-Images/master/DS13/Intrepid/Intrepid-2.png', bounds)
-        var z_2 = L.imageOverlay('https://raw.githubusercontent.com/AffectedArc07/SS13WebMap-Images/master/DS13/Intrepid/Intrepid-3.png', bounds)
+        var z_0 = L.imageOverlay('https://raw.githubusercontent.com/AffectedArc07/SS13WebMap-Images/master/DS13/Sovereign/Sovereign-1.png', bounds)
+        var z_1 = L.imageOverlay('https://raw.githubusercontent.com/AffectedArc07/SS13WebMap-Images/master/DS13/Sovereign/Sovereign-2.png', bounds)
+        var z_2 = L.imageOverlay('https://raw.githubusercontent.com/AffectedArc07/SS13WebMap-Images/master/DS13/Sovereign/Sovereign-3.png', bounds)
+        var z_3 = L.imageOverlay('https://raw.githubusercontent.com/AffectedArc07/SS13WebMap-Images/master/DS13/Sovereign/Sovereign-4.png', bounds)
         var zlevels = {
             'Deck 1': z_0,
             'Deck 2': z_1,
             'Deck 3': z_2,
+            'Deck 4': z_3,
         };
         webmap.addLayer(z_0);
         webmap.options.minZoom = -2;
