@@ -1,20 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="../../Files/materialize.css">
-	<script src="../../Files/leaflet.js"></script>
-	<meta name="description" content="SS13 Web based map viewer built by AffectedArc07">
-	<meta name="keywords" content="SS13, webmap">
-	<meta name="author" content="AffectedArc07">
+	<title>SS13 WebMap | BeeStation | KiloStation</title>
 	<link rel="shortcut icon" href="../../Files/favicon.ico" type="image/x-icon">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<!-- Metadata -->
+	<meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
+	<meta name="keywords" content="SS13, webmap, Space Station 13, BeeStation, KiloStation" />
+	<meta name="author" content="AffectedArc07" />
+	<!-- OpenGraph Metadata -->
+	<meta property="og:title" content="SS13 WebMap | BeeStation | KiloStation" />
+	<meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/" />
+	<meta property="og:image" content="https://affectedarc07.github.io/SS13WebMap/Files/favicon.ico" />
+	
+	<!-- Import stylesheet-->
+	<link rel="stylesheet" href="../../Files/materialize.css">
+	<!-- Import scripts-->
+	<script src="../../Files/leaflet.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-	<script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
+	<script type="text/javascript">
 		$(window).load(function () {
 			// Animate loader off screen
 			$(".loader").fadeOut("slow");;
 		});
 	</script>
-	<title>SS13 WebMap</title>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
@@ -22,13 +34,13 @@
 		gtag('config', 'UA-115958323-1');
 	</script>
 </head>
-<div class="loader"></div>
 <body>
+	<div class="loader"></div>
 	<div class="layer1"></div>
 	<div class="layer2"></div>
 	<div class="layer3"></div>
 	<div id="webmap"></div>
-	<script>
+	<script type="text/javascript">
 		var bounds = [[0, 0], [8160, 8160]];
 		var webmap = L.map('webmap', { crs: L.CRS.Simple });
 		webmap.fitBounds(bounds);
@@ -38,3 +50,4 @@
 		var image = L.imageOverlay('https://affectedarc07.github.io/SS13WebMap-Images/Bee/KiloStation/KiloStation-1.png', bounds).addTo(webmap);
 	</script>
 </body>
+</html>

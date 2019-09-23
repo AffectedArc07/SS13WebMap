@@ -1,59 +1,64 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="SS13 Web based map viewer built by AffectedArc07">
-<meta name="keywords" content="SS13, webmap">
-<meta name="author" content="AffectedArc07">
-<link rel="shortcut icon" href="Files/favicon.ico" type="image/x-icon">
-<meta name="viewport" content="width = device-width, initial-scale = 1">
-<link rel="stylesheet" href="Files/materialize.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-<script>
-	$(window).load(function () {
-		// Animate loader off screen
-		$(".loader").fadeOut("slow");;
-	});
-</script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-115958323-1');
-</script>
-<script type="text/javascript">
-	window.onload = function () {
-		var d = Math.random();
-		//console.log(d)
-		if (d >= 0.15) { //rng chance
-			console.log("Loaded Normal TG.");
-		}
-		else if (d < 0.15) {
-			document.getElementById('tgstuff').className = "dabbermint";
-			console.log("Something is nya~t right.\nDont blame LetterN.");
-		}
-
-	};	
-</script>
-<script async src="pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-	(adsbygoogle = window.adsbygoogle || []).push({
-		google_ad_client: "ca-pub-9034099712723350",
-		enable_page_level_ads: true
-	});
-</script>
-<title>SS13 WebMap</title>
+	<title>SS13 WebMap</title>
+	<link rel="shortcut icon" href="./Files/favicon.ico" type="image/x-icon">
+	<!-- Metadata -->
+	<meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
+	<meta name="keywords" content="SS13, webmap, Space Station 13" />
+	<meta name="author" content="AffectedArc07" />
+	<!-- OpenGraph Metadata -->
+	<meta property="og:title" content="SS13 WebMap" />
+	<meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/" />
+	<meta property="og:image" content="https://affectedarc07.github.io/SS13WebMap/Files/favicon.ico" />
+	
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width = device-width, initial-scale = 1" />
+	<!-- Import stylesheet -->
+	<link rel="stylesheet" href="Files/materialize.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<!-- Import scripts -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script type="text/javascript">
+		$(window).load(function (){
+			var d = Math.random();
+			console.debug(d)
+			if (d >= 0.15){ //rng chance
+				console.debug("Loaded Normal TG.");
+			}
+			else if (d < 0.15){
+				$("#tgstuff").addClass("dabbermint"); //why haven't i attached this to here??
+				console.debug("Something is nya~t right.\nDont blame LetterN.");
+			}
+			// Animate loader off screen
+			$(".loader").fadeOut("slow");
+		});
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-115958323-1');
+	</script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-9034099712723350",
+			enable_page_level_ads: true
+		});
+	</script>
 </head>
-<div class="loader"></div>
-<div class="layer1TG"></div>
-<div class="layer2TG"></div>
-<div class="layer3TG"></div>
-<body style="overflow: visible">
+<body>
+	<div class="loader"></div>
+	<div class="layer1TG"></div>
+	<div class="layer2TG"></div>
+	<div class="layer3TG"></div>
 	<div class="container center">
 		<h1 class="white-text">SS13 WebMap</h1>
 		<p class="white-text"><b>Created by AffectedArc07</b></p>
@@ -199,7 +204,6 @@
 		</ul>
 	</div>
 	<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
-	<script src="Files/Retrieve.js"></script>
+	<script src="./Files/Retrieve.js"></script>
 </body>
 </html>
-
