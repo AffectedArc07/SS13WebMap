@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+/* lettern: cut this css in half*/
 /*
 PARALLAX STUFF
 */
@@ -9,9 +11,8 @@ PARALLAX STUFF
         background-position: -960px 0;
     }
 }
-.layer1,
-.layer2,
-.layer3 {
+.layer1, .layer2, .layer3,
+.layer1TG, .layer2TG, .layer3TG {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -35,17 +36,6 @@ PARALLAX STUFF
     background-image: url("./Parallax/layer3.png");
     animation: animateBackground 20s linear infinite;
 }
-.layer1TG,
-.layer2TG,
-.layer3TG {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-repeat: repeat;
-    z-index: -1;
-}
 
 .layer1TG {
     background-image: url("./Parallax/layer1TG.png");
@@ -62,9 +52,12 @@ PARALLAX STUFF
     animation: animateBackground 20s linear infinite;
 }
 /* LEAFLET CSS */
-	#webmap {
-		height: 100%
-  }
+#webmap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
   
 .leaflet-pane,
 .leaflet-tile,
@@ -98,7 +91,8 @@ PARALLAX STUFF
 /* hack that prevents hw layers "stretching" when loading new tiles */
 .leaflet-safari .leaflet-tile-container {
 	width: 1600px;
-	height: 1600px;
+  height: 1600px;
+  transform-origin: 0 0;
 	-webkit-transform-origin: 0 0;
 	}
 .leaflet-marker-icon,
@@ -6485,8 +6479,9 @@ body.keyboard-focused .dropdown-content li:focus {
 }
 
 .waves-circle {
+  transform: translateZ(0);
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
@@ -6508,6 +6503,7 @@ body.keyboard-focused .dropdown-content li:focus {
   height: 2.5em;
   line-height: 2.5em;
   border-radius: 50%;
+  mask-image: none;
   -webkit-mask-image: none;
 }
 
@@ -6822,6 +6818,7 @@ body.keyboard-focused .dropdown-content li:focus {
   position: relative;
   -webkit-transition: opacity .4s;
   transition: opacity .4s;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
@@ -7619,11 +7616,11 @@ textarea.materialize-textarea {
   opacity: 0;
   pointer-events: none;
 }
-
+/*
 [type="checkbox"] {
-  /* checkbox aspect */
+  checkbox aspect
 }
-
+*/
 [type="checkbox"] + span:not(.lever) {
   position: relative;
   padding-left: 35px;
