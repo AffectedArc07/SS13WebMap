@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../../Files/css/leaflet.min.css">
     <!-- Import scripts-->
     <script src="../../Files/leaflet.js"></script>
+    <script src="../../Files/coords.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
@@ -56,29 +57,36 @@
     <div class="layer3TG"></div>
     <div id="webmap"></div>
     <script type="text/javascript">
-        var bounds = [
+        const bounds = [
             [0, 0],
             [-255, 255]
         ];
-        var webmap = L.map('webmap', {
-            crs: L.CRS.Simple
-        });
+        const map_config = {
+            "minZoom":4,
+            "maxZoom":6,
+            "center": [-128, 128],
+            "zoom": 4,
+            "crs": L.CRS.Simple,
+            "prefix":"SS13 WebMap by AffectedArc07"
+        };
+        const image_config = { // m o d u l a r
+            "map":[
+                {"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/TG/BoxStation/BoxStation-1.png"}
+            ],
+            "pipenet":[
+                {"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/TG/BoxStation/BoxStation-2.png"}
+            ]
+        };
+        var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
-        webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
-        webmap.options.minZoom = 4;
-        webmap.options.maxZoom = 6;
-        var image = L.imageOverlay('https://affectedarc07.github.io/SS13WebMap-Images/TG/BoxStation/BoxStation-1.png', bounds).addTo(webmap);
-        var pipenet = L.imageOverlay('https://affectedarc07.github.io/SS13WebMap-Images/TG/BoxStation/BoxStation-2.png', bounds).addTo(webmap);
-        var base = {
-            "Base Map": image,
-        };
-        var overlays = {
-            'Pipenet': pipenet,
-        };
-        L.control.layers(base, overlays).addTo(webmap);
-        webmap.setView([-128, 128], 4);
+        webmap.setMaxBounds(bounds);
+
+        var lazylayers = bakeLayers(image_config, webmap)
+        console.info(lazylayers)
+        L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
+        //setTimeout(()=>{ webmap.invalidateSize()}, 500);
+        attachListiner(webmap)
     </script>
-    <script src="../../Files/coords.js"></script>
 </body>
 
 </html>
