@@ -24,32 +24,32 @@ PARALLAX STUFF
 }
 
 .layer1 {
-	background-image: url("./Parallax/layer1.png");
+	background-image: url("../Parallax/layer1.png");
 	animation: infiniteLoop 80s linear infinite;
 }
 
 .layer2 {
-	background-image: url("./Parallax/layer2.png");
+	background-image: url("../Parallax/layer2.png");
 	animation: infiniteLoop 40s linear infinite;
 }
 
 .layer3 {
-	background-image: url("./Parallax/layer3.png");
+	background-image: url("../Parallax/layer3.png");
 	animation: infiniteLoop 20s linear infinite;
 }
 
 .layer1TG {
-	background-image: url("./Parallax/layer1TG.png");
+	background-image: url("../Parallax/layer1TG.png");
 	animation: infiniteLoop 80s linear infinite;
 }
 
 .layer2TG {
-	background-image: url("./Parallax/layer2TG.png");
+	background-image: url("../Parallax/layer2TG.png");
 	animation: infiniteLoop 40s linear infinite;
 }
 
 .layer3TG {
-	background-image: url("./Parallax/layer3TG.png");
+	background-image: url("../Parallax/layer3TG.png");
 	animation: infiniteLoop 20s linear infinite;
 }
 
@@ -60,40 +60,40 @@ PARALLAX STUFF
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
-	background: url(images/loader.gif) center no-repeat #272727;
+	background: url("../images/loader.gif") center no-repeat #272727;
 }
 .dabbermint {
-	content:url(Logos/pepperdab.gif);
+	content:url("../Logos/pepperdab.gif");
 	width: 32px;
 	height: 32px;
 }
 .logo-tg {
-	content:url(Logos/tg.png);
+	content:url("../Logos/tg.png");
 	width: 32px;
 	height: 32px;
 }
 .logo-hippie {
-	content:url(Logos/hippie.webp);
+	content:url("../Logos/hippie.webp");
 	width: 32px;
 	height: 32px;
 }
 .logo-tgmc {
-	content:url(Logos/tgmc.png);
+	content:url("../Logos/tgmc.png");
 	width: 32px;
 	height: 32px;
 }
 .logo-bay {
-	content:url(Logos/bay12.svg);
+	content:url("../Logos/bay12.svg");
 	width: 32px;
 	height: 32px;
 }
 .logo-kepler {
-	content:url(Logos/kepler.png);
+	content:url("../Logos/kepler.png");
 	width: 32px;
 	height: 32px;
 }
 .logo-leben {
-	content:url(Logos/leben.png);
+	content:url("../Logos/leben.png");
 	width: 32px;
 	height: 32px;
 }
