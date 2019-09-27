@@ -36,13 +36,14 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript">
-        $(window).load(function() {
+        $(window).load(() => {
             var d = Math.random();
             console.debug(d)
-            if (d >= 0.15) { //rng chance
+            if(d >= 0.15){
                 console.debug("Loaded Normal TG.");
-            } else if (d < 0.15) {
-                $("#tgstuff").addClass("dabbermint"); //why haven't i attached this to here??
+            }else if (d < 0.15){
+                $("#tgstuff").removeClass("logo-tg");
+                $("#tgstuff").addClass("dabbermint"); 
                 console.debug("Something is nya~t right.\nDont blame LetterN.");
             }
             // Animate loader off screen
