@@ -28,13 +28,15 @@
     <link rel="stylesheet" href="../../Files/css/leaflet.min.css">
     <!-- Import scripts-->
     <script src="../../Files/leaflet.js"></script>
+    <script src="../../Files/coords.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
     <script type="text/javascript">
         $(window).load(function() {
             // Animate loader off screen
-            $(".loader").fadeOut("slow");;
+            $(".loader").fadeOut("slow");
+            initFTL("E", "tg");
         });
     </script>
     <script>
@@ -50,23 +52,30 @@
 
 <body>
     <div class="loader"></div>
-    <div class="layer1"></div>
-    <div class="layer2"></div>
-    <div class="layer3"></div>
+    <div id="layer1"></div>
+    <div id="layer2"></div>
+    <div id="layer3"></div>
     <div id="webmap"></div>
     <script type="text/javascript">
-        var bounds = [
-            [0, 0],
-            [8160, 8160]
-        ];
-        var webmap = L.map('webmap', {
-            crs: L.CRS.Simple
-        });
+        const bounds = [[0, 0], [-255, 255]];
+        const map_config = {
+            "minZoom":4, "maxZoom":6,
+            "center": [-128, 128], "zoom": 4,
+            "crs": L.CRS.Simple
+        };
+        const image_config = {
+            "map":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bee/MetaStation/MetaStation-1.png"}],
+            "pipenet":[]
+        };
+        var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
+        webmap.setMaxBounds(bounds);
         webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
-        webmap.options.minZoom = -2;
-        webmap.options.maxZoom = 4;
-        var image = L.imageOverlay('https://affectedarc07.github.io/SS13WebMap-Images/Bee/MetaStation/MetaStation-1.png', bounds).addTo(webmap);
+
+        var lazylayers = bakeLayers(image_config, webmap, bounds);
+        console.info(lazylayers);
+        L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
+        attachListiner(webmap, bounds);
     </script>
 </body>
 

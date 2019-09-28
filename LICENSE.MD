@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2018 AffectedArc07
+Copyright (c) 2019 AffectedArc07
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
