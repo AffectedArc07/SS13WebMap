@@ -109,7 +109,7 @@ function initFTL(dir="E", mode="norm", speedmodif = 0){
     layer1.animate({"animation-duration": speeds.l1+"s"}, 5000);
     layer2.animate({"animation-duration": speeds.l2+"s"}, 5000);
     layer3.animate({"animation-duration": speeds.l3+"s"}, 5000);
-    console.debug("FTL Translation sucessfull")
+    console.debug("FTL Translation successful")
 }
 
 /* Helper Functions */
