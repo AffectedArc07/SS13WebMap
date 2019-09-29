@@ -59,7 +59,7 @@ function bakeLayers(data, webmap, bounds){
  * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "Y" size
  * @param {L.polygon} polygon  - Polygon, gets generated automaticaly
  */
-function attachListiner(webmap, bounds, polygon=newpoly(webmap)){    
+function attachListener(webmap, bounds, polygon=newpoly(webmap)){    
     webmap.on('mousemove', (e) => {
         var lat = Math.floor(e.latlng.lat);
         var lng = Math.floor(e.latlng.lng);
