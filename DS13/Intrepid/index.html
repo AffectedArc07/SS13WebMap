@@ -13,26 +13,30 @@
     <meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/DS13/Intrepid" />
-    <meta property="og:image" content="../../Files/images/webmap-logo.jpg" />
+    <meta property="og:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg" />
     <!-- Twitter Card data, discord apparently uses this one -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="SS13 WebMap | DS13 | Intrepid">
     <meta name="twitter:description" content="SS13 Web based map viewer built by AffectedArc07.">
-    <meta name="twitter:image" content="../../Files/images/webmap-logo.jpg">
+    <meta name="twitter:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg">
     <!-- <meta name="twitter:site" content="@publisher_handle"> 
 	<meta name="twitter:creator" content="@author_handle"> -->
 
     <!-- Import stylesheet-->
-    <link rel="stylesheet" href="../../Files/materialize.css">
+    <link rel="stylesheet" href="../../Files/css/main.min.css">
+    <link rel="stylesheet" href="../../Files/css/materialize.min.css">
+    <link rel="stylesheet" href="../../Files/css/leaflet.min.css">
     <!-- Import scripts-->
     <script src="../../Files/leaflet.js"></script>
+    <script src="../../Files/coords.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
     <script type="text/javascript">
         $(window).load(function() {
             // Animate loader off screen
-            $(".loader").fadeOut("slow");;
+            $(".loader").fadeOut("slow");
+            initFTL("N");
         });
     </script>
     <script>
@@ -48,32 +52,34 @@
 
 <body>
     <div class="loader"></div>
-    <div class="layer1"></div>
-    <div class="layer2"></div>
-    <div class="layer3"></div>
+    <div id="layer1"></div>
+    <div id="layer2"></div>
+    <div id="layer3"></div>
     <div id="webmap"></div>
     <script type="text/javascript">
-        var bounds = [
-            [0, 0],
-            [8160, 8160]
-        ];
-        var webmap = L.map('webmap', {
-            crs: L.CRS.Simple
-        });
-        webmap.fitBounds(bounds);
-        webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
-        var z_0 = L.imageOverlay('https://affectedarc07.github.io/SS13WebMap-Images/DS13/Intrepid/Intrepid-1.png', bounds)
-        var z_1 = L.imageOverlay('https://affectedarc07.github.io/SS13WebMap-Images/DS13/Intrepid/Intrepid-2.png', bounds)
-        var z_2 = L.imageOverlay('https://affectedarc07.github.io/SS13WebMap-Images/DS13/Intrepid/Intrepid-3.png', bounds)
-        var zlevels = {
-            'Deck 1': z_0,
-            'Deck 2': z_1,
-            'Deck 3': z_2,
+        const bounds = [[0, 0], [-255, 255]];
+        const map_config = {
+            "minZoom":4, "maxZoom":6,
+            "center": [-128, 128], "zoom": 4,
+            "crs": L.CRS.Simple
         };
-        webmap.addLayer(z_0);
-        webmap.options.minZoom = -2;
-        webmap.options.maxZoom = 4;
-        L.control.layers(zlevels).addTo(webmap);
+        const image_config = {
+            "map":[
+                {"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/DS13/Intrepid/Intrepid-1.png"},
+                {"z":2,"url":"https://affectedarc07.github.io/SS13WebMap-Images/DS13/Intrepid/Intrepid-2.png"},
+                {"z":3,"url":"https://affectedarc07.github.io/SS13WebMap-Images/DS13/Intrepid/Intrepid-3.png"}
+            ],
+            "pipenet":[]
+        };
+        var webmap = L.map('webmap', map_config);
+        webmap.fitBounds(bounds);
+        webmap.setMaxBounds(bounds);
+        webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
+
+        var lazylayers = bakeLayers(image_config, webmap, bounds);
+        console.info(lazylayers);
+        L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
+        attachListener(webmap, bounds);
     </script>
 </body>
 

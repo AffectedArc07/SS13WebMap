@@ -13,38 +13,42 @@
     <meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/" />
-    <meta property="og:image" content="./Files/images/webmap-logo.jpg" />
+    <meta property="og:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg" />
     <!-- Twitter Card data, discord apparently uses this one -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="SS13 WebMap">
     <meta name="twitter:description" content="SS13 Web based map viewer built by AffectedArc07.">
-    <meta name="twitter:image" content="./Files/images/webmap-logo.jpg">
+    <meta name="twitter:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg">
     <!-- <meta name="twitter:site" content="@publisher_handle"> 
 	<meta name="twitter:creator" content="@author_handle"> -->
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width = device-width, initial-scale = 1" />
     <!-- Import stylesheet -->
-    <link rel="stylesheet" href="./Files/materialize.css?css">
+    <link rel="stylesheet" href="./Files/css/main.min.css">
+    <link rel="stylesheet" href="./Files/css/materialize.min.css">
+    <link rel="stylesheet" href="./Files/css/leaflet.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!-- Import scripts -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="./Files/coords.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript">
-        $(window).load(function() {
-            var d = Math.random();
-            console.debug(d)
-            if (d >= 0.15) { //rng chance
+        $(window).load(() => {
+            var d = Math.floor(Math.random()*10);
+            if(d >= 7){
                 console.debug("Loaded Normal TG.");
-            } else if (d < 0.15) {
-                $("#tgstuff").addClass("dabbermint"); //why haven't i attached this to here??
+            }else if (d < 3){
+                $("#tgstuff").removeClass("logo-tg");
+                $("#tgstuff").addClass("dabbermint"); 
                 console.debug("Something is nya~t right.\nDont blame LetterN.");
             }
             // Animate loader off screen
             $(".loader").fadeOut("slow");
+            initFTL("E", "tg");
         });
     </script>
     <script>
@@ -66,9 +70,9 @@
 
 <body>
     <div class="loader"></div>
-    <div class="layer1TG"></div>
-    <div class="layer2TG"></div>
-    <div class="layer3TG"></div>
+    <div id="layer1"></div>
+    <div id="layer2"></div>
+    <div id="layer3"></div>
     <div class="container center">
         <h1 class="white-text">SS13 WebMap</h1>
         <p class="white-text"><b>Created by AffectedArc07</b></p>
@@ -110,116 +114,116 @@
             <li>
                 <div class="collapsible-header orange-text darken-4 valign-wrapper"><img class="logo-bay"><i class="material-icons">arrow_drop_down</i>Baystation 12</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="Bay12/Torch/index.html">SEV Torch</a>
+                    <a class="btn ss13-blue" href="Bay12/Torch/">SEV Torch</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header white-text valign-wrapper"><i class="material-icons">arrow_drop_down</i>BeeStation</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="BeeStation/BoxStation/index.html">BoxStation</a>
-                    <a class="btn ss13-blue" href="BeeStation/DeltaStation/index.html">DeltaStation</a>
-                    <a class="btn ss13-blue" href="BeeStation/DonutStation/index.html">DonutStation</a>
-                    <a class="btn ss13-blue" href="BeeStation/KiloStation/index.html">KiloStation</a>
-                    <a class="btn ss13-blue" href="BeeStation/MetaStation/index.html">MetaStation</a>
-                    <a class="btn ss13-blue" href="BeeStation/PubbyStation/index.html">PubbyStation</a>
+                    <a class="btn ss13-blue" href="BeeStation/BoxStation/">BoxStation</a>
+                    <a class="btn ss13-blue" href="BeeStation/DeltaStation/">DeltaStation</a>
+                    <a class="btn ss13-blue" href="BeeStation/DonutStation/">DonutStation</a>
+                    <a class="btn ss13-blue" href="BeeStation/KiloStation/">KiloStation</a>
+                    <a class="btn ss13-blue" href="BeeStation/MetaStation/">MetaStation</a>
+                    <a class="btn ss13-blue" href="BeeStation/PubbyStation/">PubbyStation</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header white-text valign-wrapper"><i class="material-icons">arrow_drop_down</i>CEV Eris</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="Eris/Eris/index.html">CEV Eris</a>
+                    <a class="btn ss13-blue" href="Eris/Eris/">CEV Eris</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header white-text valign-wrapper"><i class="material-icons">arrow_drop_down</i>Deep Space 13</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="DS13/Akira/index.html">Akira</a>
-                    <a class="btn ss13-blue" href="DS13/Intrepid/index.html">Intrepid</a>
-                    <a class="btn ss13-blue" href="DS13/Sovereign/index.html">Sovereign</a>
+                    <a class="btn ss13-blue" href="DS13/Akira/">Akira</a>
+                    <a class="btn ss13-blue" href="DS13/Intrepid/">Intrepid</a>
+                    <a class="btn ss13-blue" href="DS13/Sovereign/">Sovereign</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header amber-text darken-1 valign-wrapper"><img class="logo-hippie"><i class="material-icons">arrow_drop_down</i>HippieStation</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="Hippie/HippieStation/index.html">HippieStation</a>
+                    <a class="btn ss13-blue" href="Hippie/HippieStation/">HippieStation</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header cyan-text darken-1 valign-wrapper"><img class="logo-kepler"><i class="material-icons">arrow_drop_down</i>KeplerStation</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="Kepler/BoxStation/index.html">BoxStation</a>
-                    <a class="btn ss13-blue" href="Kepler/DeltaStation/index.html">DeltaStation</a>
-                    <a class="btn ss13-blue" href="Kepler/MetaStation/index.html">MetaStation</a>
-                    <a class="btn ss13-blue" href="Kepler/OmegaStation/index.html">OmegaStation</a>
-                    <a class="btn ss13-blue" href="Kepler/PubbyStation/index.html">PubbyStation</a>
+                    <a class="btn ss13-blue" href="Kepler/BoxStation/">BoxStation</a>
+                    <a class="btn ss13-blue" href="Kepler/DeltaStation/">DeltaStation</a>
+                    <a class="btn ss13-blue" href="Kepler/MetaStation/">MetaStation</a>
+                    <a class="btn ss13-blue" href="Kepler/OmegaStation/">OmegaStation</a>
+                    <a class="btn ss13-blue" href="Kepler/PubbyStation/">PubbyStation</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header red-text darken-4 valign-wrapper"><img class="logo-leben"><i class="material-icons">arrow_drop_down</i>Lebensraum</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="Lebensraum/Camp/index.html">Camp</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Chateau/index.html">Chateau</a>
-                    <a class="btn ss13-blue" href="Lebensraum/City/index.html">City</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Colditz/index.html">Castle Colditz</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Factory/index.html">Factory</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Forest/index.html">Forest</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Gazala/index.html">Gazala</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Island/index.html">Island</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Occupation/index.html">Occupation</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Omaha/index.html">Omaha</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Partisan/index.html">Partisan</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Reichstag/index.html">Reichstag</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Saipan/index.html">Saipan</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Survival/index.html">Survival</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Tower/index.html">Tower</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Train/index.html">Train</a>
-                    <a class="btn ss13-blue" href="Lebensraum/Village/index.html">Village</a>
-                    <a class="btn ss13-blue" href="Lebensraum/WinterLine/index.html">Winter Line</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Camp/">Camp</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Chateau/">Chateau</a>
+                    <a class="btn ss13-blue" href="Lebensraum/City/">City</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Colditz/">Castle Colditz</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Factory/">Factory</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Forest/">Forest</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Gazala/">Gazala</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Island/">Island</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Occupation/">Occupation</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Omaha/">Omaha</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Partisan/">Partisan</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Reichstag/">Reichstag</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Saipan/">Saipan</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Survival/">Survival</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Tower/">Tower</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Train/">Train</a>
+                    <a class="btn ss13-blue" href="Lebensraum/Village/">Village</a>
+                    <a class="btn ss13-blue" href="Lebensraum/WinterLine/">Winter Line</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header white-text valign-wrapper"><i class="material-icons">arrow_drop_down</i>Paradise Station</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="Paradise/Cyberiad/index.html">BoxStation (NSS Cyberiad)</a>
-                    <a class="btn ss13-blue" href="Paradise/Delta/index.html">Delta Station (NSS Kerberos)</a>
-                    <a class="btn ss13-blue" href="Paradise/MetaStation/index.html">MetaStation (NSS Cerebron)</a>
+                    <a class="btn ss13-blue" href="Paradise/Cyberiad/">BoxStation (NSS Cyberiad)</a>
+                    <a class="btn ss13-blue" href="Paradise/Delta/">Delta Station (NSS Kerberos)</a>
+                    <a class="btn ss13-blue" href="Paradise/MetaStation/">MetaStation (NSS Cerebron)</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header white-text valign-wrapper"><i class="material-icons">arrow_drop_down</i>Sunset Station</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="Sunset/Sunset/index.html">NSS Sunset</a>
+                    <a class="btn ss13-blue" href="Sunset/Sunset/">NSS Sunset</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header tgmc-blue-text valign-wrapper"><img class="logo-tgmc"><i class="material-icons">arrow_drop_down</i>TerraGov Marine Corps</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="TGMC/BigRed/index.html">Big Red</a>
-                    <a class="btn ss13-blue" href="TGMC/IceColony/index.html">Ice Colony</a>
-                    <a class="btn ss13-blue" href="TGMC/LV624/index.html">LV 624</a>
-                    <a class="btn ss13-blue" href="TGMC/PrisonStation/index.html">Prison Station</a>
-                    <a class="btn ss13-blue" href="TGMC/Theseus/index.html">TGS Theseus</a>
+                    <a class="btn ss13-blue" href="TGMC/BigRed/">Big Red</a>
+                    <a class="btn ss13-blue" href="TGMC/IceColony/">Ice Colony</a>
+                    <a class="btn ss13-blue" href="TGMC/LV624/">LV 624</a>
+                    <a class="btn ss13-blue" href="TGMC/PrisonStation/">Prison Station</a>
+                    <a class="btn ss13-blue" href="TGMC/Theseus/">TGS Theseus</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header  pepperthot-teal-text valign-wrapper"><img id="tgstuff" class="logo-tg"><i class="material-icons">arrow_drop_down</i>/tg/Station</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="TG/BoxStation/index.html">BoxStation</a>
-                    <a class="btn ss13-blue" href="TG/DeltaStation/index.html">DeltaStation</a>
-                    <a class="btn ss13-blue" href="TG/DonutStation/index.html">DonutStation</a>
-                    <a class="btn ss13-blue" href="TG/MetaStation/index.html">MetaStation</a>
-                    <a class="btn ss13-blue" href="TG/PubbyStation/index.html">PubbyStation</a>
+                    <a class="btn ss13-blue" href="TG/BoxStation/">BoxStation</a>
+                    <a class="btn ss13-blue" href="TG/DeltaStation/">DeltaStation</a>
+                    <a class="btn ss13-blue" href="TG/DonutStation/">DonutStation</a>
+                    <a class="btn ss13-blue" href="TG/MetaStation/">MetaStation</a>
+                    <a class="btn ss13-blue" href="TG/PubbyStation/">PubbyStation</a>
                 </div>
             </li>
             <li>
                 <div class="collapsible-header white-text valign-wrapper"><i class="material-icons">arrow_drop_down</i>VGStation</div>
                 <div class="collapsible-body white-text left-align">
-                    <a class="btn ss13-blue" href="VG/BagelStation/index.html">BagelStation</a>
-                    <a class="btn ss13-blue" href="VG/Defficiency/index.html">DefficiencyStation</a>
-                    <a class="btn ss13-blue" href="VG/Metaclub/index.html">Metaclub</a>
-                    <a class="btn ss13-blue" href="VG/PackedStation/index.html">PackedStation</a>
-                    <a class="btn ss13-blue" href="VG/TGStation/index.html">TGStation</a>
-                    <a class="btn ss13-blue" href="VG/TGStation-Snow/index.html">TGStation (Snowy)</a>
+                    <a class="btn ss13-blue" href="VG/BagelStation/">BagelStation</a>
+                    <a class="btn ss13-blue" href="VG/Defficiency/">DefficiencyStation</a>
+                    <a class="btn ss13-blue" href="VG/Metaclub/">Metaclub</a>
+                    <a class="btn ss13-blue" href="VG/PackedStation/">PackedStation</a>
+                    <a class="btn ss13-blue" href="VG/TGStation/">TGStation</a>
+                    <a class="btn ss13-blue" href="VG/TGStation-Snow/">TGStation (Snowy)</a>
                 </div>
             </li>
         </ul>
@@ -228,7 +232,7 @@
 	<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
 	-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
-    <script src="./Files/Retrieve.js"></script>
+    <script src="./Files/Retrieve.min.js"></script>
 </body>
 
 </html>

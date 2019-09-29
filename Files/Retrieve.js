@@ -1,39 +1,32 @@
-var apiURL = 'https://api.github.com/repos/AffectedArc07/SS13WebMap/commits?per_page=5&sha='
+const apiURL = 'https://api.github.com/repos/AffectedArc07/SS13WebMap/commits?per_page=5&sha=';
 
 /**
  * Actual demo
  */
-
 var demo = new Vue({
-
-    el: '#gitlog',
-
-    data: {
-        branches: ['master'],
-        currentBranch: 'master',
-        commits: null
+    "el": '#gitlog',
+    "data": {
+        "branches": ['master'],
+        "currentBranch": 'master',
+        "commits": null
     },
-
-    created: function () {
+    "created": function () {
         this.fetchData()
     },
-
-    watch: {
-        currentBranch: 'fetchData'
+    "watch": {
+        "currentBranch": 'fetchData'
     },
-
-    filters: {
-        truncate: function (v) {
+    "filters": {
+        "truncate": function (v) {
             var newline = v.indexOf('\n')
             return newline > 0 ? v.slice(0, newline) : v
         },
-        formatDate: function (v) {
+        "formatDate": function (v) {
             return v.replace(/T|Z/g, ' ')
         }
     },
-
-    methods: {
-        fetchData: function () {
+    "methods": {
+        "fetchData": function () {
             var xhr = new XMLHttpRequest()
             var self = this
             xhr.open('GET', apiURL + self.currentBranch)
