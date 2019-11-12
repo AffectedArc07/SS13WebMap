@@ -6,7 +6,7 @@
 /**
  * Generates imageoverlay for the webmap
  * @param {JSON} data 
- * @param {Layer.webmap} webmap
+ * @param {L.Map} webmap
  * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "Y" size
  * @returns {JSON} - Returns map and pipenet **imageOverlay** , ex: `{"z1":imageOverlay}`
  */
@@ -26,23 +26,23 @@ function bakeLayers(data, webmap, bounds){
             image.addTo(webmap);
         }
         if(name){
-            zname = name
+            zname = name;
         }else if(mapjson.length > 1){
             zname = "Deck "+zlevel;
         }
-        return_dat.mapOpt[zname] = image; // {mapOpt:{"z1":"imageOverlay"}
+        return_dat.mapOpt[zname] = image; // {mapOpt:{"z1":"imageOverlay"}}
     }
-    console.info("done baking map")
-    if(pipenetjson.length == 0){ //early return because pipenetjson length is 
-        console.info("no pipenet found, skipping pipenet baking")
+    console.info("done baking map");
+    if(pipenetjson.length == 0){ //early return because pipenetjson length is 0 
+        console.info("no pipenet found, skipping pipenet baking");
         return return_dat
     }
     for(var thing in pipenetjson){
-        var URL = pipenetjson[thing].url || [];
-        var zlevel = pipenetjson[thing].z || [];
+        var URL = pipenetjson[thing].url;
+        var zlevel = pipenetjson[thing].z;
         var image = L.imageOverlay(URL, bounds); //do not add pipelayers yet
         var zname = "Pipenet";
-        if(URL == "" || URL == null){
+        if(URL == "" || URL == undefined){
             continue
         }
         if(pipenetjson.length > 1){
@@ -54,9 +54,9 @@ function bakeLayers(data, webmap, bounds){
     return return_dat
 }
 /**
- * Attatch a webmap listiner
+ * Attatch webmap listiners
  * @param {L.map} webmap -  The leaflet L.map()
- * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "Y" size
+ * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "X,Y" size
  * @param {L.polygon} polygon  - Polygon, gets generated automaticaly
  */
 function attachListener(webmap, bounds, polygon=newpoly(webmap)){    
@@ -72,6 +72,18 @@ function attachListener(webmap, bounds, polygon=newpoly(webmap)){
             [lat, lng]
         ]).redraw().bindTooltip(coords.x + ',' + coords.y).openTooltip().addTo(webmap);
     });
+
+    let query = readquery();
+    console.info(`Parsing parameter cords, param:`,query);
+    if(query && ("x" in query) && ("y" in query)){
+        let xy = ss132leaflet({"x":Number(query.x),"y":Number(query.y)}, bounds);
+        webmap.setView(L.latLng(xy.lat, xy.lng));
+        if("zoom" in query){
+            webmap.setZoom(Number(query.zoom));
+        }
+    }else{
+        console.info(`it's blank...`);
+    }
 }
 /**
  * Adds metadata on the map
@@ -90,12 +102,12 @@ function addMetadata(data, webmap){
  */
 function initFTL(dir="E", mode="norm", speedmodif = 0){
     console.debug("FTL Translation imminent")
-    let layer1 = $("#layer1");
-    let layer2 = $("#layer2");
-    let layer3 = $("#layer3");
+    const layer1 = $("#layer1");
+    const layer2 = $("#layer2");
+    const layer3 = $("#layer3");
 
     const classes = {"tg":"TG_layer","norm":"layer"};
-    var speeds = {}
+    var speeds = {};
     speeds.l1 = Math.max(80+speedmodif,1);
     speeds.l2 = Math.max(40+speedmodif,1);
     speeds.l3 = Math.max(20+speedmodif,1);
@@ -109,10 +121,21 @@ function initFTL(dir="E", mode="norm", speedmodif = 0){
     layer1.animate({"animation-duration": speeds.l1+"s"}, 5000);
     layer2.animate({"animation-duration": speeds.l2+"s"}, 5000);
     layer3.animate({"animation-duration": speeds.l3+"s"}, 5000);
-    console.debug("FTL Translation successful")
+    console.debug("FTL Translation successful");
 }
 
 /* Helper Functions */
+/**
+ * Reads the "?thing=no"
+ * @returns {JSON} JSON
+ */
+function readquery(){
+    var json_out = {};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value)=>{
+        json_out[key] = value;
+    });
+    return json_out;
+}
 
 /**
  * Creates a new polygon , requires the webmap
@@ -121,7 +144,7 @@ function initFTL(dir="E", mode="norm", speedmodif = 0){
  * @returns {L.polygon} - Returns the polygon that got created
  */
 function newpoly(webmap, config={"fill": false, "color": '#40628a', "weight": 5}){
-    let c = ["Poly wanna cracker!", "Check the crystal, you chucklefucks!","Stop wasting precius bytes on the webmap Adri!!","Wire the solars, you lazy bums!","Stop breaking the webmap!!!","WHO TOOK THE DAMN HARDSUITS?","The console blares, GET https://www.googletagmanager.com/gtag/js?id=UA-115958323-1 net::ERR_BLOCKED_BY_CLIENT","CE, the clown ran \"rm -rf /\" on the NTNet station map server","OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE"];
+    const c = ["Poly wanna cracker!", "Check the crystal, you chucklefucks!","Stop wasting precius bytes on the webmap Adri!!","Wire the solars, you lazy bums!","Stop breaking the webmap!!!","WHO TOOK THE DAMN HARDSUITS?","The console blares, GET https://www.googletagmanager.com/gtag/js?id=UA-115958323-1 net::ERR_BLOCKED_BY_CLIENT","CE, the clown ran \"rm -rf /\" on the NTNet station map server","OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE"];
     console.warn("Poly "+["squawks","says","yells"][Math.floor(Math.random()*3)]+", "+c[Math.floor(Math.random()*c.length)]);
     var polygon = L.polygon([], config).addTo(webmap);
     return polygon
@@ -136,8 +159,7 @@ function newpoly(webmap, config={"fill": false, "color": '#40628a', "weight": 5}
  */
 function leaflet2ss13(lat, lng, bounds){
     var coords = {};
-    var bounds_lat = bounds[1][0] || -255; //increases the 'y' accuracy by 99% on **any** map
-    coords.y = lat + (bounds_lat*-1) + 1; //must be pos because input is commonly neg
+    coords.y = lat + Math.abs(bounds[1][0]) + 1; //must be pos because input is commonly neg
     coords.x = lng + 1;
     return coords
 }
@@ -148,8 +170,8 @@ function leaflet2ss13(lat, lng, bounds){
  * @returns {JSON} - returns lat and lng
  */
 function ss132leaflet(coords, bounds){
-    var latlng = {}
-    latlng.lat = coords.y - (bounds[1][0]*-1) || 255;
+    var latlng = {};
+    latlng.lat = coords.y - Math.abs(bounds[1][0]) || 255;
     latlng.lng = coords.x - 1;
     return latlng
 }
