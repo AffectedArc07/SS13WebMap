@@ -52,62 +52,26 @@ PARALLAX STUFF
 	z-index: 9999;
 	background: url("../images/loader.gif") center no-repeat #272727;
 }
-.dabbermint {
-	content:url("../Logos/pepperdab.gif");
+.dabbermint, .logo-tg, .logo-hippie, 
+.logo-bay, .logo-kepler, .logo-leben, 
+.logo-tgmc{
+	background-size: 32px 32px;
 	width: 32px;
 	height: 32px;
 }
-.logo-tg {
-	content:url("../Logos/tg.png");
-	width: 32px;
-	height: 32px;
-}
-.logo-hippie {
-	content:url("../Logos/hippie.webp");
-	width: 32px;
-	height: 32px;
-}
-.logo-tgmc {
-	content:url("../Logos/tgmc.png");
-	width: 32px;
-	height: 32px;
-}
-.logo-bay {
-	content:url("../Logos/bay12.svg");
-	width: 32px;
-	height: 32px;
-}
-.logo-kepler {
-	content:url("../Logos/kepler.png");
-	width: 32px;
-	height: 32px;
-}
-.logo-leben {
-	content:url("../Logos/leben.png");
-	width: 32px;
-	height: 32px;
-}
-.ss13-blue {
-	background-color: #40628a !important;
-}
-.ss13-blue-text {
-	color: #40628a !important;
-}
-.pepperthot-teal {
-	background-color: #4bff85 !important;
-}
-.pepperthot-teal-text {
-	color: #4bff85 !important;
-}
-.tgmc-blue {
-	background-color: #00bfff !important;
-}
-.tgmc-blue-text {
-	color: #00bfff !important;
-}
-.nsv13 {
-	background-color: #A39976 !important;
-}
-.nsv13-text {
-	color: #A39976 !important;
-}
+.dabbermint{	background-image:url("../Logos/pepperdab.gif");}
+.logo-tg{		background-image:url("../Logos/tg.png");}
+.logo-hippie{	background-image:url("../Logos/hippie.png");} /*webp not suppored by IE*/
+.logo-tgmc{		background-image:url("../Logos/tgmc.png");}
+.logo-bay{		background-image:url("../Logos/bay12.svg");}
+.logo-kepler{	background-image:url("../Logos/kepler.png");}
+.logo-leben{	background-image:url("../Logos/leben.png");}
+
+.ss13-blue{				background-color: #40628a !important;}
+.ss13-blue-text{		color: #40628a !important;}
+.pepperthot-teal{		background-color: #4bff85 !important;}
+.pepperthot-teal-text{	color: #4bff85 !important;}
+.tgmc-blue{				background-color: #00bfff !important;}
+.tgmc-blue-text{		color: #00bfff !important;}
+.nsv13{					background-color: #A39976 !important;}
+.nsv13-text{			color: #A39976 !important;}
