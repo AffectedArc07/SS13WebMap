@@ -63,7 +63,7 @@ function attachListener(webmap, bounds, polygon){
     if(!polygon){
         polygon = newpoly(webmap);
     }    
-    webmap.on('mousemove', (e) => {
+    webmap.on('mousemove',function(e){
         var lat = Math.floor(e.latlng.lat);
         var lng = Math.floor(e.latlng.lng);
         var coords = leaflet2ss13(lat, lng, bounds);
