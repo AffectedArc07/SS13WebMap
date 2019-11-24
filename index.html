@@ -37,7 +37,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript">
-        $(window).load(() => {
+        $(window).load(function(){
             var d = Math.floor(Math.random()*10);
             if(d >= 7){
                 console.debug("Loaded Normal TG.");
@@ -53,10 +53,7 @@
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-115958323-1');
     </script>

@@ -139,7 +139,7 @@ function initFTL(dir, mode, speedmodif){
  */
 function readquery(){
     var json_out = {};
-    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value)=>{
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value){
         json_out[key] = value;
     });
     return json_out;
