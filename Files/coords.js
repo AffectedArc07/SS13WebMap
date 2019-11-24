@@ -59,7 +59,10 @@ function bakeLayers(data, webmap, bounds){
  * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "X,Y" size
  * @param {L.polygon} polygon  - Polygon, gets generated automaticaly
  */
-function attachListener(webmap, bounds, polygon=newpoly(webmap)){    
+function attachListener(webmap, bounds, polygon){
+    if(!polygon){
+        polygon = newpoly(webmap);
+    }    
     webmap.on('mousemove', (e) => {
         var lat = Math.floor(e.latlng.lat);
         var lng = Math.floor(e.latlng.lng);
@@ -100,13 +103,19 @@ function addMetadata(data, webmap){
  * @example
  * initFTL("N", "tg") 
  */
-function initFTL(dir="E", mode="norm", speedmodif = 0){
-    console.debug("FTL Translation imminent")
-    const layer1 = $("#layer1");
-    const layer2 = $("#layer2");
-    const layer3 = $("#layer3");
-
+function initFTL(dir, mode, speedmodif){
+    if(!dir || (dir != "N" && dir != "S" && dir !="E" && dir !="W")){
+        dir="E";
+    }
+    if(!mode || (mode != "norm" && mode != "tg")){
+        mode="norm";
+    }
+    if(!speedmodif || isNaN(speedmodif)){
+        speedmodif = 0;
+    }
+    const layer1 = $("#layer1"), layer2 = $("#layer2"), layer3 = $("#layer3");
     const classes = {"tg":"TG_layer","norm":"layer"};
+
     var speeds = {};
     speeds.l1 = Math.max(80+speedmodif,1);
     speeds.l2 = Math.max(40+speedmodif,1);
@@ -121,7 +130,6 @@ function initFTL(dir="E", mode="norm", speedmodif = 0){
     layer1.animate({"animation-duration": speeds.l1+"s"}, 5000);
     layer2.animate({"animation-duration": speeds.l2+"s"}, 5000);
     layer3.animate({"animation-duration": speeds.l3+"s"}, 5000);
-    console.debug("FTL Translation successful");
 }
 
 /* Helper Functions */
@@ -143,7 +151,10 @@ function readquery(){
  * @param {JSON} config - JSON Config
  * @returns {L.polygon} - Returns the polygon that got created
  */
-function newpoly(webmap, config={"fill": false, "color": '#40628a', "weight": 5}){
+function newpoly(webmap, config){
+    if(!config){
+        config = {"fill": false, "color": '#40628a', "weight": 5};
+    }
     const c = ["Poly wanna cracker!", "Check the crystal, you chucklefucks!","Stop wasting precius bytes on the webmap Adri!!","Wire the solars, you lazy bums!","Stop breaking the webmap!!!","WHO TOOK THE DAMN HARDSUITS?","The console blares, GET https://www.googletagmanager.com/gtag/js?id=UA-115958323-1 net::ERR_BLOCKED_BY_CLIENT","CE, the clown ran \"rm -rf /\" on the NTNet station map server","OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE"];
     console.warn("Poly "+["squawks","says","yells"][Math.floor(Math.random()*3)]+", "+c[Math.floor(Math.random()*c.length)]);
     var polygon = L.polygon([], config).addTo(webmap);
