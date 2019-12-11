@@ -141,6 +141,11 @@ var SS13Webmap = (function(){
 		return json_out;
 	}
 	
+	/**
+	 * fetch() but XML
+	 * @param {String} url - URL of object
+	 * @param {Boolean} asinks - Async?
+	 */
 	function XMLfetch(url, asinks=true){
 		var xhr = new XMLHttpRequest(); //now ie* compatable i think?
 		xhr.open('GET', url, asinks);
@@ -153,7 +158,7 @@ var SS13Webmap = (function(){
 	 * Converts leaflet latitude and longtitiude to ss13 cords, now accepts **any** maps (with proper bounds)
 	 * @param {Number} lat
 	 * @param {Number} lng
-	 * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "Y" size
+	 * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "X" "Y" size
 	 * @returns {JSON} Returns coordinate JSON
 	 */
 	function leaflet2ss13(lat, lng, bounds){
@@ -165,7 +170,7 @@ var SS13Webmap = (function(){
 	/**
 	 * Exact opposite of leaflet2ss13
 	 * @param {JSON} coords 
-	 * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "Y" size
+	 * @param {Array<Array>} bounds - The bound of an entire map, preferably the map dmm file "X" "Y" size
 	 * @returns {JSON} - returns lat and lng
 	 */
 	function ss132leaflet(coords, bounds){
@@ -198,7 +203,7 @@ var SS13Webmap = (function(){
 						}
 						webmap.flyTo(L.latLng(xy.lat, xy.lng));
 					}
-				}, 700);
+				}, Math.floor(Math.random()*700));
 			});
 		},
 		/**
@@ -216,11 +221,6 @@ var SS13Webmap = (function(){
 			const layer1 = $("#layer1"), layer2 = $("#layer2"), layer3 = $("#layer3");
 			const classes = {"tg":"TG_layer", "norm":"layer"};
 
-			var speeds = {
-				"l1":Math.max(80 + speed_modifier, 1),
-				"l2":Math.max(40 + speed_modifier, 1),
-				"l3":Math.max(20 + speed_modifier, 1)
-			}; 
 			layer1.addClass(classes[mode]+"1");
 			layer2.addClass(classes[mode]+"2");
 			layer3.addClass(classes[mode]+"3");
@@ -228,12 +228,12 @@ var SS13Webmap = (function(){
 			layer1.css("animation-name", "loop_" + direction);
 			layer2.css("animation-name", "loop_" + direction);
 			layer3.css("animation-name", "loop_" + direction);
-			if(!animate){
+			if(!animate){ //for plaingrass maps (see leben)
 				return
 			}
-			layer1.css("animation-duration", speeds.l1 + "s");
-			layer2.css("animation-duration", speeds.l2 + "s");
-			layer3.css("animation-duration", speeds.l3 + "s");
+			layer1.css("animation-duration", Math.max(80 + speed_modifier, 1) + "s");
+			layer2.css("animation-duration", Math.max(40 + speed_modifier, 1) + "s");
+			layer3.css("animation-duration", Math.max(20 + speed_modifier, 1) + "s");
 		}
 	};
   })();
