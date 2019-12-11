@@ -63,17 +63,18 @@
             "center": [-100, 100], "zoom": 4,
             "crs": L.CRS.Simple
         };
-        const image_config = {
-            "map":[
-                {"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch1_deck5-1.png"},
-                {"z":2,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch2_deck4-1.png"},
-                {"z":3,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch3_deck3-1.png"},
-                {"z":4,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch4_deck2-1.png"},
-                {"z":5,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch5_deck1-1.png"},
-                {"z":6,"name":"Bridge Deck","url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch6_bridge-1.png"}
-            ],
-            "pipenet":[]
-        };
+        //using json.parse makes loading of this const faster
+        const image_config = JSON.parse('{ \
+            "map":[ \
+                {"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch1_deck1-1.png"}, \
+                {"z":2,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch2_deck2-1.png"}, \
+                {"z":3,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch3_deck3-1.png"}, \
+                {"z":4,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch4_deck4-1.png"}, \
+                {"z":5,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch5_deck5-1.png"}, \
+                {"z":6,"name":"Bridge Deck","url":"https://affectedarc07.github.io/SS13WebMap-Images/Bay12/Torch/torch6_bridge-1.png"} \
+            ], \
+            "pipenet":[] \
+        }');
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
         webmap.setMaxBounds(bounds);

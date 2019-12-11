@@ -72,7 +72,17 @@ function attachListener(webmap, bounds, polygon=newpoly(webmap)){
             [lat, lng]
         ]).redraw().bindTooltip(coords.x + ',' + coords.y).openTooltip().addTo(webmap);
     });
+}
+/**
+ * Adds metadata on the map
+ * @param {JSON} data - JSON Array data 
+ * @param {L.map} webmap - The leaflet L.map()
+ */
+function addMetadata(data, webmap){
+    //soon, markers where there are valueable things
+}
 
+function getQuery(){
     let query = readquery();
     console.info(`Parsing parameter cords, param:`,query);
     if(query && ("x" in query) && ("y" in query)){
@@ -85,14 +95,7 @@ function attachListener(webmap, bounds, polygon=newpoly(webmap)){
         console.info(`it's blank...`);
     }
 }
-/**
- * Adds metadata on the map
- * @param {JSON} data - JSON Array data 
- * @param {L.map} webmap - The leaflet L.map()
- */
-function addMetadata(data, webmap){
-    //soon, markers where there are valueable things
-}
+
 /**
  * Initialize the paralax (not started while the page is loading)
  * @param {String} dir - The direction, can be:`'N','S','E','W'`
@@ -144,10 +147,13 @@ function readquery(){
  * @returns {L.polygon} - Returns the polygon that got created
  */
 function newpoly(webmap, config={"fill": false, "color": '#40628a', "weight": 5}){
-    const c = ["Poly wanna cracker!", "Check the crystal, you chucklefucks!","Stop wasting precius bytes on the webmap Adri!!","Wire the solars, you lazy bums!","Stop breaking the webmap!!!","WHO TOOK THE DAMN HARDSUITS?","The console blares, GET https://www.googletagmanager.com/gtag/js?id=UA-115958323-1 net::ERR_BLOCKED_BY_CLIENT","CE, the clown ran \"rm -rf /\" on the NTNet station map server","OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE"];
-    console.warn("Poly "+["squawks","says","yells"][Math.floor(Math.random()*3)]+", "+c[Math.floor(Math.random()*c.length)]);
     var polygon = L.polygon([], config).addTo(webmap);
     return polygon
+}
+
+function dopolyshit(){
+    const c = ["Poly wanna cracker!", "Check the crystal, you chucklefucks!","Stop wasting precius bytes on the webmap Adri!!","Wire the solars, you lazy bums!","Stop breaking the webmap!!!","WHO TOOK THE DAMN HARDSUITS?","The console blares, GET https://www.googletagmanager.com/gtag/js?id=UA-115958323-1 net::ERR_BLOCKED_BY_CLIENT","CE, the clown ran \"rm -rf /\" on the NTNet station map server","OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE"];
+    console.warn("Poly "+["squawks","says","yells"][Math.floor(Math.random()*3)]+", "+c[Math.floor(Math.random()*c.length)]);
 }
 
 /**
