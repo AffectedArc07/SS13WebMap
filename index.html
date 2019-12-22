@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8" />
     <title>SS13 WebMap</title>
     <link rel="shortcut icon" href="./Files/favicon.ico" type="image/x-icon">
     <!-- Metadata -->
@@ -20,9 +20,8 @@
     <meta name="twitter:description" content="SS13 Web based map viewer built by AffectedArc07.">
     <meta name="twitter:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg">
     <!-- <meta name="twitter:site" content="@publisher_handle"> 
-	<meta name="twitter:creator" content="@author_handle"> -->
-
-    <meta charset="UTF-8" />
+    <meta name="twitter:creator" content="@author_handle"> -->
+    
     <meta name="viewport" content="width = device-width, initial-scale = 1" />
     <!-- Import stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css">
@@ -38,11 +37,11 @@
         $(window).load(() => {
             var d = Math.floor(Math.random()*10);
             if(d >= 7){
-                console.debug("Loaded Normal TG.");
+                console.info("Loaded Normal TG.");
             }else if (d < 3){
                 $("#tgstuff").removeClass("logo-tg");
                 $("#tgstuff").addClass("dabbermint"); 
-                console.debug("Something is nya~t right.\nDont blame LetterN.");
+                console.log("%cSomething is nya~t right.\nDont blame LetterN.","font-size:1.5em;font-color:#2222ff;");
             }
             // Animate loader off screen
             $(".loader").fadeOut("slow");
@@ -224,10 +223,9 @@
         </ul>
     </div>
     <!--
-	<script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
+	<script src="https://unpkg.com/vue@2.6.0/dist/vue.js"></script> debug vue!
 	-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script src="./Files/Retrieve.min.js"></script>
 </body>
-
 </html>

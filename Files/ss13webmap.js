@@ -6,7 +6,7 @@ var SS13Webmap = (function(){
 	var maps, pipes, deaths, divcontent, mapconfig, bounds; //configs
 	var webmap;
 	var maxdeath = 200;
-	const ss13subsyslog = "color: blue; font-weight:bold; font-size:20px; font-family:Arial;";
+	const ss13subsyslog = "color: blue; font-weight:bold; font-size:15px; font-family:Arial;";
 	
 	/**
 	 * Loads the configs
@@ -40,9 +40,9 @@ var SS13Webmap = (function(){
 	function bakeLayers(){
 		var return_dat = {"option_1":{},"option_2":{}};
 		return_dat.option_2["GPS"] = attachGPS(); //lazy? yes!
-		var deathgroup = L.layerGroup()
 		//order: death heatmap, map, pipes
 		if(deaths){
+			var deathgroup = L.layerGroup()
 			console.info("%cBuilding Deathmap",ss13subsyslog);
 			for(var thing in deaths){
 				var object = deaths[thing];
@@ -61,6 +61,7 @@ var SS13Webmap = (function(){
 					deathgroup.push(tangle);
 				}
 			}
+			return_dat.option_2["Deathmap"] = deathgroup;
 			console.info("%cDeathmap built",ss13subsyslog);	
 		}
 
@@ -121,8 +122,8 @@ var SS13Webmap = (function(){
 	function attachOptimizedPixelation(){
 		webmap.on("zoom", function(e){
 			var zoom = e.target._zoom;
-			console.log(zoom);
-			if(zoom >= 6 ){
+			//console.log(zoom);
+			if(zoom >= 6){
 				$(".leaflet-image-layer").css("image-rendering", "pixelated");
 				return
 			}
