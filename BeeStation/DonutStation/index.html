@@ -41,7 +41,6 @@
         gtag('config', 'UA-115958323-1');
     </script>
 </head>
-</head>
 <body>
     <div class="loader"></div>
     <div id="layer1"></div>
@@ -49,26 +48,21 @@
     <div id="layer3"></div>
     <div id="webmap"></div>
     <script type="text/javascript">
-        const bounds = [[0, 0], [-255, 255]];
-        const map_config = {
-            "minZoom":4, "maxZoom":6,
-            "center": [-128, 128], "zoom": 4,
-            "crs": L.CRS.Simple
+        const config = {
+            "maps":[
+                {"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bee/DonutStation/DonutStation-1.png"}
+            ],
+            "bounds":[[0, 0], [-255, 255]],
+            "mapconfig":{
+                "minZoom":4,
+                "maxZoom":6,
+                "center":[-113, 130],
+                "zoom": 5,
+                "crs": L.CRS.Simple
+            }
         };
-        const image_config = {
-            "map":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Bee/DonutStation/DonutStation-1.png"}],
-            "pipenet":[]
-        };
-        var webmap = L.map('webmap', map_config);
-        webmap.fitBounds(bounds);
-        webmap.setMaxBounds(bounds);
-        webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
-
-        var lazylayers = bakeLayers(image_config, webmap, bounds);
-        console.info(lazylayers);
-        L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
-        attachListener(webmap, bounds);
+        SS13Webmap.newWebmap(config);
+        SS13Webmap.runFTL();
     </script>
 </body>
-
 </html>
