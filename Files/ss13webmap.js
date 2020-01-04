@@ -5,7 +5,7 @@
 var SS13Webmap = (function(){
 	var maps, pipes, deaths, divcontent, mapconfig, bounds; //configs
 	var webmap;
-	var maxdeath = 200;
+	var maxdeath = 150; //based factor
 	const ss13subsyslog = "color: blue; font-weight:bold; font-size:15px; font-family:Arial;";
 	
 	/**
@@ -71,7 +71,7 @@ var SS13Webmap = (function(){
 			var {url, z, name} = object;
 			var zname = (name ? name : "Base Map");
 		
-			if(maps.length > 1){
+			if(maps.length > 1 && zname == "Base Map"){
 				zname = "Deck "+z;
 			}
 			return_dat.option_1[zname] = (z === 1 ? L.imageOverlay(url, bounds).addTo(webmap) : L.imageOverlay(url, bounds));
@@ -175,7 +175,7 @@ var SS13Webmap = (function(){
 	 * @returns {JSON} - returns lat and lng
 	 */
 	function ss132leaflet(coords, bounds){
-		var latlng = {};
+		var latlng = {"lat":0, "lng":0};
 		latlng.lat = coords.y - Math.abs(bounds[1][0]) - 1;
 		latlng.lng = coords.x - 1;
 		return latlng
@@ -235,6 +235,15 @@ var SS13Webmap = (function(){
 			layer1.css("animation-duration", Math.max(80 + speed_modifier, 1) + "s");
 			layer2.css("animation-duration", Math.max(40 + speed_modifier, 1) + "s");
 			layer3.css("animation-duration", Math.max(20 + speed_modifier, 1) + "s");
+		},
+		newMarker:function(cfg){
+			var coords = [], markercfg = {}
+			if(cfg){
+				coords = cfg.coords ? cfg.coords : [0,0];
+				markercfg = cfg.markercfg ? cfg.markercfg : {};
+			}
+			var ltlng = ss132leaflet({"x":coords[0], "y":coords[1]}, bounds)
+			L.marker([ltlng.lat, ltlng.lng], markercfg).addTo(webmap);
 		}
 	};
-  })();
+})();

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>SS13 WebMap | HippieStation</title>
     <link rel="shortcut icon" href="../../Files/favicon.ico" type="image/x-icon">
@@ -24,32 +23,24 @@
 
     <!-- Import stylesheet-->
     <link rel="stylesheet" href="../../Files/css/main.min.css">
-    <link rel="stylesheet" href="../../Files/css/materialize.min.css">
     <link rel="stylesheet" href="../../Files/css/leaflet.min.css">
     <!-- Import scripts-->
     <script src="../../Files/leaflet.js"></script>
-    <script src="../../Files/coords.min.js"></script>
+    <script src="../../Files/ss13webmap.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
     <script type="text/javascript">
-        $(window).load(function() {
-            // Animate loader off screen
+        $(window).load(function(){    
             $(".loader").fadeOut("slow");
-            initFTL("E", "tg");
         });
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag(){dataLayer.push(arguments)}
         gtag('js', new Date());
         gtag('config', 'UA-115958323-1');
     </script>
 </head>
-
 <body>
     <div class="loader"></div>
     <div id="layer1"></div>
@@ -57,26 +48,22 @@
     <div id="layer3"></div>
     <div id="webmap"></div>
     <script type="text/javascript">
-        const bounds = [[0, 0], [-255, 255]];
-        const map_config = {
-            "minZoom":4, "maxZoom":6,
-            "center": [-128, 128], "zoom": 4,
-            "crs": L.CRS.Simple
+        const config = {
+            "maps":[
+                {"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Kepler/HippieStation/hippiestation-1.png"}
+            ],
+            "pipenet":[],
+            "bounds":[[0, 0], [-255, 255]],
+            "mapconfig":{
+                "minZoom":4,
+                "maxZoom":6,
+                "center":[-113, 130],
+                "zoom": 5,
+                "crs": L.CRS.Simple
+            }
         };
-        const image_config = {
-            "map":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Hippie/HippieStation/hippiestation-1.png"}],
-            "pipenet":[]
-        };
-        var webmap = L.map('webmap', map_config);
-        webmap.fitBounds(bounds);
-        webmap.setMaxBounds(bounds);
-        webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
-
-        var lazylayers = bakeLayers(image_config, webmap, bounds);
-        console.info(lazylayers);
-        L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
-        attachListener(webmap, bounds);
+        SS13Webmap.newWebmap(config);
+        SS13Webmap.runFTL();
     </script>
 </body>
-
 </html>
