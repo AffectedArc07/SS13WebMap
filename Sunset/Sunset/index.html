@@ -75,7 +75,6 @@
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
         L.control.layers(lazylayers.mapOpt).addTo(webmap);
-        attachListener(webmap, bounds);
     </script>
 </body>
 
