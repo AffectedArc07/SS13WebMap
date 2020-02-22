@@ -36,7 +36,7 @@
         $(window).load(function() {
             // Animate loader off screen
             $(".loader").fadeOut("slow");
-            initFTL("E","tg"); //it says tg on the lid so it gets a tg para
+            initFTL("E"); //it says tg on the lid so it gets a tg para
         });
     </script>
     <script>
@@ -75,7 +75,6 @@
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
         L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
-        attachListener(webmap, bounds);
     </script>
 </body>
 
