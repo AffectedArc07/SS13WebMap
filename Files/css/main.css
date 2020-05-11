@@ -92,6 +92,11 @@ PARALLAX STUFF
 	width: 32px;
 	height: 32px;
 }
+.logo-scorpio {
+	content:url("../Logos/scorpio.png");
+	width: 32px;
+	height: 32px;
+}
 .ss13-blue {
 	background-color: #40628a !important;
 }
