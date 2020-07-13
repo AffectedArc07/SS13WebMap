@@ -36,7 +36,7 @@
         $(window).load(function() {
             // Animate loader off screen
             $(".loader").fadeOut("slow");
-            initFTL("E");
+            initFTL("E", "tg");
         });
     </script>
     <script>
@@ -64,7 +64,7 @@
         };
         const image_config = {
             "map":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Paradise/Cyberiad/cyberiad-1.png"}],
-            "pipenet":[]
+            "pipenet":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/Paradise/Cyberiad/cyberiad-2.png"}]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
@@ -74,6 +74,7 @@
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
         L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
+        attachListener(webmap, bounds);
     </script>
 </body>
 
