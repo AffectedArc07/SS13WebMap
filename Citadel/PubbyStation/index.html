@@ -59,7 +59,6 @@
     <script type="text/javascript">
         const bounds = [[0, 0], [-255, 255]];
         const map_config = {
-            "minZoom":4, "maxZoom":6,
             "center": [-128, 128], "zoom": 4,
             "crs": L.CRS.Simple
         };
@@ -75,7 +74,6 @@
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
         L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
-        attachListener(webmap, bounds);
     </script>
 </body>
 
