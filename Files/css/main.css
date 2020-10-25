@@ -107,6 +107,11 @@ PARALLAX STUFF
 	width: 32px;
 	height: 32px;
 }
+.logo-tauceti {
+	content:url("../Logos/tauceti.png");
+	width: 32px;
+	height: 32px;
+}
 .ss13-blue {
 	background-color: #40628a !important;
 }
@@ -130,4 +135,7 @@ PARALLAX STUFF
 }
 .nsv13-text {
 	color: #A39976 !important;
+}
+.tauceti-text {
+	color: #9fa8da !important;
 }
