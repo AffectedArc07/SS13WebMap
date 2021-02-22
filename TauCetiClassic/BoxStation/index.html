@@ -63,8 +63,8 @@
             "crs": L.CRS.Simple
         };
         const image_config = {
-            "map":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/TauCetiClassic/BoxStation/boxstation-1.png"}],
-            "pipenet":[]
+            "map":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/tcc/box/boxstation-1.png"}],
+            "pipenet":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/tcc/box/boxstation-1-pipe.png"}]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
@@ -73,7 +73,7 @@
 
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
-        L.control.layers(lazylayers.mapOpt).addTo(webmap);
+        L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
         attachListener(webmap, bounds);
     </script>
 </body>

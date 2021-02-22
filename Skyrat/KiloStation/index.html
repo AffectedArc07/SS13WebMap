@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <title>SS13 WebMap | /tg/ | Pubby Station</title>
+    <title>SS13 WebMap | Skyrat | KiloStation</title>
     <link rel="shortcut icon" href="../../Files/favicon.ico" type="image/x-icon">
     <!-- Metadata -->
     <meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
-    <meta name="keywords" content="SS13, webmap, Space Station 13, /tg/station, Pubby Station" />
+    <meta name="keywords" content="SS13, webmap, Space Station 13, Skyrat, KiloStation" />
     <meta name="author" content="AffectedArc07" />
     <!-- OpenGraph Metadata -->
-    <meta property="og:title" content="SS13 WebMap | /tg/ | Pubby Station" />
+    <meta property="og:title" content="SS13 WebMap | Skyrat | KiloStation" />
     <meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/TG/PubbyStation" />
+    <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/Skyrat/KiloStation" />
     <meta property="og:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg" />
     <!-- Twitter Card data, discord apparently uses this one -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SS13 WebMap | /tg/ | Pubby Station">
+    <meta name="twitter:title" content="SS13 WebMap | Skyrat | KiloStation">
     <meta name="twitter:description" content="SS13 Web based map viewer built by AffectedArc07.">
     <meta name="twitter:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg">
     <!-- <meta name="twitter:site" content="@publisher_handle"> 
@@ -63,8 +63,12 @@
             "crs": L.CRS.Simple
         };
         const image_config = {
-            "map":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/TG/PubbyStation/PubbyStation-1.png"}],
-            "pipenet":[{"z":1,"url":"https://affectedarc07.github.io/SS13WebMap-Images/TG/PubbyStation/PubbyStation-2.png"}]
+            "map":[
+                {"z":1, "url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/kilostation/KiloStation_skyrat-1.png"},
+            ],
+            "pipenet":[
+                {"z":1, "url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/kilostation/KiloStation_skyrat-1-pipe.png"},
+            ]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
