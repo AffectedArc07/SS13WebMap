@@ -87,11 +87,6 @@ PARALLAX STUFF
 	width: 32px;
 	height: 32px;
 }
-.logo-scorpio {
-	content:url("../Logos/scorpio.png");
-	width: 32px;
-	height: 32px;
-}
 .logo-skyrat {
 	content:url("../Logos/skyrat.png");
 	width: 32px;
@@ -109,6 +104,11 @@ PARALLAX STUFF
 }
 .logo-cit {
 	content:url("../Logos/Cit.png");
+	width: 32px;
+	height: 32px;
+}
+.logo-yog {
+	content:url("../Logos/yog.png");
 	width: 32px;
 	height: 32px;
 }
