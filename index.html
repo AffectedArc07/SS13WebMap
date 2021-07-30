@@ -76,7 +76,7 @@
     <div class="container center">
         <h1 class="white-text">SS13 WebMap</h1>
         <p class="white-text"><b>Created by AffectedArc07</b></p>
-        <p class="white-text">Special thanks to <b>Letter_N</b> (For HTML theming), And to <b>atlanta_ned</b> (For Docker tech support)</p>
+        <p class="white-text">Special thanks to <b>Letter_N</b> (For HTML theming).</p>
         <a class="btn ss13-blue" href="https://github.com/AffectedArc07/SS13WebMap"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</a>
         <a class="btn ss13-blue" href="https://discordapp.com/invite/pjBpxHa"><i class="fab fa-discord"></i>&nbsp;&nbsp;Discord (Request maps here)</a>
         <a class="btn ss13-blue" href="https://ko-fi.com/affectedarc07"><i class="fas fa-pound-sign"></i>&nbsp;&nbsp;Donate</a>
@@ -150,7 +150,7 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header blue-text valign-wrapper"><img class="logo-cit"><i class="material-icons">arrow_drop_down</i>Citadel RP</div>
+                <div class="collapsible-header blue-text valign-wrapper"><img class="logo-cit"><i class="material-icons">arrow_drop_down</i>Citadel RP<i class="nsfw_marker"></i></div>
                 <div class="collapsible-body white-text left-align">
                     <a class="btn ss13-blue" href="CitadelRP/Polaris/">Polaris</a>
                     <a class="btn ss13-blue" href="CitadelRP/SouthernCross/">SouthernCross</a>
@@ -159,7 +159,7 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header blue-text valign-wrapper"><img class="logo-cit"><i class="material-icons">arrow_drop_down</i>Citadel Station</div>
+                <div class="collapsible-header blue-text valign-wrapper"><img class="logo-cit"><i class="material-icons">arrow_drop_down</i>Citadel Station<i class="nsfw_marker"></i></div>
                 <div class="collapsible-body white-text left-align">
                     <a class="btn ss13-blue" href="Citadel/BoxStation/">BoxStation</a>
                     <a class="btn ss13-blue" href="Citadel/CogStation/">CogStation</a>
@@ -188,6 +188,12 @@
                     <a class="btn ss13-blue" href="CMSS13/Shivas/">Shivas Snowball</a>
                     <a class="btn ss13-blue" href="CMSS13/Solaris/">Solaris Ridge</a>
                     <a class="btn ss13-blue" href="CMSS13/Trijent/">Trijent Dam</a>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header white-text valign-wrapper"><i class="material-icons">arrow_drop_down</i>Fortune 13<i class="nsfw_marker"></i></div>
+                <div class="collapsible-body white-text left-align">
+                    <a class="btn ss13-blue" href="Fortune13/Pahrump/">Pahrump</a>
                 </div>
             </li>
             <li>
@@ -255,7 +261,7 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header cyan-text valign-wrapper"><img class="logo-skyrat"><i class="material-icons">arrow_drop_down</i>Skyrat13</div>
+                <div class="collapsible-header cyan-text valign-wrapper"><img class="logo-skyrat"><i class="material-icons">arrow_drop_down</i>Skyrat13<i class="nsfw_marker"></i></div>
                 <div class="collapsible-body white-text left-align">
                     <a class="btn ss13-blue" href="Skyrat/DeltaStation/">DeltaStation</a>
                     <a class="btn ss13-blue" href="Skyrat/IceBoxStation/">IceBoxStation</a>
@@ -329,5 +335,14 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
     <script src="./Files/Retrieve.min.js"></script>
 </body>
-
+<script>
+    // dont stab me lettrn please
+    var nsfw_tags = document.getElementsByClassName("nsfw_marker");
+    while(nsfw_tags.length > 0) {
+        var my_tag = nsfw_tags.item(0);
+        my_tag.innerHTML = "warning";
+        my_tag.classList = "material-icons orange-text";
+        my_tag.title = "NSFW Server\nThis server denotes itself as 18+.\nI do not control or condone the content on the maps.\nYou have been warned.";
+    }
+</script>
 </html>
