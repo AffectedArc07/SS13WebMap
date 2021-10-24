@@ -55,6 +55,7 @@ PARALLAX STUFF
 .logo {
 	width: 32px;
 	height: 32px;
+	image-rendering: auto;
 }
 .ss13-blue {
 	background-color: #40628a !important;
