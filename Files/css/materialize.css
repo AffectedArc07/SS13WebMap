@@ -2353,7 +2353,7 @@ audio:not([controls]) {
  */
 img {
   border-style: none;
-  image-rendering: pixelated;
+  image-rendering: auto;
 
 }
 
