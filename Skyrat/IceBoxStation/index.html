@@ -64,11 +64,15 @@
         };
         const image_config = {
             "map":[
-                {"z":1,"name":"Top","url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IceBoxStation_skyrat-1.png"},
-                {"z":2,"name":"Middle","url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IcemoonUnderground_Above_skyrat-1.png"},
-                {"z":3,"name":"Bottom","url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IcemoonUnderground_Below_skyrat-1.png"},
+                {"z":1,"name":"Station","url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IceBoxStation_skyrat-3.png"},
+                {"z":2,"name":"Lower 1","url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IceBoxStation_skyrat-2.png"},
+                {"z":3,"name":"Lower 2","url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IceBoxStation_skyrat-1.png"},
             ],
-            "pipenet":[]
+            "pipenet":[
+                {"z":1, "name": "Station", "url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IceBoxStation_skyrat-3-pipe.png"},
+                {"z":2, "name": "Lower 1", "url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IceBoxStation_skyrat-2-pipe.png"},
+                {"z":3, "name": "Lower 2", "url":"https://mocha.affectedarc07.co.uk/webmap/skyrat-tg/icebox/IceBoxStation_skyrat-1-pipe.png"},
+            ]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
