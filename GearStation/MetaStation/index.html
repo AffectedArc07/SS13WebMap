@@ -36,7 +36,7 @@
         $(window).load(function() {
             // Animate loader off screen
             $(".loader").fadeOut("slow");
-            initFTL("E");
+            initFTL("E", "tg");
         });
     </script>
     <script>
@@ -63,7 +63,8 @@
             "crs": L.CRS.Simple
         };
         const image_config = {
-            "map":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/gearstation/metastation/MetaStation-1.png"}]
+            "map":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/gearstation/metastation/MetaStation-1.png"}],
+            "pipenet":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/gearstation/metastation/MetaStation-1-pipe.png"}]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
@@ -73,6 +74,7 @@
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
         L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
+        attachListener(webmap, bounds);
     </script>
 </body>
 
