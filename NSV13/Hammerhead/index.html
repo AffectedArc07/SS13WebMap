@@ -3,21 +3,21 @@
 <html lang="en">
 
 <head>
-    <title>SS13 WebMap | WhiteDream | BoxStation</title>
+    <title>SS13 WebMap | NSV13 | Hammerhead</title>
     <link rel="shortcut icon" href="../../Files/favicon.ico" type="image/x-icon">
     <!-- Metadata -->
     <meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
-    <meta name="keywords" content="SS13, webmap, Space Station 13, WhiteDream, BoxStation" />
+    <meta name="keywords" content="SS13, webmap, Space Station 13, NSV13, Hammerhead" />
     <meta name="author" content="AffectedArc07" />
     <!-- OpenGraph Metadata -->
-    <meta property="og:title" content="SS13 WebMap | WhiteDream | BoxStation" />
+    <meta property="og:title" content="SS13 WebMap | NSV13 | Hammerhead" />
     <meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/WhiteDream/BoxStation" />
+    <meta property="og:url" content="https://affectedarc07.github.io/SS13WebMap/NSV13/Hammerhead" />
     <meta property="og:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg" />
     <!-- Twitter Card data, discord apparently uses this one -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="SS13 WebMap | WhiteDream | BoxStation">
+    <meta name="twitter:title" content="SS13 WebMap | NSV13 | Hammerhead">
     <meta name="twitter:description" content="SS13 Web based map viewer built by AffectedArc07.">
     <meta name="twitter:image" content="https://affectedarc07.github.io/SS13WebMap/Files/images/webmap-logo.jpg">
     <!-- <meta name="twitter:site" content="@publisher_handle"> 
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="../../Files/css/leaflet.min.css">
     <!-- Import scripts-->
     <script src="../../Files/leaflet.js"></script>
-    <script src="../../Files/coords.min.js"></script>
+    <script src="../../Files/coords.min.js?some=randomquery"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
@@ -37,7 +37,7 @@
         $(window).load(function() {
             // Animate loader off screen
             $(".loader").fadeOut("slow");
-            initFTL("E");
+            initFTL("E","tg",-20);
         });
     </script>
     <script>
@@ -65,10 +65,9 @@
         };
         const image_config = {
             "map":[
-                {"z":1, "name": "Upper Level" ,"url":"https://mocha.affectedarc07.co.uk/webmap/whitedream/boxstation/BoxStationWhite-1.png"},
-                {"z":2, "name": "Lower Level" ,"url":"https://mocha.affectedarc07.co.uk/webmap/whitedream/boxstation/BoxStationWhite-2.png"},
+                {"z":1,"name":"Main Deck","url":"https://mocha.affectedarc07.co.uk/webmap/nsv/hammerhead/Hammerhead-1.png"},
             ],
-            "pipenet": []
+            "pipenet":[]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
@@ -78,6 +77,7 @@
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
         L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
+        attachListener(webmap, bounds);
     </script>
 </body>
 
