@@ -63,7 +63,10 @@
             "crs": L.CRS.Simple
         };
         const image_config = {
-            "map":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/lima/LimaStation-1.png"}],
+            "map":[
+                {"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/lima/LimaStation-2.png","name": "Main"},
+                {"z":2,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/lima/LimaStation-1.png","name": "Sub Layer"}
+            ],
             "pipenet": []
         };
         var webmap = L.map('webmap', map_config);
