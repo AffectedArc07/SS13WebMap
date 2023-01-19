@@ -36,7 +36,7 @@
         $(window).load(function() {
             // Animate loader off screen
             $(".loader").fadeOut("slow");
-            initFTL("E");
+            initFTL("E", "tg");
         });
     </script>
     <script>
@@ -67,7 +67,10 @@
                 {"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/lima/LimaStation-2.png","name": "Main"},
                 {"z":2,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/lima/LimaStation-1.png","name": "Sub Layer"}
             ],
-            "pipenet": []
+            "pipenet": [
+                {"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/lima/LimaStation-2-pipe.png","name": "Main"},
+                {"z":2,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/lima/LimaStation-1-pipe.png","name": "Sub Layer"}
+            ]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);

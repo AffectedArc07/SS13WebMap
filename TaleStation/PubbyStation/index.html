@@ -36,7 +36,7 @@
         $(window).load(function() {
             // Animate loader off screen
             $(".loader").fadeOut("slow");
-            initFTL("E");
+            initFTL("E", "tg");
         });
     </script>
     <script>
@@ -64,7 +64,7 @@
         };
         const image_config = {
             "map":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/pubby/PubbyStation-1.png"}],
-            "pipenet":[]
+            "pipenet":[{"z":1,"url":"https://mocha.affectedarc07.co.uk/webmap/talestation/pubby/PubbyStation-1-pipe.png"}]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
