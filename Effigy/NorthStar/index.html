@@ -36,7 +36,7 @@
         $(window).load(function() {
             // Animate loader off screen
             $(".loader").fadeOut("slow");
-            initFTL("E");
+            initFTL("E", "tg");
         });
     </script>
     <script>
@@ -69,7 +69,12 @@
                 {"z":3, "name": "Med + Sci", "url":"https://mocha.affectedarc07.co.uk/webmap/effigy/northstar/north_star-2.png"},
                 {"z":4, "name": "Supply + Engi", "url":"https://mocha.affectedarc07.co.uk/webmap/effigy/northstar/north_star-1.png"}
             ],
-            "pipenet":[]
+            "pipenet":[
+                {"z":1, "name": "Command", "url":"https://mocha.affectedarc07.co.uk/webmap/effigy/northstar/north_star-4-pipe.png"},
+                {"z":2, "name": "Service", "url":"https://mocha.affectedarc07.co.uk/webmap/effigy/northstar/north_star-3-pipe.png"},
+                {"z":3, "name": "Med + Sci", "url":"https://mocha.affectedarc07.co.uk/webmap/effigy/northstar/north_star-2-pipe.png"},
+                {"z":4, "name": "Supply + Engi", "url":"https://mocha.affectedarc07.co.uk/webmap/effigy/northstar/north_star-1-pipe.png"}
+            ]
         };
         var webmap = L.map('webmap', map_config);
         webmap.fitBounds(bounds);
@@ -79,6 +84,7 @@
         var lazylayers = bakeLayers(image_config, webmap, bounds);
         console.info(lazylayers);
         L.control.layers(lazylayers.mapOpt, lazylayers.pipenet).addTo(webmap);
+        attachListener(webmap, bounds);
     </script>
 </body>
 
