@@ -1,0 +1,128 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+/*
+PARALLAX STUFF
+*/
+@keyframes loop_N {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 960px;
+    }
+}
+
+@keyframes loop_S {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 0 -960px;
+    }
+}
+
+@keyframes loop_E {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -960px 0;
+    }
+}
+
+@keyframes loop_W {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 960px 0;
+    }
+}
+
+.parallax_layer1, .parallax_layer2, .parallax_layer3,
+.fancy_parallax_layer1, .fancy_parallax_layer2, .fancy_parallax_layer3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: repeat;
+    animation: 400s linear infinite;
+    z-index: -1;
+}
+
+.parallax_layer1 {
+    background-image: url("../img/parallax/layer1.png");
+}
+
+.parallax_layer2 {
+    background-image: url("../img/parallax/layer2.png");
+}
+
+.parallax_layer3 {
+    background-image: url("../img/parallax/layer3.png");
+}
+
+.fancy_parallax_layer1 {
+    background-image: url("../img/parallax/layer1_fancy.png");
+}
+
+.fancy_parallax_layer2 {
+    background-image: url("../img/parallax/layer2_fancy.png");
+}
+
+.fancy_parallax_layer3 {
+    background-image: url("../img/parallax/layer3_fancy.png");
+}
+
+.page_loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("../img/loader.gif") center no-repeat #272727;
+}
+
+.codebase_logo {
+    width: 32px;
+    height: 32px;
+    image-rendering: auto;
+}
+
+/* BS5 Overrides */
+.accordion-button {
+    --bs-accordion-btn-bg: var(--bs-dark);
+    --bs-accordion-btn-color: var(--bs-white);
+    --bs-accordion-btn-icon: initial;
+    --bs-accordion-btn-active-icon: initial;
+    --bs-accordion-active-bg: var(--bs-dark);
+    --bs-accordion-active-color: var(--bs-white);
+    --bs-accordion-btn-focus-box-shadow: initial;
+}
+.accordion {
+    --bs-accordion-bg: var(--bs-dark);
+    --bs-accordion-color: var(--bs-white);
+    --bs-accordion-border-color: var(--bs-white);
+    --bs-accordion-border-width: 0px;
+}

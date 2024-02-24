@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container text-center mt-5">
+    <h1 class="display-1 text-white">SS13 WebMap</h1>
+    <p class="text-white"><b>Created by AffectedArc07</b></p>
+    <p class="text-white">Special thanks to <b>Letter_N</b> for HTML theming and JS support.</p>
+    <a class="btn btn-primary" href="https://github.com/AffectedArc07/SS13WebMap"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</a>
+    <a class="btn btn-primary" href="https://github.com/AffectedArc07/SS13WebMap/tree/master/MAP_REQUESTING.MD"><i class="fas fa-folder-plus"></i>&nbsp;&nbsp;How to get your map on here</a>
+    <a class="btn btn-primary" href="https://onlyfaans.net/"><i class="fas fa-pound-sign"></i>&nbsp;&nbsp;Donate</a>
+    <a class="btn btn-primary" href="https://affectedarc07.co.uk/webmap/status.php"><i class="fas fa-server"></i>&nbsp;&nbsp;Status</a>
+
+    <div class="accordion text-start mt-3" id="homepage_accordion">
+        <div class="accordion-item border-1 border-white">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#psa_collapsible" aria-expanded="false" aria-controls="psa_collapsible">
+                    <i class="fas fa-angle-down"></i>&nbsp;&nbsp;<span class="badge bg-secondary">NOTICE</span>&nbsp;&nbsp;PSA for server Headcoders/Maintainers
+                </button>
+            </h2>
+            <div id="psa_collapsible" class="accordion-collapse collapse" data-bs-parent="#homepage_accordion">
+                <div class="accordion-body">
+                    I do <b>NOT</b> actively track repositories and their map rotation. Getting a new map added or an old map removed is entirely on you or your playerbase to request.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item border-1 border-white">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq_collapsible" aria-expanded="false" aria-controls="faq_collapsible">
+                    <i class="fas fa-angle-down"></i>&nbsp;&nbsp;FAQ
+                </button>
+            </h2>
+            <div id="faq_collapsible" class="accordion-collapse collapse" data-bs-parent="#homepage_accordion">
+                <div class="accordion-body">
+                    <h2 class="fs-5">What is this?</h2>
+                    <p>This is a small project made by me to help newcomers learn the SS13 maps easier</p>
+                    <h2 class="fs-5">How do I get a map here?</h2>
+                    <p>Read the document linked on the <span class="badge bg-secondary">How to get your map on here</span> button.</p>
+                    <h2 class="fs-5">How often is this updated?</h2>
+                    <p>All current codebases will automatically update any time a map edit on a specific codebase is made.</p>
+                    <h2 class="fs-5">Why do some servers have coloured names, icons and fancy parallax?</h2>
+                    <p>These servers have been granted fancy status. In return, they get fancy parralax, coordinate readout on the maps, their icon in the list, pipenet overlays (some conditions apply) and a colour in the list</p>
+                    <h2 class="fs-5">How do I get fancy status?</h2>
+                    <p>Simply post a link to this to your playerbase to shout out the project, then you will be granted fancy status</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item border-1 border-white">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <i class="fas fa-angle-down"></i>&nbsp;&nbsp;Codebase XYZ
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#homepage_accordion">
+                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@using SS13WebMap.Models.Pages;
+@model PageModelBase;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Metadata -->
+    <meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
+    <meta name="keywords" content="SS13, webmap, Space Station 13" />
+    <meta name="author" content="AffectedArc07" />
+    <!-- OpenGraph Metadata -->
+    <meta property="og:title" content="SS13 WebMap" />
+    <meta property="og:description" content="SS13 Web based map viewer built by AffectedArc07." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://webmap.affectedarc07.co.uk/" />
+    <meta property="og:image" content="https://webmap.affectedarc07.co.uk/img/logo.jpg" />
+    <!-- Twitter Card data, discord apparently uses this one -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SS13 WebMap">
+    <meta name="twitter:description" content="SS13 Web based map viewer built by AffectedArc07.">
+    <meta name="twitter:image" content="https://webmap.affectedarc07.co.uk/img/logo.jpg">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>@ViewData["Title"] - SS13WebMap</title>
+    <link rel="stylesheet" href="~/css/webmap.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SS13WebMap.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/fontawesome/css/all.min.css" asp-append-version="true" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
+</head>
+<body>
+    <div class="page_loader"></div>
+    <div id="parallax_layer1"></div>
+    <div id="parallax_layer2"></div>
+    <div id="parallax_layer3"></div>
+    <main role="main">
+        @RenderBody()
+    </main>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/extras.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        // Parallax Start
+        let parallax_type = "@Model.GetParallaxType()";
+        let parallax_dir = "@Model.GetParallaxDirection()";
+        let speed_modifier = @Model.ParallaxSpeedModifier;
+        
+        // Fade out the loader
+        $(".page_loader").fadeOut("slow");
+        initFTL(parallax_dir, parallax_type, speed_modifier);
+    </script>
+</body>
+</html>
