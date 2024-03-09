@@ -116,6 +116,57 @@ namespace SS13WebMap {
                     },
                 }
             } },
+            
+            // BlueMoon
+            { "bluemoon", new Codebase {
+                CodebaseId = "bluemoon",
+                CodebaseName = "BlueMoon",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "armystation", MapName = "ArmyStation", MapHeight = 180, MapWidth = 255,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "ArmyStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "boxstation", MapName = "BoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "BoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "cogstation", MapName = "CogStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "CogStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "kilostation", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "omegastation", MapName = "OmegaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "OmegaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "pubbystation", MapName = "PubbyStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "PubbyStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "syndicateboxstation", MapName = "SyndicateStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "SyndicateBoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "taustation", MapName = "TauStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "TauStation", "1" },
+                        }
+                    },
+                }
+            } },
 
             // Chaotic Onyx
             { "onyx", new Codebase {
