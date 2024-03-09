@@ -1,4 +1,5 @@
-﻿using SS13WebMap.Models.Codebase;
+﻿using SS13WebMap.Models.Backend;
+using SS13WebMap.Models.Codebase;
 
 namespace SS13WebMap {
     public class CodebaseData {
@@ -38,7 +39,7 @@ namespace SS13WebMap {
                 }
             } },
 
-            // AquilaStation
+            // AuStation
             { "austation", new Codebase {
                 CodebaseId = "austation",
                 CodebaseName = "AuStation",
@@ -49,6 +50,68 @@ namespace SS13WebMap {
                 GameMaps = new List<GameMap>() {
                     new GameMap { MapId = "austation", MapName = "Austation", Layers = new List<string[]> {
                             new string[] { "Base Map", "Austation", "1" },
+                        }
+                    },
+                }
+            } },
+
+            // Baystation 12
+            { "bay12", new Codebase {
+                CodebaseId = "bay12",
+                CodebaseName = "Baystation 12",
+                TextColour = "#e65100",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/bay12.svg",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "torch", MapName = "SEV Torch", MapHeight = 200, MapWidth = 200, ParallaxDirection = ParallaxDirection.East, ParallaxSpeedModifier = -20,
+                        Layers = new List<string[]> {
+                            new string[] { "Bridge Deck", "torch6_bridge", "1" },
+                            new string[] { "Deck 1 - Operations", "torch5_deck1", "1" },
+                            new string[] { "Deck 2 - Maintenance", "torch4_deck2", "1" },
+                            new string[] { "Deck 3 - Habitation", "torch3_deck3", "1" },
+                            new string[] { "Deck 4 - Supply", "torch2_deck4", "1" },
+                            new string[] { "Deck 5 - Hangar", "torch1_deck5", "1" },
+                        }
+                    },
+                }
+            } },
+
+            // Beestation
+            { "bee", new Codebase {
+                CodebaseId = "bee",
+                CodebaseName = "BeeStation",
+                TextColour = "#ffc107",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/bee.webp",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "boxstation", MapName = "BoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "BoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "corgstation", MapName = "CorgStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "CorgStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "flandstation", MapName = "FlandStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "FlandStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "kilostation", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "radstation", MapName = "RadStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "RadStation", "1" },
                         }
                     },
                 }
