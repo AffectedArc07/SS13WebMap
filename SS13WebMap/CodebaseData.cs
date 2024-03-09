@@ -35,6 +35,52 @@ namespace SS13WebMap {
                 }
             } },
 
+            // GoonStation
+            { "goon", new Codebase {
+                CodebaseId = "goon",
+                CodebaseName = "GoonStation",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "atlas", MapName = "Atlas", Layers = new List<string[]> {
+                            new string[] { "Base Map", "atlas", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "clarion", MapName = "Clarion", Layers = new List<string[]> {
+                            new string[] { "Base Map", "clarion", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "cogmap", MapName = "Cogmap", Layers = new List<string[]> {
+                            new string[] { "Base Map", "cogmap", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "cogmap2", MapName = "Cogmap2", Layers = new List<string[]> {
+                            new string[] { "Base Map", "cogmap2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "destiny", MapName = "Destiny", Layers = new List<string[]> {
+                            new string[] { "Base Map", "destiny", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "donut", MapName = "Donut", Layers = new List<string[]> {
+                            new string[] { "Base Map", "donut3", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "horizon", MapName = "Horizon", Layers = new List<string[]> {
+                            new string[] { "Base Map", "horizon", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "manta", MapName = "Manta", Layers = new List<string[]> {
+                            new string[] { "Base Map", "manta", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "oshan", MapName = "Oshan", Layers = new List<string[]> {
+                            new string[] { "Base Map", "oshan", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Paradise
             { "paradise", new Codebase {
                 CodebaseId = "paradise",
