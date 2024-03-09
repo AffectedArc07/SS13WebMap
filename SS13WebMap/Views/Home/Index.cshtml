@@ -12,7 +12,7 @@
     <a class="btn btn-primary" target="_blank" href="https://onlyfaans.net/"><i class="fas fa-pound-sign"></i>&nbsp;&nbsp;Donate</a>
     <a class="btn btn-primary" target="_blank" href="https://affectedarc07.co.uk/webmap/status.php"><i class="fas fa-server"></i>&nbsp;&nbsp;Status</a>
 
-    <div class="accordion text-start mt-3" id="homepage_accordion">
+    <div class="accordion text-start mt-3 mb-5" id="homepage_accordion">
         <div class="accordion-item border-1 border-white">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#psa_collapsible" aria-expanded="false" aria-controls="psa_collapsible">
@@ -54,6 +54,9 @@
                             <img class="codebase_logo me-2" src="@codebase.LogoPath">
                         }
                         <i class="fas fa-angle-down"></i>&nbsp;&nbsp;@codebase.CodebaseName
+                        @if(codebase.IsAdult) {
+                            <span class="ms-2 text-warning" data-bs-toggle="tooltip" data-bs-title="This server denotes itself as 18+. I do not control or condone the content on the maps. You have been warned."><i class="fas fa-exclamation-triangle"></i></span>
+                        }
                     </button>
                 </h2>
                 <div id="cbcollapse-@codebase.CodebaseId" class="accordion-collapse collapse" data-bs-parent="#homepage_accordion">

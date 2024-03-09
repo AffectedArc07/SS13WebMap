@@ -181,6 +181,106 @@ namespace SS13WebMap {
                     },
                 }
             } },
+            
+            // Citadel RP
+            /* Disabled until someone tells me what on earth is going on
+            { "citrp", new Codebase {
+                CodebaseId = "citrp",
+                CodebaseName = "Citadel Station (RP)",
+                TextColour = "#2196f3",
+                FancySupport = true,
+                IsAdult = true,
+                LogoPath = "img/logos/cit.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "atlas", MapName = "Atlas", MapWidth = 192, MapHeight = 192,
+                        Layers = new List<string[]> {
+                            new string[] { "Z1", "rift-01-underground3", "1" },
+                            new string[] { "Z2", "rift-02-underground2", "1" },
+                            new string[] { "Z3", "rift-03-underground1", "1" },
+                            new string[] { "Z4", "rift-04-surface1", "1" },
+                            new string[] { "Z5", "rift-05-surface2", "1" },
+                            new string[] { "Z6", "rift-06-surface3", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "polaris", MapName = "Polaris", MapWidth = 300, MapHeight = 300,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "polaris-1", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "southerncross", MapName = "SouthernCross ", MapWidth = 300, MapHeight = 300,
+                        Layers = new List<string[]> {
+                            new string[] { "Z1", "southern_cross-1", "1" },
+                            new string[] { "Z2", "southern_cross-1", "2" },
+                            new string[] { "Z3", "southern_cross-1", "3" },
+                        }
+                    },
+                    new GameMap { MapId = "tether", MapName = "Tether", MapWidth = 300, MapHeight = 300,
+                        Layers = new List<string[]> {
+                            new string[] { "Surface 1", "tether-01-surface1", "1" },
+                            new string[] { "Surface 2", "tether-02-surface2", "1" },
+                            new string[] { "Surface 3", "tether-03-surface3", "1" },
+                            new string[] { "Transit", "tether-04-transit", "1" },
+                            new string[] { "Station 1", "tether-05-station1", "1" },
+                            new string[] { "Station 2", "tether-06-station2", "1" },
+                            new string[] { "Station 3", "tether-07-station3", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "triumph", MapName = "Triupmh", MapWidth = 192, MapHeight = 192,
+                        Layers = new List<string[]> {
+                            new string[] { "Z1", "deck1", "1" },
+                            new string[] { "Z2", "deck2", "1" },
+                            new string[] { "Z3", "deck3", "1" },
+                            new string[] { "Z4", "deck4", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "virgo", MapName = "Virgo", MapWidth = 300, MapHeight = 300,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "virgo-1", "1" },
+                        }
+                    },
+                }
+            } },
+            */
+
+            // Citadel TG
+            { "cit", new Codebase {
+                CodebaseId = "cit",
+                CodebaseName = "Citadel Station (TG)",
+                TextColour = "#2196f3",
+                FancySupport = true,
+                IsAdult = true,
+                LogoPath = "img/logos/cit.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "boxstation", MapName = "BoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "BoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "cogstation", MapName = "CogStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "CogStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "lambdastation", MapName = "LambdaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "lambda", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "omegastation", MapName = "OmegaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "OmegaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "pubbystation", MapName = "PubbyStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "PubbyStation", "1" },
+                        }
+                    },
+                }
+            } },
 
             // Chaotic Onyx
             { "onyx", new Codebase {

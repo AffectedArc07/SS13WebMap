@@ -182,3 +182,6 @@ for (let elem of codebase_header_elems) {
         elem.style.color = elem.getAttribute("webmap-fancy-colour");
     }
 }
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
