@@ -6,6 +6,38 @@ namespace SS13WebMap {
         /// The main data holder for all codebases.
         /// </summary>
         public static Dictionary<string, Codebase> Codebases = new Dictionary<string, Codebase>() {
+            // AquilaStation
+            { "aquila", new Codebase {
+                CodebaseId = "aquila",
+                CodebaseName = "AquilaStation",
+                TextColour = "#f44336",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/aquila.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "atlantis", MapName = "Atlantis", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "Atlantis2", "1" },
+                            new string[] { "Lower Deck", "Atlantis", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "atlas", MapName = "Atlas", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "atlas2", "1" },
+                            new string[] { "Lower Deck", "atlas", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "serendipity", MapName = "Serendipity", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "Serendipity1", "1" },
+                            new string[] { "Lower Deck", "Serendipity2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "snake", MapName = "Snake", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "snake_upper", "1" },
+                            new string[] { "Lower Deck", "snake_lower", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Chaotic Onyx
             { "onyx", new Codebase {
                 CodebaseId = "onyx",
@@ -31,7 +63,7 @@ namespace SS13WebMap {
                             new string[] { "CC Level", "genesis-3", "1" },
                             new string[] { "Mining Outpost", "genesis-6", "1" },
                         }
-                    }
+                    },
                 }
             } },
 
@@ -105,7 +137,7 @@ namespace SS13WebMap {
                     new GameMap { MapId = "metastation", MapName = "MetaStation (NSS Cerebron)", Layers = new List<string[]> {
                             new string[] { "Base Map", "MetaStation", "1" },
                         }
-                    }
+                    },
                 }
             } },
         };

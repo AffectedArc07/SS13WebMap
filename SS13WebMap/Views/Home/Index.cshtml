@@ -51,7 +51,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed codebase-header-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cbcollapse-@codebase.CodebaseId" aria-expanded="false" aria-controls="cbcollapse-@codebase.CodebaseId" webmap-fancy="@(codebase.FancySupport ? "y" : "n")" webmap-fancy-colour="@codebase.TextColour">
                         @if(codebase.FancySupport) {
-                            <img class="codebase_logo" src="~/img/logos/paradisess13.png">
+                            <img class="codebase_logo me-2" src="@codebase.LogoPath">
                         }
                         <i class="fas fa-angle-down"></i>&nbsp;&nbsp;@codebase.CodebaseName
                     </button>
