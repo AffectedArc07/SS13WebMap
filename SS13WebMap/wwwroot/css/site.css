@@ -94,6 +94,8 @@ PARALLAX STUFF
     background-image: url("../img/parallax/layer3_fancy.png");
 }
 
+/* Extra Styles */
+
 .page_loader {
     position: fixed;
     left: 0px;
@@ -108,6 +110,18 @@ PARALLAX STUFF
     width: 32px;
     height: 32px;
     image-rendering: auto;
+}
+
+#webmap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+img {
+    border-style: none;
+    image-rendering: pixelated
 }
 
 /* BS5 Overrides */
@@ -125,4 +139,10 @@ PARALLAX STUFF
     --bs-accordion-color: var(--bs-white);
     --bs-accordion-border-color: var(--bs-white);
     --bs-accordion-border-width: 0px;
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+    background: transparent !important;
+    outline: 0 !important;
 }

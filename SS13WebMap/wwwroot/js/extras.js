@@ -173,3 +173,12 @@ function ss132leaflet(coords, bounds) {
     latlng.lng = coords.x - 1;
     return latlng
 }
+
+// Homescreen stuff
+let codebase_header_elems = document.getElementsByClassName("codebase-header-btn");
+for (let elem of codebase_header_elems) {
+    if (elem.getAttribute("webmap-fancy") == "y") {
+        // I will never forgive american spelling
+        elem.style.color = elem.getAttribute("webmap-fancy-colour");
+    }
+}

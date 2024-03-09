@@ -1,0 +1,19 @@
+﻿@using SS13WebMap.Models.Pages;
+@model MapPage;
+@{
+    ViewData["Title"] = $"{Model.CodebaseName} | {Model.MapName}";
+}
+
+@section ExtraCss {
+    <link rel="stylesheet" href="~/lib/leaflet/leaflet.css" asp-append-version="true" />
+}
+
+<span class="d-none" id="codebase_id">@Model.CodebaseId</span>
+<span class="d-none" id="map_id">@Model.MapId</span>
+
+<div id="webmap"></div>
+
+@section Scripts {
+    <script src="~/lib/leaflet/leaflet.js" asp-append-version="true"></script>
+    <script src="~/js/webmap.js" asp-append-version="true"></script>
+}

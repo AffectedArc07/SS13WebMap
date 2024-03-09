@@ -13,7 +13,7 @@ namespace SS13WebMap.Controllers {
         }
 
         /// <summary>
-        /// The one route that does all the grunt work
+        /// The homepage route
         /// </summary>
         public IActionResult Index() {
             PageModelBase base_page = new() {

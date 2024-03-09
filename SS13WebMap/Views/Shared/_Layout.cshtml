@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <!-- Metadata -->
     <meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
     <meta name="keywords" content="SS13, webmap, Space Station 13" />
@@ -24,11 +24,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>@ViewData["Title"] - SS13WebMap</title>
+    @if(string.IsNullOrWhiteSpace((string)ViewData["Title"])) {
+        <title>SS13WebMap</title>
+    } else {
+        <title>SS13WebMap | @ViewData["Title"]</title>
+    }
+
     <link rel="stylesheet" href="~/css/webmap.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SS13WebMap.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/fontawesome/css/all.min.css" asp-append-version="true" />
+    @await RenderSectionAsync("ExtraCss", required: false)
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
 </head>
 <body>
@@ -41,7 +47,6 @@
     </main>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/extras.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script>

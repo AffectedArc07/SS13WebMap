@@ -22,7 +22,8 @@ namespace SS13WebMap {
             app.UseRouting();
             app.UseAuthorization();
 
-            // Map our default
+            // Map our controllers
+            app.MapControllers();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}");

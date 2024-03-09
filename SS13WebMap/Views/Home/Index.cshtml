@@ -1,15 +1,16 @@
 ﻿@{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "";
 }
+@using SS13WebMap.Models.Codebase;
 
 <div class="container text-center mt-5">
     <h1 class="display-1 text-white">SS13 WebMap</h1>
     <p class="text-white"><b>Created by AffectedArc07</b></p>
     <p class="text-white">Special thanks to <b>Letter_N</b> for HTML theming and JS support.</p>
-    <a class="btn btn-primary" href="https://github.com/AffectedArc07/SS13WebMap"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</a>
-    <a class="btn btn-primary" href="https://github.com/AffectedArc07/SS13WebMap/tree/master/MAP_REQUESTING.MD"><i class="fas fa-folder-plus"></i>&nbsp;&nbsp;How to get your map on here</a>
-    <a class="btn btn-primary" href="https://onlyfaans.net/"><i class="fas fa-pound-sign"></i>&nbsp;&nbsp;Donate</a>
-    <a class="btn btn-primary" href="https://affectedarc07.co.uk/webmap/status.php"><i class="fas fa-server"></i>&nbsp;&nbsp;Status</a>
+    <a class="btn btn-primary" target="_blank" href="https://github.com/AffectedArc07/SS13WebMap"><i class="fab fa-github"></i>&nbsp;&nbsp;GitHub</a>
+    <a class="btn btn-primary" target="_blank" href="https://github.com/AffectedArc07/SS13WebMap/tree/master/MAP_REQUESTING.MD"><i class="fas fa-folder-plus"></i>&nbsp;&nbsp;How to get your map on here</a>
+    <a class="btn btn-primary" target="_blank" href="https://onlyfaans.net/"><i class="fas fa-pound-sign"></i>&nbsp;&nbsp;Donate</a>
+    <a class="btn btn-primary" target="_blank" href="https://affectedarc07.co.uk/webmap/status.php"><i class="fas fa-server"></i>&nbsp;&nbsp;Status</a>
 
     <div class="accordion text-start mt-3" id="homepage_accordion">
         <div class="accordion-item border-1 border-white">
@@ -45,15 +46,25 @@
                 </div>
             </div>
         </div>
-        <div class="accordion-item border-1 border-white">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    <i class="fas fa-angle-down"></i>&nbsp;&nbsp;Codebase XYZ
-                </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#homepage_accordion">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        @foreach (Codebase codebase in CodebaseData.Codebases.Values) {
+            <div class="accordion-item border-1 border-white">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed codebase-header-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cbcollapse-@codebase.CodebaseId" aria-expanded="false" aria-controls="cbcollapse-@codebase.CodebaseId" webmap-fancy="@(codebase.FancySupport ? "y" : "n")" webmap-fancy-colour="@codebase.TextColour">
+                        @if(codebase.FancySupport) {
+                            <img class="codebase_logo" src="~/img/logos/paradisess13.png">
+                        }
+                        <i class="fas fa-angle-down"></i>&nbsp;&nbsp;@codebase.CodebaseName
+                    </button>
+                </h2>
+                <div id="cbcollapse-@codebase.CodebaseId" class="accordion-collapse collapse" data-bs-parent="#homepage_accordion">
+                    <div class="accordion-body">
+                        @foreach(GameMap map in codebase.GameMaps) {
+                            <a class="btn btn-primary" href="/maps/@codebase.CodebaseId/@map.MapId/">@map.MapName</a>
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
+        }
+
     </div>
 </div>
