@@ -168,6 +168,20 @@ namespace SS13WebMap {
                 }
             } },
 
+            // BurgerStation
+            { "burger", new Codebase {
+                CodebaseId = "burger",
+                CodebaseName = "BurgerStation",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "burgerstation", MapName = "BurgerStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "burgerstation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Chaotic Onyx
             { "onyx", new Codebase {
                 CodebaseId = "onyx",
