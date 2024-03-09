@@ -143,7 +143,7 @@ function readquery() {
  * @returns {L.polygon} - Returns the polygon that got created
  */
 function newpoly(webmap, config = { "fill": false, "color": '#40628a', "weight": 5 }) {
-    const c = ["Poly wanna cracker!", "Check the crystal, you chucklefucks!", "Stop wasting precius bytes on the webmap Adri!!", "Wire the solars, you lazy bums!", "Stop breaking the webmap!!!", "WHO TOOK THE DAMN HARDSUITS?", "The console blares, GET https://www.googletagmanager.com/gtag/js?id=UA-115958323-1 net::ERR_BLOCKED_BY_CLIENT", "CE, the clown ran \"rm -rf /\" on the NTNet station map server", "OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE"];
+    const c = ["Poly wanna cracker!", "Check the crystal, you chucklefucks!", "Stop wasting precius bytes on the webmap Adri!!", "Wire the solars, you lazy bums!", "Stop breaking the webmap!!!", "WHO TOOK THE DAMN HARDSUITS?", "The console blares, GET https://www.googletagmanager.com/gtag/js?id=G-B9W79LHL1W net::ERR_BLOCKED_BY_CLIENT", "CE, the clown ran \"rm -rf /\" on the NTNet station map server", "OH GOD ITS ABOUT TO DELAMINATE CALL THE SHUTTLE"];
     console.warn("Poly " + ["squawks", "says", "yells"][Math.floor(Math.random() * 3)] + ", " + c[Math.floor(Math.random() * c.length)]);
     return L.polygon([], config).addTo(webmap)
 }

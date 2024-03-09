@@ -4,6 +4,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9W79LHL1W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B9W79LHL1W');
+    </script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <!-- Metadata -->
     <meta name="description" content="SS13 Web based map viewer built by AffectedArc07" />
@@ -24,7 +32,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    @if(string.IsNullOrWhiteSpace((string)ViewData["Title"])) {
+    @if (string.IsNullOrWhiteSpace((string)ViewData["Title"])) {
         <title>SS13WebMap</title>
     } else {
         <title>SS13WebMap | @ViewData["Title"]</title>
@@ -35,7 +43,6 @@
     <link rel="stylesheet" href="~/SS13WebMap.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/fontawesome/css/all.min.css" asp-append-version="true" />
     @await RenderSectionAsync("ExtraCss", required: false)
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115958323-1"></script>
 </head>
 <body>
     <div class="page_loader"></div>
@@ -54,7 +61,7 @@
         let parallax_type = "@Model.GetParallaxType()";
         let parallax_dir = "@Model.GetParallaxDirection()";
         let speed_modifier = @Model.ParallaxSpeedModifier;
-        
+
         // Fade out the loader
         $(".page_loader").fadeOut("slow");
         initFTL(parallax_dir, parallax_type, speed_modifier);
