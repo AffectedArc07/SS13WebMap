@@ -38,6 +38,22 @@ namespace SS13WebMap {
                 }
             } },
 
+            // AquilaStation
+            { "austation", new Codebase {
+                CodebaseId = "austation",
+                CodebaseName = "AuStation",
+                TextColour = "#ffc107",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/austation.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "austation", MapName = "Austation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Austation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Chaotic Onyx
             { "onyx", new Codebase {
                 CodebaseId = "onyx",
