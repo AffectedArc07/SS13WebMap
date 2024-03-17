@@ -362,6 +362,20 @@ namespace SS13WebMap {
                 }
             } },
 
+            // Daedalus
+            { "daedalus", new Codebase {
+                CodebaseId = "daedalus",
+                CodebaseName = "Daedalus Dock",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "daedalusmeta", MapName = "DaedalusMeta", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // GoonStation
             { "goon", new Codebase {
                 CodebaseId = "goon",
