@@ -183,7 +183,6 @@ namespace SS13WebMap {
             } },
             
             // Citadel RP
-            /* Disabled until someone tells me what on earth is going on
             { "citrp", new Codebase {
                 CodebaseId = "citrp",
                 CodebaseName = "Citadel Station (RP)",
@@ -192,55 +191,40 @@ namespace SS13WebMap {
                 IsAdult = true,
                 LogoPath = "img/logos/cit.png",
                 GameMaps = new List<GameMap>() {
-                    new GameMap { MapId = "atlas", MapName = "Atlas", MapWidth = 192, MapHeight = 192,
+                    new GameMap { MapId = "atlas", MapName = "NSB Atlas (Rift)", MapWidth = 192, MapHeight = 192,
                         Layers = new List<string[]> {
-                            new string[] { "Z1", "rift-01-underground3", "1" },
-                            new string[] { "Z2", "rift-02-underground2", "1" },
-                            new string[] { "Z3", "rift-03-underground1", "1" },
-                            new string[] { "Z4", "rift-04-surface1", "1" },
-                            new string[] { "Z5", "rift-05-surface2", "1" },
-                            new string[] { "Z6", "rift-06-surface3", "1" },
+                            new string[] { "Surface 3 (Command Deck)", "rift-06-surface3", "1" },
+                            new string[] { "Surface 2 (Operations Deck)", "rift-05-surface2", "1" },
+                            new string[] { "Surface 1 (Logistics Deck)", "rift-04-surface1", "1" },
+                            new string[] { "Underground -1 (Maintenance Deck)", "rift-03-underground1", "1" },
+                            new string[] { "Underground -2 (Operations Deck)", "rift-02-underground2", "1" },
+                            new string[] { "Underground -3 (Logistics Deck)", "rift-01-underground3", "1" },
+                            new string[] { "Western Plains", "rift-10-west_plains", "1" },
+                            new string[] { "Western Caves (Shallow)", "rift-09-west_caves", "1" },
+                            new string[] { "Western Caves (Deep)", "rift-08-west_deep", "1" },
+                            new string[] { "Western Canyons", "rift-07-west_base", "1" },
                         }
                     },
-                    new GameMap { MapId = "polaris", MapName = "Polaris", MapWidth = 300, MapHeight = 300,
+                    new GameMap { MapId = "tether", MapName = "NSB Adephagia (Tether)", MapWidth = 192, MapHeight = 192,
                         Layers = new List<string[]> {
-                            new string[] { "Base Map", "polaris-1", "1" },
+                            new string[] { "Station 2 (Logistics Deck)", "station2", "1" },
+                            new string[] { "Station 1 (Engineering Deck)", "station1", "1" },
+                            new string[] { "Surface 3 (Service and Command)", "surface3", "1" },
+                            new string[] { "Surface 2 (Research and Life Support)", "surface2", "1" },
+                            new string[] { "Surface 1 (Lobby and External)", "surface1", "1" },
                         }
                     },
-                    new GameMap { MapId = "southerncross", MapName = "SouthernCross ", MapWidth = 300, MapHeight = 300,
+                    new GameMap { MapId = "triumph", MapName = "NSV Triumph", MapWidth = 192, MapHeight = 192,
                         Layers = new List<string[]> {
-                            new string[] { "Z1", "southern_cross-1", "1" },
-                            new string[] { "Z2", "southern_cross-1", "2" },
-                            new string[] { "Z3", "southern_cross-1", "3" },
-                        }
-                    },
-                    new GameMap { MapId = "tether", MapName = "Tether", MapWidth = 300, MapHeight = 300,
-                        Layers = new List<string[]> {
-                            new string[] { "Surface 1", "tether-01-surface1", "1" },
-                            new string[] { "Surface 2", "tether-02-surface2", "1" },
-                            new string[] { "Surface 3", "tether-03-surface3", "1" },
-                            new string[] { "Transit", "tether-04-transit", "1" },
-                            new string[] { "Station 1", "tether-05-station1", "1" },
-                            new string[] { "Station 2", "tether-06-station2", "1" },
-                            new string[] { "Station 3", "tether-07-station3", "1" },
-                        }
-                    },
-                    new GameMap { MapId = "triumph", MapName = "Triupmh", MapWidth = 192, MapHeight = 192,
-                        Layers = new List<string[]> {
-                            new string[] { "Z1", "deck1", "1" },
-                            new string[] { "Z2", "deck2", "1" },
-                            new string[] { "Z3", "deck3", "1" },
-                            new string[] { "Z4", "deck4", "1" },
-                        }
-                    },
-                    new GameMap { MapId = "virgo", MapName = "Virgo", MapWidth = 300, MapHeight = 300,
-                        Layers = new List<string[]> {
-                            new string[] { "Base Map", "virgo-1", "1" },
+                            new string[] { "Deck 4 (Command Deck)", "deck4", "1" },
+                            new string[] { "Deck 3 (Operations Deck)", "deck3", "1" },
+                            new string[] { "Deck 2 (Service Deck)", "deck2", "1" },
+                            new string[] { "Deck 1 (Engineering Deck)", "deck1", "1" },
+
                         }
                     },
                 }
             } },
-            */
 
             // Citadel TG
             { "cit", new Codebase {
