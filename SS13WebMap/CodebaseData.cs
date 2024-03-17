@@ -295,6 +295,73 @@ namespace SS13WebMap {
                 }
             } },
 
+            // CM-SS13
+            { "cm", new Codebase {
+                CodebaseId = "cm",
+                CodebaseName = "CM-SS13",
+                TextColour = "#e91e63",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/cm.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "almayer", MapName = "USS Almayer", MapWidth = 300, MapHeight = 201,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "USS_Almayer", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "fiorina", MapName = "Fiorina Science Annex", MapWidth = 255, MapHeight = 210,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "Fiorina_SciAnnex", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "kutjevo", MapName = "Kutjevo Refinery", MapWidth = 240, MapHeight = 165,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "Kutjevo", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "lv522", MapName = "LV522", MapWidth = 193, MapHeight = 225,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "LV522_Chances_Claim", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "lv624", MapName = "LV624", MapWidth = 175, MapHeight = 226,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "LV624", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "newvaradero", MapName = "New Varadero", MapWidth = 220, MapHeight = 180,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "New_Varadero", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "shivas", MapName = "Shivas Snowball", MapWidth = 220, MapHeight = 160,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "Shivas_Snowball", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "solaris", MapName = "Solaris Ridge", MapWidth = 225, MapHeight = 215,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "BigRed", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "sorokyne", MapName = "Sorokyne Strata", MapWidth = 256, MapHeight = 193,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "Sorokyne_Strata", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "trijent", MapName = "Trijent Dam", MapWidth = 245, MapHeight = 232,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "Desert_Dam", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "whiskey", MapName = "Whiskey Outpost", MapWidth = 130, MapHeight = 200,
+                        Layers = new List<string[]> {
+                            new string[] { "Main Level", "Whiskey_Outpost_v2", "1" },
+                        }
+                    },
+                }
+            } },
+
             // GoonStation
             { "goon", new Codebase {
                 CodebaseId = "goon",
