@@ -436,6 +436,28 @@ namespace SS13WebMap {
                 }
             } },
 
+            // Fulp
+            { "fulp", new Codebase {
+                CodebaseId = "fulp",
+                CodebaseName = "FulpStation",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "heliostation", MapName = "HelioStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Heliostation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "pubbystation", MapName = "PubbyStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "PubbyStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "selenestation", MapName = "SeleneStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "SeleneStation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // GoonStation
             { "goon", new Codebase {
                 CodebaseId = "goon",
