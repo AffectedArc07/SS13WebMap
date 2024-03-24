@@ -457,6 +457,36 @@ namespace SS13WebMap {
                     },
                 }
             } },
+            
+            // GearStation
+            { "gearstation", new Codebase {
+                CodebaseId = "gearstation",
+                CodebaseName = "GearStation",
+                TextColour = "#b2ebf2",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/gearstation.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "deltastation", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "icebox", MapName = "IceBoxStation", Layers = new List<string[]> {
+                            new string[] { "Station", "IceBoxStation", "3" },
+                            new string[] { "Lower 1", "IceBoxStation", "2" },
+                            new string[] { "Lower 2", "IceBoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "kilostation", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                }
+            } },
 
             // GoonStation
             { "goon", new Codebase {
