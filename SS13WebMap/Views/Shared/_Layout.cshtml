@@ -55,16 +55,14 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/extras.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
     <script>
         // Parallax Start
         let parallax_type = "@Model.GetParallaxType()";
         let parallax_dir = "@Model.GetParallaxDirection()";
         let speed_modifier = @Model.ParallaxSpeedModifier;
 
-        // Fade out the loader
-        $(".page_loader").fadeOut("slow");
         initFTL(parallax_dir, parallax_type, speed_modifier);
     </script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
