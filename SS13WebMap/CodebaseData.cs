@@ -394,6 +394,48 @@ namespace SS13WebMap {
                 }
             } },
 
+            // Effigy
+            { "effigy", new Codebase {
+                CodebaseId = "effigy",
+                CodebaseName = "Effigy",
+                TextColour = "#69f0ae",
+                FancySupport = true,
+                IsAdult = true,
+                LogoPath = "img/logos/effigy.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "foxholestation", MapName = "FoxHoleStation", Layers = new List<string[]> {
+                            new string[] { "Lower Hole", "foxholestation", "1" },
+                            new string[] { "Upper Hole", "foxholestation", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "icebox", MapName = "IceBoxStation", Layers = new List<string[]> {
+                            new string[] { "Station", "IceBoxStation", "3" },
+                            new string[] { "Lower 1", "IceBoxStation", "2" },
+                            new string[] { "Lower 2", "IceBoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "rimpoint", MapName = "RimPoint", Layers = new List<string[]> {
+                            new string[] { "Ground Level", "RimPoint", "1" },
+                            new string[] { "Upper Level", "RimPoint", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "sigmaoctantis", MapName = "SigmaOctantis", Layers = new List<string[]> {
+                            new string[] { "Lower Level", "SigmaOctantis", "1" },
+                            new string[] { "Upper Level", "SigmaOctantis", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "tramstation", MapName = "TramStation", Layers = new List<string[]> {
+                            new string[] { "Upper Level", "tramstation", "2" },
+                            new string[] { "Lower Level", "tramstation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // GoonStation
             { "goon", new Codebase {
                 CodebaseId = "goon",
