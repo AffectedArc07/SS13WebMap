@@ -181,6 +181,24 @@ namespace SS13WebMap {
                     },
                 }
             } },
+
+            // Eris
+            { "eris", new Codebase {
+                CodebaseId = "eris",
+                CodebaseName = "CEV Eris",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "eris", MapName = "CEV Eris", Layers = new List<string[]> {
+                            new string[] { "Z1", "_CEV_Eris", "1" },
+                            new string[] { "Z2", "_CEV_Eris", "2" },
+                            new string[] { "Z3", "_CEV_Eris", "3" },
+                            new string[] { "Z4", "_CEV_Eris", "4" },
+                            new string[] { "Z5", "_CEV_Eris", "5" },
+                        }
+                    },
+                }
+            } },
             
             // Citadel RP
             { "citrp", new Codebase {
