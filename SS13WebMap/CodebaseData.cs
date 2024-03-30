@@ -534,6 +534,52 @@ namespace SS13WebMap {
                 }
             } },
 
+            // Lumos
+            { "lumos", new Codebase {
+                CodebaseId = "lumos",
+                CodebaseName = "Lumos",
+                FancySupport = false,
+                IsAdult = true,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "boxstation", MapName = "BoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "BoxStation_Lumos", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2_Lumos", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "fridgestation", MapName = "FridgeStation", Layers = new List<string[]> {
+                            new string[] { "Top", "FridgeStation", "1" },
+                            new string[] { "Middle", "IcemoonUnderground_Fridge_Above", "1" },
+                            new string[] { "Bottom", "IcemoonUnderground_Fridge_Below", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "lavaland", MapName = "Lavaland", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Lavaland_Lumos", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation_Lumos", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "omegastation", MapName = "OmegaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "OmegaStation_Lumos", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "pubbystation", MapName = "PubbyStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "PubbyStation_Lumos", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "snaxi", MapName = "Snaxi", Layers = new List<string[]> {
+                            new string[] { "Top", "Snaxi_Lumos", "1" },
+                            new string[] { "Middle", "IcemoonUnderground_Above_Lumos", "1" },
+                            new string[] { "Bottom", "IcemoonUnderground_Below_Lumos", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Paradise
             { "paradise", new Codebase {
                 CodebaseId = "paradise",
