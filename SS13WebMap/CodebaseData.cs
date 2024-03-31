@@ -669,6 +669,24 @@ namespace SS13WebMap {
                     },
                 }
             } },
+
+            // SinguloStation
+            { "singulo", new Codebase {
+                CodebaseId = "singulo",
+                CodebaseName = "SinguloStation",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "construction", MapName = "ConstructionStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "ConstructionStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "cryo", MapName = "CryoStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "CryoStation", "1" },
+                        }
+                    },
+                }
+            } },
         };
     }
 }
