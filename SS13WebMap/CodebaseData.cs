@@ -840,6 +840,34 @@ namespace SS13WebMap {
                     },
                 }
             } },
+            
+            // YogStation
+            { "yog", new Codebase {
+                CodebaseId = "yog",
+                CodebaseName = "YogStation",
+                TextColour = "#eb78a0",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/yog.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "asteroid", MapName = "AsteroidStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "AsteroidStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "gaxstation", MapName = "GaxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "GaxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "yogstation", MapName = "YogStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "YogStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "yogsmeta", MapName = "YogsMeta", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Yogsmeta", "1" },
+                        }
+                    },
+                }
+            } },
         };
     }
 }
