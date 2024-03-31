@@ -733,6 +733,31 @@ namespace SS13WebMap {
                     },
                 }
             } },
+            
+            // TaleStation
+            { "talestation", new Codebase {
+                CodebaseId = "talestation",
+                CodebaseName = "TaleStation",
+                TextColour = "#ef423b",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/talestation.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "kilo", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "lima", MapName = "LimaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "LimaStation", "2" },
+                            new string[] { "Sub Layer", "LimaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "pubby", MapName = "PubbyStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "PubbyStation", "1" },
+                        }
+                    },
+                }
+            } },
         };
     }
 }
