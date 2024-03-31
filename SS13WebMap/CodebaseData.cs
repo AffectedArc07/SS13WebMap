@@ -794,6 +794,52 @@ namespace SS13WebMap {
                     },
                 }
             } },
+            
+            // /tg/station
+            { "tgstation", new Codebase {
+                CodebaseId = "tgstation",
+                CodebaseName = "/tg/Station",
+                TextColour = "#5bff8e",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/tg.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "birdshot", MapName = "Birdshot", Layers = new List<string[]> {
+                            new string[] { "Base Map", "birdshot", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "icebox", MapName = "IceBoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "IceBoxStation", "3" },
+                            new string[] { "Lower 1", "IceBoxStation", "2" },
+                            new string[] { "Lower 2", "IceBoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "kilostation", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "northstar", MapName = "NorthStar", Layers = new List<string[]> {
+                            new string[] { "Engi + Cargo", "north_star", "1" },
+                            new string[] { "Medsci", "north_star", "2" },
+                            new string[] { "Service", "north_star", "3" },
+                            new string[] { "Command + Sec", "north_star", "4" },
+                        }
+                    },
+                    new GameMap { MapId = "tramstation", MapName = "TramStation", Layers = new List<string[]> {
+                            new string[] { "Upper Level", "tramstation", "2" },
+                            new string[] { "Lower Level", "tramstation", "1" },
+                        }
+                    },
+                }
+            } },
         };
     }
 }
