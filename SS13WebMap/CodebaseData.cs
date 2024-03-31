@@ -580,6 +580,68 @@ namespace SS13WebMap {
                 }
             } },
 
+            // NSV13
+            { "nsv", new Codebase {
+                CodebaseId = "nsv",
+                CodebaseName = "NSV13",
+                TextColour = "#b867c5",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/nsv.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "aetherwhisp", MapName = "Aetherwhisp", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "Aetherwhisp2", "1" },
+                            new string[] { "Bottom Deck", "Aetherwhisp1", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "atlas", MapName = "Atlas", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "atlas2", "1" },
+                            new string[] { "Bottom Deck", "atlas", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "eclipse", MapName = "Eclipse", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "Eclipse2", "1" },
+                            new string[] { "Bottom Deck", "Eclipse1", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "galactica", MapName = "Galactica", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "Galactica1", "1" },
+                            new string[] { "Bottom Deck", "Galactica2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "gladius", MapName = "Gladius", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "Gladius2", "1" },
+                            new string[] { "Bottom Deck", "Gladius1", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "hammerhead", MapName = "Hammerhead", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Hammerhead", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "serendipity", MapName = "Serendipity", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "Serendipity1", "1" },
+                            new string[] { "Bottom Deck", "Serendipity2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "shrike", MapName = "Shrike", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "Shrike1", "1" },
+                            new string[] { "Bottom Deck", "Shrike2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "snake", MapName = "Snake", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "snake_upper", "1" },
+                            new string[] { "Bottom Deck", "snake_lower", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "tycoon", MapName = "Tycoon", MapWidth = 300, MapHeight = 300,
+                        Layers = new List<string[]> {
+                            new string[] { "Top Deck", "Tycoon1", "1" },
+                            new string[] { "Bottom Deck", "Tycoon2", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Paradise
             { "paradise", new Codebase {
                 CodebaseId = "paradise",
