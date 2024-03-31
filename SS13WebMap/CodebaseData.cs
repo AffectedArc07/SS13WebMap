@@ -758,6 +758,42 @@ namespace SS13WebMap {
                     },
                 }
             } },
+
+            // Tau Ceti Classic
+            { "tcc", new Codebase {
+                CodebaseId = "tcc",
+                CodebaseName = "Tau Ceti Classic",
+                TextColour = "#a0a8d8",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/tauceti.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "asteroid", MapName = "Asteroid", Layers = new List<string[]> {
+                            new string[] { "Base Map", "asteroid", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "box", MapName = "BoxStation (NSS Exodus)", Layers = new List<string[]> {
+                            new string[] { "Base Map", "boxstation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "falcon", MapName = "Falcon", Layers = new List<string[]> {
+                            new string[] { "Base Map", "falcon", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "gamma", MapName = "Gamma (NSS Gamma)", Layers = new List<string[]> {
+                            new string[] { "Base Map", "gamma", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "prometheus", MapName = "Prometheus", Layers = new List<string[]> {
+                            new string[] { "Base Map", "prometheus", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "prometheus_asteroid", MapName = "Prometheus Asteroid", Layers = new List<string[]> {
+                            new string[] { "Base Map", "prometheus_asteroid", "1" },
+                        }
+                    },
+                }
+            } },
         };
     }
 }
