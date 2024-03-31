@@ -841,6 +841,112 @@ namespace SS13WebMap {
                 }
             } },
             
+            // TGMC
+            { "tgmc", new Codebase {
+                CodebaseId = "tgmc",
+                CodebaseName = "TerraGov Marine Corps",
+                TextColour = "#2ebffc",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/tgmc.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "arachne", MapName = "Arachne", MapWidth = 150, MapHeight = 100,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "TGS_Arachne", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "barrenquilla", MapName = "Barrenquilla Mining Facility", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Barrenquilla_Mining_Facility", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "bigred", MapName = "BigRed", MapWidth = 225, MapHeight = 215,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "BigRed_v2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "chigusa", MapName = "Chigusa", MapWidth = 245, MapHeight = 232,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "desertdam", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "desert", MapName = "Desert Outpost", Layers = new List<string[]> {
+                            new string[] { "Base Map", "desert", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "gelidaiv", MapName = "Gelida IV", MapWidth = 175, MapHeight = 220,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "gelida_iv", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "icecolony", MapName = "Ice Colony", MapWidth = 202, MapHeight = 210,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "Ice_Colony_v2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "icycaves", MapName = "Icy Caves", MapWidth = 158, MapHeight = 154,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "icy_caves", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "lv624", MapName = "LV 624", MapWidth = 220, MapHeight = 180,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "LV624", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "lawankaoutpost", MapName = "Lawanka Outpost", MapWidth = 230, MapHeight = 215,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "LawankaOutpost", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "magmoordigsiteiv", MapName = "Magmoor Digsite IV", MapWidth = 200, MapHeight = 231,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "Magmoor_Digsite_IV", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "minerva", MapName = "Minerva", MapWidth = 145, MapHeight = 96,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "TGS_Minerva", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "orion", MapName = "Orion Military Outpost", MapWidth = 170, MapHeight = 130,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "orionoutpost", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "pillarofspring", MapName = "Pillar Of Spring", Layers = new List<string[]> {
+                            new string[] { "Base Map", "TGS_Pillar_of_Spring", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "prisonstation", MapName = "Prison Station", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Prison_Station_FOP", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "researchoutpost", MapName = "Research Outpost", MapWidth = 165, MapHeight = 130,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "Research_Outpost", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "slumbridge", MapName = "Slumbridge", MapWidth = 200, MapHeight = 179,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "slumbridge", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "sulaco", MapName = "Sulaco", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Sulaco", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "theseus", MapName = "TGS Theseus", Layers = new List<string[]> {
+                            new string[] { "Base Map", "TGS_Theseus", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "whiskey_outpost", MapName = "Whiskey Outpost", MapWidth = 121, MapHeight = 135,
+                        Layers = new List<string[]> {
+                            new string[] { "Base Map", "Whiskey_Outpost_v2", "1" },
+                        }
+                    },
+                }
+            } },
+            
             // YogStation
             { "yog", new Codebase {
                 CodebaseId = "yog",
