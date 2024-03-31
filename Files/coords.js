@@ -173,3 +173,13 @@ function ss132leaflet(coords, bounds){
     latlng.lng = coords.x - 1;
     return latlng
 }
+
+window.onload = function() {
+    console.log("yes");
+    let new_elem = document.createElement("h3");
+    new_elem.classList.add("yellow");
+    new_elem.style.zIndex = -200;
+    new_elem.innerHTML = "This site is now deprecated - please use <a href='https://webmap.affectedarc07.co.uk/'>https://webmap.affectedarc07.co.uk/</a>.";
+    document.getElementsByTagName("body")[0].prepend(new_elem);
+    console.log("please");
+}
