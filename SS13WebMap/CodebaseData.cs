@@ -384,11 +384,13 @@ namespace SS13WebMap {
             { "daedalus", new Codebase {
                 CodebaseId = "daedalus",
                 CodebaseName = "Daedalus Dock",
-                FancySupport = false,
+                TextColour = "#008bcc",
+                FancySupport = true,
                 IsAdult = false,
+                LogoPath = "img/logos/daedalus.png",
                 GameMaps = new List<GameMap>() {
-                    new GameMap { MapId = "daedalusmeta", MapName = "DaedalusMeta", Layers = new List<string[]> {
-                            new string[] { "Base Map", "MetaStation", "1" },
+                    new GameMap { MapId = "theseus", MapName = "Theseus", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Theseus", "1" },
                         }
                     },
                 }
