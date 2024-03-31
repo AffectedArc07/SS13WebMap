@@ -687,6 +687,28 @@ namespace SS13WebMap {
                     },
                 }
             } },
+
+            // Skyrat
+            { "skyrat-tg", new Codebase {
+                CodebaseId = "skyrat-tg",
+                CodebaseName = "Skyrat",
+                TextColour = "#2bbcd2",
+                FancySupport = true,
+                IsAdult = true,
+                LogoPath = "img/logos/skyrat.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "blueshift", MapName = "BlueShift", Layers = new List<string[]> {
+                            new string[] { "Top Deck", "BlueShift_upper", "1" },
+                            new string[] { "Middle Deck", "BlueShift_middle", "1" },
+                            new string[] { "Bottom Deck", "BlueShift_lower", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "voidraptor", MapName = "VoidRaptor", Layers = new List<string[]> {
+                            new string[] { "Base Map", "VoidRaptor", "1" },
+                        }
+                    },
+                }
+            } },
         };
     }
 }
