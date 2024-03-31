@@ -709,6 +709,30 @@ namespace SS13WebMap {
                     },
                 }
             } },
+
+            // SS220 Paradise
+            { "ss220", new Codebase {
+                CodebaseId = "ss220",
+                CodebaseName = "SS220 Paradise",
+                TextColour = "#9574ca",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/ss220.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "cyberiad", MapName = "BoxStation (NSS Cyberiad) / Кибериада", Layers = new List<string[]> {
+                            new string[] { "Base Map", "cyberiad", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "cerestation", MapName = "CereStation (NSS Farragus) / Фаррагус", Layers = new List<string[]> {
+                            new string[] { "Base Map", "cerestation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "Delta Station (NSS Kerberos) / Керберос", Layers = new List<string[]> {
+                            new string[] { "Base Map", "delta", "1" },
+                        }
+                    },
+                }
+            } },
         };
     }
 }
