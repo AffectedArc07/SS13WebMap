@@ -98,6 +98,13 @@ namespace SS13WebMap {
                             new string[] { "Base Map", "DeltaStation2", "1" },
                         }
                     },
+                    new GameMap { MapId = "echostation", MapName = "EchoStation", Layers = new List<string[]> {
+                            new string[] { "Surface", "EchoStation", "4" },
+                            new string[] { "Underground 1", "EchoStation", "3" },
+                            new string[] { "Underground 2", "EchoStation", "2" },
+                            new string[] { "Underground 3", "EchoStation", "1" },
+                        }
+                    },
                     new GameMap { MapId = "flandstation", MapName = "FlandStation", Layers = new List<string[]> {
                             new string[] { "Base Map", "FlandStation", "1" },
                         }
