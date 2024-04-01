@@ -122,7 +122,7 @@ namespace SS13WebMap {
                 CodebaseId = "bluemoon",
                 CodebaseName = "BlueMoon",
                 FancySupport = false,
-                IsAdult = false,
+                IsAdult = true,
                 GameMaps = new List<GameMap>() {
                     new GameMap { MapId = "armystation", MapName = "ArmyStation", MapHeight = 180, MapWidth = 255,
                         Layers = new List<string[]> {
