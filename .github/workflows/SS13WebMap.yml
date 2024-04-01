@@ -2,7 +2,7 @@ name: Build and deploy .NET Core application to Web App SS13WebMap
 on:
   push:
     branches:
-    - next
+    - master
 env:
   AZURE_WEBAPP_NAME: SS13WebMap
   AZURE_WEBAPP_PACKAGE_PATH: SS13WebMap/published
