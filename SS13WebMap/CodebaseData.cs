@@ -445,6 +445,23 @@ namespace SS13WebMap {
                 }
             } },
 
+            // Foundation 19
+            { "foundation19", new Codebase {
+                CodebaseId = "foundation19",
+                CodebaseName = "Foundation 19",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "site53", MapName = "Site 53", Layers = new List<string[]> {
+                            new string[] { "Level 1", "site53-1", "1" },
+                            new string[] { "Level 2", "site53-2", "1" },
+                            new string[] { "Level 3", "site53-3", "1" },
+                            new string[] { "Level 4", "site53-4", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Fulp
             { "fulp", new Codebase {
                 CodebaseId = "fulp",
