@@ -1015,16 +1015,16 @@ namespace SS13WebMap {
         /// <summary>
         /// Sum of total normal layers. This is done here as a static to not cause runtime load.
         /// </summary>
-        private static int TotalNormalLayers = Codebases.Where(x => !x.Value.FancySupport).Sum(x => x.Value.GameMaps.Sum(x => x.Layers.Count));
+        public static int TotalNormalLayers = Codebases.Sum(x => x.Value.GameMaps.Sum(x => x.Layers.Count));
 
         /// <summary>
-        /// Sum of total fancy layers, which is the above but counting fancy, then multiplying by 2. This is done here as a static to not cause runtime load.
+        /// Sum of total pipe layers, which is the above but counting fancy codebases. This is done here as a static to not cause runtime load.
         /// </summary>
-        private static int TotalFancyLayers = Codebases.Where(x => x.Value.FancySupport).Sum(x => x.Value.GameMaps.Sum(x => x.Layers.Count)) * 2;
+        private static int TotalPipeLayers = Codebases.Where(x => x.Value.FancySupport).Sum(x => x.Value.GameMaps.Sum(x => x.Layers.Count));
 
         /// <summary>
         /// Sum of total layers. This is done here as a static to not cause runtime load.
         /// </summary>
-        public static int TotalLayers = TotalNormalLayers + TotalFancyLayers;
+        public static int TotalLayers = TotalNormalLayers + TotalPipeLayers;
     }
 }
