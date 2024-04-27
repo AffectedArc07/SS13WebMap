@@ -606,6 +606,32 @@ namespace SS13WebMap {
                 }
             } },
 
+            // NovaSector
+            { "nova", new Codebase {
+                CodebaseId = "nova",
+                CodebaseName = "NovaSector",
+                TextColour = "#205bff",
+                FancySupport = true,
+                IsAdult = true,
+                LogoPath = "img/logos/novasector.png",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "blueshift", MapName = "Blueshift", Layers = new List<string[]> {
+                            new string[] { "Bottom Deck", "Blueshift", "1" },
+                            new string[] { "Top Deck", "Blueshift", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "ouroboros", MapName = "Ouroboros", Layers = new List<string[]> {
+                            new string[] { "Bottom Deck", "Ouroboros", "1" },
+                            new string[] { "Top Deck", "Ouroboros", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "voidraptor", MapName = "VoidRaptor", Layers = new List<string[]> {
+                            new string[] { "Base Map", "VoidRaptor", "1" },
+                        }
+                    },
+                }
+            } },
+
             // NSV13
             { "nsv", new Codebase {
                 CodebaseId = "nsv",
