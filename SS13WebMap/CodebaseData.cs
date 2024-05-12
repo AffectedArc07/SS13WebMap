@@ -762,14 +762,14 @@ namespace SS13WebMap {
                 }
             } },
 
-            // SS220 Paradise
-            { "ss220", new Codebase {
+            // SS1984 Paradise
+            { "ss220", new Codebase { // The ID has to stay as SS220 as thats where the maps are under
                 CodebaseId = "ss220",
-                CodebaseName = "SS220 Paradise",
+                CodebaseName = "SS1984 Paradise",
                 TextColour = "#9574ca",
                 FancySupport = true,
                 IsAdult = false,
-                LogoPath = "img/logos/ss220.png",
+                LogoPath = "img/logos/ss1984.png",
                 GameMaps = new List<GameMap>() {
                     new GameMap { MapId = "cyberiad", MapName = "BoxStation (NSS Cyberiad) / Кибериада", Layers = new List<string[]> {
                             new string[] { "Base Map", "cyberiad", "1" },
