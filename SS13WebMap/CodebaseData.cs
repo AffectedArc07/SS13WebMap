@@ -762,9 +762,10 @@ namespace SS13WebMap {
                 }
             } },
 
+            
             // SS1984 Paradise
-            { "ss220", new Codebase { // The ID has to stay as SS220 as thats where the maps are under
-                CodebaseId = "ss220",
+            { "ss1984", new Codebase {
+                CodebaseId = "ss1984",
                 CodebaseName = "SS1984 Paradise",
                 TextColour = "#9574ca",
                 FancySupport = true,
@@ -781,6 +782,27 @@ namespace SS13WebMap {
                     },
                     new GameMap { MapId = "deltastation", MapName = "Delta Station (NSS Kerberos) / Керберос", Layers = new List<string[]> {
                             new string[] { "Base Map", "delta", "1" },
+                        }
+                    },
+                }
+            } },
+
+            { "ss220", new Codebase {
+                CodebaseId = "ss220",
+                CodebaseName = "SS220",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "boxstation", MapName = "BoxStation (NSS Cyberiad) / Кибериада", Layers = new List<string[]> {
+                            new string[] { "Base Map", "boxstation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "Delta Station (NSS Kerberos) / Керберос", Layers = new List<string[]> {
+                            new string[] { "Base Map", "deltastation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation (NSS Cerebron) / Цереброн", Layers = new List<string[]> {
+                            new string[] { "Base Map", "metastation", "1" },
                         }
                     },
                 }
