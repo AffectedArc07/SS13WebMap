@@ -606,6 +606,40 @@ namespace SS13WebMap {
                 }
             } },
 
+            
+            // Monkestation
+            { "monkestation", new Codebase {
+                CodebaseId = "monkestation",
+                CodebaseName = "Monkestation",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "boxstation", MapName = "BoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "BoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "deltastation", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "icebox", MapName = "IceBoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "IceBoxStation", "3" },
+                            new string[] { "Lower 1", "IceBoxStation", "2" },
+                            new string[] { "Lower 2", "IceBoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "tramstation", MapName = "TramStation", Layers = new List<string[]> {
+                            new string[] { "Upper Level", "tramstation", "2" },
+                            new string[] { "Lower Level", "tramstation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // NovaSector
             { "nova", new Codebase {
                 CodebaseId = "nova",
