@@ -806,6 +806,12 @@ namespace SS13WebMap {
                 IsAdult = false,
                 LogoPath = "img/logos/ss1984.png",
                 GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "celestation", MapName = "NSS Celestation / Селестия", Layers = new List<string[]> {
+                            new string[] { "Basement", "celestation", "1" },
+                            new string[] { "Main Floor", "celestation", "2" },
+                            new string[] { "Second Floor", "celestation", "3" },
+                        }
+                    },
                     new GameMap { MapId = "cyberiad", MapName = "BoxStation (NSS Cyberiad) / Кибериада", Layers = new List<string[]> {
                             new string[] { "Base Map", "cyberiad", "1" },
                         }
