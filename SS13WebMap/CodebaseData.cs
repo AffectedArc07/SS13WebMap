@@ -830,8 +830,10 @@ namespace SS13WebMap {
             { "ss220", new Codebase {
                 CodebaseId = "ss220",
                 CodebaseName = "SS220",
-                FancySupport = false,
+                TextColour = "#209fdf",
+                FancySupport = true,
                 IsAdult = false,
+                LogoPath = "img/logos/ss220.webp",
                 GameMaps = new List<GameMap>() {
                     new GameMap { MapId = "boxstation", MapName = "BoxStation (NSS Cyberiad) / Кибериада", Layers = new List<string[]> {
                             new string[] { "Base Map", "boxstation", "1" },
