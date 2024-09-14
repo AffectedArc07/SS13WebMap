@@ -749,6 +749,10 @@ namespace SS13WebMap {
                             new string[] { "Base Map", "deltastation", "1" },
                         }
                     },
+                    new GameMap { MapId = "emeraldstation", MapName = "EmeraldStation (NSS Diagoras)", Layers = new List<string[]> {
+                            new string[] { "Base Map", "emeraldstation", "1" },
+                        }
+                    },
                     new GameMap { MapId = "metastation", MapName = "MetaStation (NSS Cerebron)", Layers = new List<string[]> {
                             new string[] { "Base Map", "metastation", "1" },
                         }
@@ -954,6 +958,10 @@ namespace SS13WebMap {
                             new string[] { "Lower Level", "tramstation", "1" },
                         }
                     },
+                    new GameMap { MapId = "wawastation", MapName = "WawaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "wawastation", "1" },
+                        }
+                    },
                 }
             } },
             
@@ -1076,16 +1084,22 @@ namespace SS13WebMap {
                             new string[] { "Base Map", "AsteroidStation", "1" },
                         }
                     },
-                    new GameMap { MapId = "gaxstation", MapName = "GaxStation", Layers = new List<string[]> {
+                    new GameMap { MapId = "donutstation", MapName = "DonutStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DonutStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "icemeta", MapName = "IceMeta", Layers = new List<string[]> {
+                            new string[] { "Surface", "IceMeta", "3" },
+                            new string[] { "Underground", "IceMeta", "2" },
+                            new string[] { "Caves", "IceMeta", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "gaxstation", MapName = "NVS Gax", Layers = new List<string[]> {
                             new string[] { "Base Map", "GaxStation", "1" },
                         }
                     },
                     new GameMap { MapId = "yogstation", MapName = "YogStation", Layers = new List<string[]> {
                             new string[] { "Base Map", "YogStation", "1" },
-                        }
-                    },
-                    new GameMap { MapId = "yogsmeta", MapName = "YogsMeta", Layers = new List<string[]> {
-                            new string[] { "Base Map", "Yogsmeta", "1" },
                         }
                     },
                 }
