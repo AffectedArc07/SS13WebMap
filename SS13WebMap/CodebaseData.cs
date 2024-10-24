@@ -239,6 +239,14 @@ namespace SS13WebMap {
                             new string[] { "Surface 1 (Lobby and External)", "surface1", "1" },
                         }
                     },
+                    new GameMap { MapId = "endeavour", MapName = "NSV Endeavour", MapWidth = 192, MapHeight = 192,
+                        Layers = new List<string[]> {
+                            new string[] { "Deck 1", "deck4", "1" },
+                            new string[] { "Deck 2", "deck3", "1" },
+                            new string[] { "Deck 3", "deck2", "1" },
+                            new string[] { "Deck 4", "deck1", "1" },
+                        }
+                    },
                     new GameMap { MapId = "triumph", MapName = "NSV Triumph", MapWidth = 192, MapHeight = 192,
                         Layers = new List<string[]> {
                             new string[] { "Deck 4 (Command Deck)", "deck4", "1" },
@@ -1080,10 +1088,6 @@ namespace SS13WebMap {
                 IsAdult = false,
                 LogoPath = "img/logos/yog.png",
                 GameMaps = new List<GameMap>() {
-                    new GameMap { MapId = "asteroid", MapName = "AsteroidStation", Layers = new List<string[]> {
-                            new string[] { "Base Map", "AsteroidStation", "1" },
-                        }
-                    },
                     new GameMap { MapId = "donutstation", MapName = "DonutStation", Layers = new List<string[]> {
                             new string[] { "Base Map", "DonutStation", "1" },
                         }
@@ -1092,6 +1096,15 @@ namespace SS13WebMap {
                             new string[] { "Surface", "IceMeta", "3" },
                             new string[] { "Underground", "IceMeta", "2" },
                             new string[] { "Caves", "IceMeta", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "manatee", MapName = "ManaeteeStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "ManateeStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "mini", MapName = "MiniStation", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "MiniStation", "1" },
+                            new string[] { "Lower Deck", "MiniStation", "2" },
                         }
                     },
                     new GameMap { MapId = "gaxstation", MapName = "NVS Gax", Layers = new List<string[]> {
