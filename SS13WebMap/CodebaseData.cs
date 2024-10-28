@@ -39,6 +39,91 @@ namespace SS13WebMap {
                 }
             } },
 
+            // ArkStation
+            { "arkstation", new Codebase {
+                CodebaseId = "arkstation",
+                CodebaseName = "Ark Station 13",
+                FancySupport = false,
+                IsAdult = true,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "blueshift", MapName = "Blueshift", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "Blueshift", "1" },
+                            new string[] { "Lower Deck", "Blueshift", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "delta", MapName = "DeltaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "DeltaStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "icebox", MapName = "Ice Box", Layers = new List<string[]> {
+                            new string[] { "Ground", "IceBoxStation", "1" },
+                            new string[] { "Underground", "IceBoxStation", "2" },
+                            new string[] { "Caves", "IceBoxStation", "3" },
+                        }
+                    },
+                    new GameMap { MapId = "journey", MapName = "NSS Journey", Layers = new List<string[]> {
+                            new string[] { "Base Map", "NSSJourney", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "kilo", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation2", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "meta", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "northstar", MapName = "North Star", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "north_star", "1" },
+                            new string[] { "Second Deck", "north_star", "2" },
+                            new string[] { "Third Deck", "north_star", "3" },
+                            new string[] { "Lower Deck", "north_star", "4" },
+                        }
+                    },
+                    new GameMap { MapId = "omega", MapName = "OmegaStation", Layers = new List<string[]> {
+                            new string[] { "Ground", "OmegaStation", "1" },
+                            new string[] { "Underground", "OmegaStation", "2" },
+                            new string[] { "Caves", "OmegaStation", "3" },
+                        }
+                    },
+                    new GameMap { MapId = "ouroboros", MapName = "Ouroboros", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "Ouroboros", "1" },
+                            new string[] { "Lower Deck", "Ouroboros", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "pubby", MapName = "PubbyStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "PubbyStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "serenity", MapName = "Serenity", Layers = new List<string[]> {
+                            new string[] { "Space Dock", "SerenityStation", "1" },
+                            new string[] { "Ground", "SerenityStation", "2" },
+                            new string[] { "Mushroom Caves", "SerenityStation", "3" },
+                        }
+                    },
+                    new GameMap { MapId = "snowglobe", MapName = "Snowglobe", Layers = new List<string[]> {
+                            new string[] { "Ground", "snowglobe", "1" },
+                            new string[] { "Underground", "snowglobe", "2" },
+                            new string[] { "Caves", "snowglobe", "3" },
+                        }
+                    },
+                    new GameMap { MapId = "tram", MapName = "TramStation", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "tramstation", "1" },
+                            new string[] { "Lower Deck", "tramstation", "2" },
+                        }
+                    },
+                    new GameMap { MapId = "voidraptor", MapName = "VoidRaptor", Layers = new List<string[]> {
+                            new string[] { "Base Map", "VoidRaptor", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "wawa", MapName = "WawaStation", Layers = new List<string[]> {
+                            new string[] { "Upper Deck", "wawastation", "1" },
+                            new string[] { "Lower Deck", "wawastation", "2" },
+                        }
+                    },
+                }
+            } },
+
             // AuStation
             { "austation", new Codebase {
                 CodebaseId = "austation",
