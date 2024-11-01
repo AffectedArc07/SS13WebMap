@@ -43,8 +43,10 @@ namespace SS13WebMap {
             { "arkstation", new Codebase {
                 CodebaseId = "arkstation",
                 CodebaseName = "Ark Station 13",
-                FancySupport = false,
-                IsAdult = true,
+                TextColour = "#2bbcd2",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/arkstation.png",
                 GameMaps = new List<GameMap>() {
                     new GameMap { MapId = "blueshift", MapName = "Blueshift", Layers = new List<string[]> {
                             new string[] { "Upper Deck", "Blueshift", "2" },
