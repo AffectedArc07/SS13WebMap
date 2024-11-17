@@ -923,6 +923,11 @@ namespace SS13WebMap {
                             new string[] { "Base Map", "delta", "1" },
                         }
                     },
+                    new GameMap { MapId = "nova", MapName = "Nova Station (NSS Nova) / Нова", Layers = new List<string[]> {
+                            new string[] { "First Floor", "nova", "1" },
+                            new string[] { "Second Floor", "nova", "2" },
+                        }
+                    },
                 }
             } },
 
