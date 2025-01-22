@@ -1195,8 +1195,8 @@ namespace SS13WebMap {
                         }
                     },
                     new GameMap { MapId = "mini", MapName = "MiniStation", Layers = new List<string[]> {
-                            new string[] { "Upper Deck", "MiniStation", "1" },
-                            new string[] { "Lower Deck", "MiniStation", "2" },
+                            new string[] { "Upper Deck", "MiniStation", "2" },
+                            new string[] { "Lower Deck", "MiniStation", "1" },
                         }
                     },
                     new GameMap { MapId = "gaxstation", MapName = "NVS Gax", Layers = new List<string[]> {
