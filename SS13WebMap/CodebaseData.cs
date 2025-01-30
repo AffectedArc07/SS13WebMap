@@ -941,7 +941,8 @@ namespace SS13WebMap {
                 LogoPath = "img/logos/ss220.webp",
                 GameMaps = new List<GameMap>() {
                     new GameMap { MapId = "cyberiad", MapName = "BoxStation (NSS Cyberiad) / Кибериада", Layers = new List<string[]> {
-                            new string[] { "Base Map", "Cyberiad", "1" },
+                            new string[] { "Main Level", "Cyberiad", "2" },
+                            new string[] { "Ghetto", "Cyberiad", "1" },
                         }
                     },
                 }
