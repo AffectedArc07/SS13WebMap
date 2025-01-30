@@ -931,9 +931,26 @@ namespace SS13WebMap {
                 }
             } },
 
+            // SS220 BandaStation
+            { "bandastation", new Codebase {
+                CodebaseId = "bandastation",
+                CodebaseName = "SS220 (BandaStation)",
+                TextColour = "#209fdf",
+                FancySupport = true,
+                IsAdult = false,
+                LogoPath = "img/logos/ss220.webp",
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "cyberiad", MapName = "BoxStation (NSS Cyberiad) / Кибериада", Layers = new List<string[]> {
+                            new string[] { "Base Map", "Cyberiad", "1" },
+                        }
+                    },
+                }
+            } },
+
+            // SS220 Paradise
             { "ss220", new Codebase {
                 CodebaseId = "ss220",
-                CodebaseName = "SS220",
+                CodebaseName = "SS220 (Paradise)",
                 TextColour = "#209fdf",
                 FancySupport = true,
                 IsAdult = false,
