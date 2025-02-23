@@ -1188,6 +1188,23 @@ namespace SS13WebMap {
                     },
                 }
             } },
+
+            // Wod13
+            { "wod13", new Codebase {
+                CodebaseId = "wod13",
+                CodebaseName = "World of Darkness 13",
+                FancySupport = false,
+                IsAdult = true,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "sanfran", MapName = "San Francisco", Layers = new List<string[]> {
+                            new string[] { "Z1", "SanFrancisco", "1" },
+                            new string[] { "Z2", "SanFrancisco", "2" },
+                            new string[] { "Z3", "SanFrancisco", "3" },
+                            new string[] { "Z4", "SanFrancisco", "4" },
+                        }
+                    },
+                }
+            } },
             
             // YogStation
             { "yog", new Codebase {
