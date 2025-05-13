@@ -177,6 +177,10 @@ namespace SS13WebMap {
                             new string[] { "Base Map", "BoxStation", "1" },
                         }
                     },
+                    new GameMap { MapId = "cardinalstation", MapName = "CardinalStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "CardinalStation", "1" },
+                        }
+                    },
                     new GameMap { MapId = "corgstation", MapName = "CorgStation", Layers = new List<string[]> {
                             new string[] { "Base Map", "CorgStation", "1" },
                         }
