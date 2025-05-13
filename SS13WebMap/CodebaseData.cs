@@ -704,8 +704,50 @@ namespace SS13WebMap {
                     },
                 }
             } },
-
             
+            // Massmeta
+            { "massmeta", new Codebase {
+                CodebaseId = "massmeta",
+                CodebaseName = "MassMeta",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "bearcat", MapName = "Bearcat", Layers = new List<string[]> {
+                            new string[] { "Top Layer", "bearcat", "1" },
+                            new string[] { "Main Layer", "bearcat", "2" },
+                            new string[] { "Bottom Layer", "bearcat", "3" },
+                        }
+                    },
+                    new GameMap { MapId = "icebox", MapName = "IceBoxStation", Layers = new List<string[]> {
+                            new string[] { "Main Station", "IceBoxStation", "1" },
+                            new string[] { "Top Caves", "IceBoxStation", "2" },
+                            new string[] { "Bottom Caves", "IceBoxStation", "3" },
+                        }
+                    },
+                    new GameMap { MapId = "kilostation", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MetaStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "protobox", MapName = "ProtoBox", Layers = new List<string[]> {
+                            new string[] { "Base Map", "ProtoBoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "protos", MapName = "Protos", Layers = new List<string[]> {
+                            new string[] { "Base Map", "protos", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "tramstation", MapName = "TramStation", Layers = new List<string[]> {
+                            new string[] { "Main Layer", "tramstation", "1" },
+                            new string[] { "Bottom Layer", "tramstation", "2" },
+                        }
+                    },
+                }
+            } },
+
             // Monkestation
             { "monkestation", new Codebase {
                 CodebaseId = "monkestation",
