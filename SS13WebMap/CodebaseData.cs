@@ -266,6 +266,49 @@ namespace SS13WebMap {
                 }
             } },
 
+                        
+            // BubberStation
+            { "bubber", new Codebase {
+                CodebaseId = "bubber",
+                CodebaseName = "BubberStation",
+                FancySupport = false,
+                IsAdult = true,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "biodome", MapName = "Biodome", Layers = new List<string[]> {
+                            new string[] { "Main Layer", "biodome", "2" },
+                            new string[] { "Sublayer", "biodome", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "blueshift", MapName = "Blueshift", Layers = new List<string[]> {
+                            new string[] { "Main Layer", "Blueshift", "2" },
+                            new string[] { "Sublayer", "Blueshift", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "boxstation", MapName = "BoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "BoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "kilostation", MapName = "KiloStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "KiloStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "moonstation", MapName = "MoonStation", Layers = new List<string[]> {
+                            new string[] { "Main Layer", "moonstation", "3" },
+                            new string[] { "Sublayer", "moonstation", "2" },
+                            new string[] { "Lavaland", "moonstation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "persistencestation", MapName = "Persistence Station", MapHeight = 67, MapWidth = 56, Layers = new List<string[]> {
+                            new string[] { "Main Layer", "lavaland_persistence", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "voidraptor", MapName = "Void Raptor", Layers = new List<string[]> {
+                            new string[] { "Main Layer", "VoidRaptor", "1" },
+                        }
+                    },
+                }
+            } },
+
             // BurgerStation
             { "burger", new Codebase {
                 CodebaseId = "burger",
@@ -508,7 +551,7 @@ namespace SS13WebMap {
                 CodebaseName = "Effigy",
                 TextColour = "#69f0ae",
                 FancySupport = true,
-                IsAdult = true,
+                IsAdult = false,
                 LogoPath = "img/logos/effigy.png",
                 GameMaps = new List<GameMap>() {
                     new GameMap { MapId = "foxholestation", MapName = "FoxHoleStation", Layers = new List<string[]> {
@@ -659,6 +702,21 @@ namespace SS13WebMap {
                 }
             } },
 
+            
+            // Hippie
+            { "hippie", new Codebase {
+                CodebaseId = "hippie",
+                CodebaseName = "HippieStation",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "hippiestation", MapName = "HippieStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "hippiestation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // Lumos
             { "lumos", new Codebase {
                 CodebaseId = "lumos",
@@ -700,49 +758,6 @@ namespace SS13WebMap {
                             new string[] { "Top", "Snaxi_Lumos", "1" },
                             new string[] { "Middle", "IcemoonUnderground_Above_Lumos", "1" },
                             new string[] { "Bottom", "IcemoonUnderground_Below_Lumos", "1" },
-                        }
-                    },
-                }
-            } },
-            
-            // Massmeta
-            { "massmeta", new Codebase {
-                CodebaseId = "massmeta",
-                CodebaseName = "MassMeta",
-                FancySupport = false,
-                IsAdult = false,
-                GameMaps = new List<GameMap>() {
-                    new GameMap { MapId = "bearcat", MapName = "Bearcat", Layers = new List<string[]> {
-                            new string[] { "Top Layer", "bearcat", "1" },
-                            new string[] { "Main Layer", "bearcat", "2" },
-                            new string[] { "Bottom Layer", "bearcat", "3" },
-                        }
-                    },
-                    new GameMap { MapId = "icebox", MapName = "IceBoxStation", Layers = new List<string[]> {
-                            new string[] { "Main Station", "IceBoxStation", "1" },
-                            new string[] { "Top Caves", "IceBoxStation", "2" },
-                            new string[] { "Bottom Caves", "IceBoxStation", "3" },
-                        }
-                    },
-                    new GameMap { MapId = "kilostation", MapName = "KiloStation", Layers = new List<string[]> {
-                            new string[] { "Base Map", "KiloStation", "1" },
-                        }
-                    },
-                    new GameMap { MapId = "metastation", MapName = "MetaStation", Layers = new List<string[]> {
-                            new string[] { "Base Map", "MetaStation", "1" },
-                        }
-                    },
-                    new GameMap { MapId = "protobox", MapName = "ProtoBox", Layers = new List<string[]> {
-                            new string[] { "Base Map", "ProtoBoxStation", "1" },
-                        }
-                    },
-                    new GameMap { MapId = "protos", MapName = "Protos", Layers = new List<string[]> {
-                            new string[] { "Base Map", "protos", "1" },
-                        }
-                    },
-                    new GameMap { MapId = "tramstation", MapName = "TramStation", Layers = new List<string[]> {
-                            new string[] { "Main Layer", "tramstation", "1" },
-                            new string[] { "Bottom Layer", "tramstation", "2" },
                         }
                     },
                 }
