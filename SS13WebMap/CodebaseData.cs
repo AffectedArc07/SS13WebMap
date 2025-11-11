@@ -714,6 +714,10 @@ namespace SS13WebMap {
                             new string[] { "Base Map", "hippiestation", "1" },
                         }
                     },
+                    new GameMap { MapId = "ministation", MapName = "MiniStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "ministation", "1" },
+                        }
+                    },
                 }
             } },
 
