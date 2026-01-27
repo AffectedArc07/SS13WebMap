@@ -151,7 +151,7 @@ namespace SS13WebMap {
                 IsAdult = false,
                 LogoPath = "img/logos/bay12.svg",
                 GameMaps = new List<GameMap>() {
-                    new GameMap { MapId = "torch", MapName = "SEV Torch", MapHeight = 200, MapWidth = 200, ParallaxDirection = ParallaxDirection.East, ParallaxSpeedModifier = -20,
+                    new GameMap { MapId = "torch", MapName = "SEV Torch", MapHeight = 200, MapWidth = 200, ParallaxDirection = ParallaxDirection.West, ParallaxSpeedModifier = -20,
                         Layers = new List<string[]> {
                             new string[] { "Bridge Deck", "torch6_bridge", "1" },
                             new string[] { "Deck 1 - Operations", "torch5_deck1", "1" },
