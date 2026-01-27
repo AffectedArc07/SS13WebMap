@@ -538,6 +538,10 @@ namespace SS13WebMap {
                 IsAdult = false,
                 LogoPath = "img/logos/daedalus.png",
                 GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "atlas", MapName = "Atlas", Layers = new List<string[]> {
+                            new string[] { "Base Map", "atlas", "1" },
+                        }
+                    },
                     new GameMap { MapId = "theseus", MapName = "Theseus", Layers = new List<string[]> {
                             new string[] { "Base Map", "Theseus", "1" },
                         }
