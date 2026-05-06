@@ -924,6 +924,24 @@ namespace SS13WebMap {
                 }
             } },
 
+            
+            // RU SCP 13
+            { "ruscp", new Codebase {
+                CodebaseId = "ruscp",
+                CodebaseName = "RU SCP 13",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "site53", MapName = "Site 53", Layers = new List<string[]> {
+                            new string[] { "Ground Floor", "site53", "1" },
+                            new string[] { "Second Floor", "site53", "2" },
+                            new string[] { "Third Floor", "site53", "3" },
+                            new string[] { "Surface", "site53", "4" },
+                        }
+                    }
+                }
+            } },
+
             // SinguloStation
             { "singulo", new Codebase {
                 CodebaseId = "singulo",
