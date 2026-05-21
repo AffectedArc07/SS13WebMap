@@ -541,10 +541,10 @@ namespace SS13WebMap {
 
                         }
                     },
-                    new GameMap { MapId = "tyragorift", MapName = "Tyrago Rift", MapWidth = 241, MapHeight = 182,
+                    new GameMap { MapId = "tyragorift", MapName = "Tyrargo Rift", MapWidth = 241, MapHeight = 182,
                         Layers = new List<string[]> {
-                            new string[] { "Main Level", "Tyrargo_Rift", "1" },
-                            new string[] { "Underground", "Tyrargo_Rift", "2" },
+                            new string[] { "Underground", "Tyrargo_Rift", "1" },
+                            new string[] { "Main Level", "Tyrargo_Rift", "2" },
                             new string[] { "Sky", "Tyrargo_Rift", "3" },
 
                         }
