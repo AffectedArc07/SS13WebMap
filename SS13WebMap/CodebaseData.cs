@@ -1086,7 +1086,30 @@ namespace SS13WebMap {
                     },
                 }
             } },
+
             
+            // SurfShack13
+            { "surfshack", new Codebase {
+                CodebaseId = "surfshack",
+                CodebaseName = "SurfShack13",
+                FancySupport = false,
+                IsAdult = false,
+                GameMaps = new List<GameMap>() {
+                    new GameMap { MapId = "box", MapName = "BoxStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "BoxStation", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "minisurf", MapName = "MiniSurf", Layers = new List<string[]> {
+                            new string[] { "Base Map", "MiniSurf", "1" },
+                        }
+                    },
+                    new GameMap { MapId = "pubby", MapName = "PubbyStation", Layers = new List<string[]> {
+                            new string[] { "Base Map", "PubbyStation", "1" },
+                        }
+                    },
+                }
+            } },
+
             // TaleStation
             { "talestation", new Codebase {
                 CodebaseId = "talestation",
