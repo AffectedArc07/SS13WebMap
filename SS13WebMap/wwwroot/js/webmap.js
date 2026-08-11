@@ -43,9 +43,20 @@ fetch(`/maps/${codebase_id}/${map_id}/?d=y`).then(r => r.json()).then(r => {
 
     // Setup the leaflet object with the correct properties
     var webmap = L.map('webmap', map_config);
-    webmap.fitBounds(bounds);
     webmap.setMaxBounds(bounds);
     webmap.attributionControl.setPrefix('SS13 WebMap by AffectedArc07');
+    // Check for query params and set view if present
+    var urlParams = new URLSearchParams(window.location.search);
+    var x = urlParams.get("x");
+    var y = urlParams.get("y");
+    var zoom = urlParams.get("zoom");
+    if (x !== null && y !== null && zoom !== null) {
+        var xy = ss132leaflet({ x, y }, bounds)
+        webmap.setView(L.latLng(xy.lat, xy.lng), zoom);
+    }
+    else {
+        webmap.fitBounds(bounds);
+    }
 
     // Log the layers
     var lazylayers = bakeLayers(image_config, webmap, bounds);
