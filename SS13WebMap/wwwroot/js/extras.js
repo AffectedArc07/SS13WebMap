@@ -73,16 +73,6 @@ function attachListener(webmap, bounds, polygon = newpoly(webmap)) {
         ]).redraw().bindTooltip(coords.x + ',' + coords.y).openTooltip().addTo(webmap);
     });
 
-    const query = readquery();
-    console.info(`Parsing parameter cords, param:`, query);
-    if (query && ("x" in query) && ("y" in query)) {
-        // order matters
-        if ("zoom" in query) {
-            webmap.setZoom(Number(query.zoom));
-        }
-        let xy = ss132leaflet({ "x": Number(query.x), "y": Number(query.y) }, bounds);
-        webmap.setView(L.latLng(xy.lat, xy.lng));
-    }
 }
 /**
  * Adds metadata on the map
@@ -124,18 +114,6 @@ function initFTL(dir = "E", mode = "norm", speedmodif = 0) {
 }
 
 /* Helper Functions */
-/**
- * Reads the "?thing=no"
- * @returns {JSON} JSON
- */
-function readquery() {
-    var json_out = {};
-    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m, key, value) => {
-        json_out[key] = value;
-    });
-    return json_out;
-}
-
 /**
  * Creates a new polygon , requires the webmap
  * @param {L.map} webmap - The leaflet L.map()
