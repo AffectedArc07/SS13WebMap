@@ -949,6 +949,10 @@ namespace SS13WebMap {
                             new string[] { "Base Map", "metastation", "1" },
                         }
                     },
+                    new GameMap { MapId = "omegastation", MapName = "OmegaStation (NSS Legaria)", Layers = new List<string[]> {
+                            new string[] { "Base Map", "omegastation", "1" },
+                        }
+                    },
                 }
             } },
 
