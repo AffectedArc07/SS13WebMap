@@ -22,18 +22,13 @@ namespace SS13WebMap.Models.Pages {
         /// </summary>
         /// <returns>The parallax direction as just a letter.</returns>
         public string GetParallaxDirection() {
-            switch (ParallaxDirection) {
-                case ParallaxDirection.North:
-                    return "N";
-                case ParallaxDirection.East:
-                    return "E";
-                case ParallaxDirection.South:
-                    return "S";
-                case ParallaxDirection.West:
-                    return "W";
-            }
-
-            return "E"; // Safety
+            return ParallaxDirection switch {
+                ParallaxDirection.North => "N",
+                ParallaxDirection.East => "E",
+                ParallaxDirection.South => "S",
+                ParallaxDirection.West => "W",
+                _ => "E",// Safety
+            };
         }
 
         /// <summary>
@@ -41,14 +36,10 @@ namespace SS13WebMap.Models.Pages {
         /// </summary>
         /// <returns>The parallax type as either "norm" or "tg".</returns>
         public string GetParallaxType() {
-            switch (ParallaxType) {
-                case ParallaxType.Standard:
-                    return "norm";
-                case ParallaxType.Fancy:
-                    return "tg";
-            }
-
-            return "tg"; // Safety
+            return ParallaxType switch {
+                ParallaxType.Fancy => "tg",
+                _ => "norm",
+            };
         }
     }
 }

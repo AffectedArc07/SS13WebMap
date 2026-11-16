@@ -3,22 +3,22 @@
         /// <summary>
         /// Internal ID of the codebase, set to the same as its lookup value in the <see cref="CodebaseData"/> dictionary.
         /// </summary>
-        public string CodebaseId { get; set; }
+        public required string CodebaseId { get; set; }
 
         /// <summary>
         /// The friendly name of the codebase
         /// </summary>
-        public string CodebaseName { get; set; }
+        public required string CodebaseName { get; set; }
 
         /// <summary>
         /// The colour of the text on the front screen, if any.
         /// </summary>
-        public string TextColour { get; set; }
+        public string TextColour { get; set; } = string.Empty;
 
         /// <summary>
         /// The path of the logo, if any.
         /// </summary>
-        public string LogoPath { get; set; }
+        public string LogoPath { get; set; } = string.Empty;
 
         /// <summary>
         /// Does this codebase declare itself adult?
@@ -33,6 +33,6 @@
         /// <summary>
         /// Maps this codebase has, if any.
         /// </summary>
-        public List<GameMap> GameMaps { get; set; }
+        public List<GameMap> GameMaps { get; set; } = [];
     }
 }

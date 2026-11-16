@@ -1,3 +1,5 @@
+using SS13WebMap.Services;
+
 namespace SS13WebMap {
     public class Program {
         public static void Main(string[] args) {
@@ -7,6 +9,7 @@ namespace SS13WebMap {
             // Add controllers and razor runtime compilation
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+            builder.Services.AddSingleton<ICodebaseDataService, CodebaseDataService>();
 
             WebApplication app = builder.Build();
 

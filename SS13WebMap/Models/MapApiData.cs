@@ -6,7 +6,7 @@ namespace SS13WebMap.Models {
         /// The bounds of the map
         /// </summary>
         [JsonPropertyName("bounds")]
-        public int[] Bounds { get; set; }
+        public required int[] Bounds { get; set; }
 
         /// <summary>
         /// Do we want to attach the coords listener
@@ -18,13 +18,13 @@ namespace SS13WebMap.Models {
         /// Layers for the main map layers
         /// </summary>
         [JsonPropertyName("maplayers")]
-        public List<LeafletLayer> MapLayers { get; set; } = new List<LeafletLayer>();
+        public List<LeafletLayer> MapLayers { get; set; } = [];
 
         /// <summary>
         /// Layers for the pipe map layers
         /// </summary>
         [JsonPropertyName("pipelayers")]
-        public List<LeafletLayer> PipeLayers { get; set; } = new List<LeafletLayer>();
+        public List<LeafletLayer> PipeLayers { get; set; } = [];
 
 
         public class LeafletLayer {
@@ -32,13 +32,13 @@ namespace SS13WebMap.Models {
             /// The name of this layer on the leaflet popup
             /// </summary>
             [JsonPropertyName("name")]
-            public string LayerName { get; set; }
+            public string LayerName { get; set; } = string.Empty;
 
             /// <summary>
             /// The path of this image on the layers
             /// </summary>
             [JsonPropertyName("path")]
-            public string LayerImagePath { get; set; }
+            public string LayerImagePath { get; set; } = string.Empty;
         }
     }
 }

@@ -3,21 +3,21 @@
         /// <summary>
         /// Used for the title
         /// </summary>
-        public string CodebaseName { get; set; }
+        public required string CodebaseName { get; set; }
 
         /// <summary>
         /// Used for the title
         /// </summary>
-        public string MapName { get; set; }
+        public required string MapName { get; set; }
 
         /// <summary>
         /// Used for the title
         /// </summary>
-        public string CodebaseId { get; set; }
+        public required string CodebaseId { get; set; }
 
         /// <summary>
         /// Used for the title
         /// </summary>
-        public string MapId { get; set; }
+        public required string MapId { get; set; }
     }
 }

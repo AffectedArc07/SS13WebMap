@@ -5,12 +5,12 @@ namespace SS13WebMap.Models.Codebase {
         /// <summary>
         /// ID of the map, stored in the lookup dictionary on a <see cref="Codebase"/>.
         /// </summary>
-        public string MapId { get; set; }
+        public required string MapId { get; set; }
 
         /// <summary>
         /// The name of the map.
         /// </summary>
-        public string MapName { get; set; }
+        public required string MapName { get; set; }
 
         /// <summary>
         /// The direction of the parallax effect.
@@ -35,7 +35,7 @@ namespace SS13WebMap.Models.Codebase {
         /// <summary>
         /// Layers of the map. Each piece of the list is a 3-cell array, first key being the name of the layer, second being the image path, third being the Z suffix on the end.
         /// </summary>
-        public List<string[]> Layers { get; set; } = new List<string[]>();
+        public List<string[]> Layers { get; set; } = [];
 
         /// <summary>
         /// Gets the image path of a layer

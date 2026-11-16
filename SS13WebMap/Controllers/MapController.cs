@@ -3,26 +3,29 @@ using SS13WebMap.Models;
 using SS13WebMap.Models.Backend;
 using SS13WebMap.Models.Codebase;
 using SS13WebMap.Models.Pages;
+using SS13WebMap.Services;
 
 namespace SS13WebMap.Controllers {
     [Route("maps")]
-    public class MapController : Controller {
+    public class MapController(ICodebaseDataService cds) : Controller {
+        private readonly ICodebaseDataService _cds = cds;
+
         [HttpGet("{codebaseid}/{mapid}/")]
         public IActionResult Index(string codebaseid, string mapid, [FromQuery (Name = "d")] string getdata) {
             if (string.IsNullOrWhiteSpace(codebaseid) || string.IsNullOrWhiteSpace(mapid)) {
                 return NotFound();
             }
 
-            if (!CodebaseData.Codebases.ContainsKey(codebaseid)) {
+            if (!_cds.GetCodebases().ContainsKey(codebaseid)) {
                 return NotFound($"Codebase '{codebaseid}' not found");
             }
 
             // Lets get our stuff
-            Codebase the_codebase = CodebaseData.Codebases[codebaseid];
+            Codebase the_codebase = _cds.GetCodebases()[codebaseid];
 
             IEnumerable<GameMap> linq_sequence = the_codebase.GameMaps.Where(x => x.MapId == mapid);
 
-            if (linq_sequence.Count() < 1) {
+            if (!linq_sequence.Any()) {
                 return NotFound($"Map '{mapid}' not found in codebase '{codebaseid}'");
             }
 
@@ -33,7 +36,7 @@ namespace SS13WebMap.Controllers {
             if (!string.IsNullOrWhiteSpace(getdata) && getdata == "y") {
                 MapApiData api_model = new() {
                     FancyCoords = the_codebase.FancySupport,
-                    Bounds = new int[] { (0 - map_data.MapHeight), map_data.MapWidth }
+                    Bounds = [(0 - map_data.MapHeight), map_data.MapWidth]
                 };
 
                 // Setup our map layers

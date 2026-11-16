@@ -32,7 +32,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    @if (string.IsNullOrWhiteSpace((string)ViewData["Title"])) {
+    @if (string.IsNullOrWhiteSpace((string?)ViewData["Title"])) {
         <title>SS13WebMap</title>
     } else {
         <title>SS13WebMap | @ViewData["Title"]</title>

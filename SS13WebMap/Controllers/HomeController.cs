@@ -6,12 +6,6 @@ using System.Diagnostics;
 
 namespace SS13WebMap.Controllers {
     public class HomeController : Controller {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger) {
-            _logger = logger;
-        }
-
         /// <summary>
         /// The homepage route
         /// </summary>
